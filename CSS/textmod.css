@@ -1,0 +1,11 @@
+
+
+.notextdeco {
+    text-decoration: none;
+}
+
+.textcenter {
+    text-align: center;
+    text-anchor: middle;
+    margin: auto 0;
+}
