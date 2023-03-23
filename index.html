@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+<head>
+    <title>a1creator</title>
+    <link rel="stylesheet" href="CSS/contract.css" media="screen">
+    <link rel="stylesheet" href="CSS/index.css" media="screen">
+    <link rel="stylesheet" href="CSS/header.css" media="screen">
+    <link rel="stylesheet" href="CSS/indexextra.css" media="screen">
+    <link rel="stylesheet" href="CSS/gamesindex.css" media="screen">
+    <link rel="stylesheet" href="CSS/jumpingbacteria.css" media="screen">
+    <link rel="stylesheet" href="CSS/nutbutton.css" media="screen">
+    <link rel="stylesheet" href="CSS/googleplaystoreButton.css" media="screen">
+    <link rel="stylesheet" href="CSS/scrollbar/scrollbarIndex.css" media="screen">
+    <link rel="shortcut icon" href="images/a1Icon16px.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(function() {
+            $("#header").load("php/header.html");
+            $("#footer").load("php/footer.html");
+        });
+    </script>
+</head>
+<body>
+    <!-- load header in -->
+    <header id="header"></header>
+
+    <!-- grid layout thing for showcases -->
+    <div class="no-text-decoration showcase-grid">
+        <!-- DO YOU BELIEVE SHOWCASE -->
+        <div style="grid-area: spacevoyage;">
+            <div class="showcase-rectangle quadgrid" style="background-image: url(images/spacevoyage/bckg.png); background-size: cover; background-repeat: no-repeat;">
+                <a href="spacevoyage.html" class="showcase-title" style="color: #FDFDFD; font-family: Ethnocentric;">SPACE VOYAGE</a>
+            </div>
+        </div>
+        <!-- DO YOU BELIEVE SHOWCASE -->
+        <div style="grid-area: doyoubelieve;">
+            <div class="showcase-rectangle triplegrid" style="background-image: url(images/doYouBelieve/painting03.png); background-size: contain;">
+                <a href="https://a1creator.itch.io/doyoubelieve" target="_blank" class="showcase-title" style="color: #F0E022; ">DO YOU BELIEVE?</a>
+            </div>
+        </div>
+        <!-- NUT BUTTON SHOWCASE -->
+        <div style="grid-area: nutbutton;">
+            <div class="showcase-rectangle singlegrid" style="background-image: url(images/nut/unpressedShowcaseWide.jpg);">
+                <a href="nutbuttonpage.html" class="showcase-title" style="color: #385484;">NUT BUTTON</a>
+            </div>
+        </div>
+        <!-- CRAB ZOO SHOWCASE -->
+        <div style="grid-area: crabzoo;">
+            <div class="showcase-rectangle singlegrid" style="background-image: url('images/crabzoo/crabZooIcon.png');">
+                <a href="crabzoo.html" class="showcase-title" style="color: #89CFF0;">CRAB ZOO</a>
+            </div>
+        </div>
+        <!-- CRAB DEFENSE SHOWCASE -->
+        <div style="grid-area: crabdefence;">
+            <div class="showcase-rectangle triplegrid" style="background-image: url('images/crabdefence/crabBanner.png');">
+                <a href="crabdefence.html" class="showcase-title" style="color: #89CFF0;">CRAB DEFENCE</a>
+            </div>
+        </div>
+        <!-- JUMPING BACTERIA SHOWCASE -->
+        <div style="grid-area: jumpingbacteria;">
+            <div class="showcase-rectangle quadgrid" style="background-image: url(images/jumpingbacteria/a1bannergoogplay.png);">
+                <a href="jumpingbacteria.html" class="showcase-title" style="color: #83fe5b;">JUMPING BACTERIA</a>
+            </div>
+        </div>
+    </div>
+
+        <!-- FOOTER -->
+        <footer style="background-color: #4d4d4d;" id="footer"> </footer>
+
+</body>
+
+</html>
