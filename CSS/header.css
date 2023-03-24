@@ -15,10 +15,12 @@ table {
 
 #free {
     padding: 0 0 0 1.5rem;
+    width: 15%;
 }
 
 #browsergames {
     padding: 0 0 0 1.5rem;
+    width: 55%;
 }
 
 table {
