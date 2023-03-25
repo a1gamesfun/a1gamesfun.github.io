@@ -1,6 +1,6 @@
 
 
-.notextdeco {
+.no-text-deco {
     text-decoration: none;
 }
 
@@ -34,7 +34,6 @@
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
 }
-
 
 
 
