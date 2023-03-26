@@ -10,7 +10,7 @@
     <!-- Dynamically Loading the Games-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
-    <script type="module" src="js/gamespawner.js"></script>
+    <script type="module" src="https://a1games.fun/js/gamespawner.js"></script>
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4290613853758058" crossorigin="anonymous"></script>
     <!-- Header & Footer Insertion -->
@@ -27,97 +27,106 @@
     <header id="header"></header>
 
 
+    <template id="item_template">
+        <a class="game-thumbnail" href="{{href}}" target="_blank">
+            <img class="game-thumbnail-image" src="files/img/thumbnails/{{imagename}}.png" />
+        </a>
+    </template>
+
+    <div id="app" class="container">
+    </div>
+
     <!-- grid layout thing for showcases -->
     <div class="no-text-deco games-grid">
-        <a class="game-thumbnail"  href="https://a1creator.com/spacevoyage" target="_blank">
-            <img class="game-thumbnail-image"  src="files/img/thumbnails/space_voyage.png" />
+        <a class="game-thumbnail" href="https://a1creator.com/spacevoyage" target="_blank">
+            <img class="game-thumbnail-image" src="files/img/thumbnails/space_voyage.png" />
         </a>
-        <a class="game-thumbnail"  href="https://a1creator.com/spacevoyage" target="_blank">
-            <img class="game-thumbnail-image"  src="files/img/thumbnails/space_voyage.png" />
+        <a class="game-thumbnail" href="https://a1creator.com/spacevoyage" target="_blank">
+            <img class="game-thumbnail-image" src="files/img/thumbnails/space_voyage.png" />
         </a>
-        <a class="game-thumbnail"  href="https://a1creator.com/spacevoyage" target="_blank">
-            <img class="game-thumbnail-image"  src="files/img/thumbnails/space_voyage.png" />
+        <a class="game-thumbnail" href="https://a1creator.com/spacevoyage" target="_blank">
+            <img class="game-thumbnail-image" src="files/img/thumbnails/space_voyage.png" />
         </a>
-        <a class="game-thumbnail"  href="https://a1creator.com/spacevoyage" target="_blank">
-            <img class="game-thumbnail-image"  src="files/img/thumbnails/space_voyage.png" />
+        <a class="game-thumbnail" href="https://a1creator.com/spacevoyage" target="_blank">
+            <img class="game-thumbnail-image" src="files/img/thumbnails/space_voyage.png" />
         </a>
-        <a class="game-thumbnail"  href="https://a1creator.com/spacevoyage" target="_blank">
-            <img class="game-thumbnail-image"  src="files/img/thumbnails/space_voyage.png" />
+        <a class="game-thumbnail" href="https://a1creator.com/spacevoyage" target="_blank">
+            <img class="game-thumbnail-image" src="files/img/thumbnails/space_voyage.png" />
         </a>
-        <a class="game-thumbnail"  href="https://a1creator.com/spacevoyage" target="_blank">
-            <img class="game-thumbnail-image"  src="files/img/thumbnails/space_voyage.png" />
+        <a class="game-thumbnail" href="https://a1creator.com/spacevoyage" target="_blank">
+            <img class="game-thumbnail-image" src="files/img/thumbnails/space_voyage.png" />
         </a>
-        <a class="game-thumbnail"  href="https://a1creator.com/spacevoyage" target="_blank">
-            <img class="game-thumbnail-image"  src="files/img/thumbnails/space_voyage.png" />
+        <a class="game-thumbnail" href="https://a1creator.com/spacevoyage" target="_blank">
+            <img class="game-thumbnail-image" src="files/img/thumbnails/space_voyage.png" />
         </a>
-        <a class="game-thumbnail"  href="https://a1creator.com/spacevoyage" target="_blank">
-            <img class="game-thumbnail-image"  src="files/img/thumbnails/space_voyage.png" />
+        <a class="game-thumbnail" href="https://a1creator.com/spacevoyage" target="_blank">
+            <img class="game-thumbnail-image" src="files/img/thumbnails/space_voyage.png" />
         </a>
-        <a class="game-thumbnail"  href="https://a1creator.com/spacevoyage" target="_blank">
-            <img class="game-thumbnail-image"  src="files/img/thumbnails/space_voyage.png" />
+        <a class="game-thumbnail" href="https://a1creator.com/spacevoyage" target="_blank">
+            <img class="game-thumbnail-image" src="files/img/thumbnails/space_voyage.png" />
         </a>
-        <a class="game-thumbnail"  href="https://a1creator.com/spacevoyage" target="_blank">
-            <img class="game-thumbnail-image"  src="files/img/thumbnails/space_voyage.png" />
+        <a class="game-thumbnail" href="https://a1creator.com/spacevoyage" target="_blank">
+            <img class="game-thumbnail-image" src="files/img/thumbnails/space_voyage.png" />
         </a>
-        <a class="game-thumbnail"  href="https://a1creator.com/spacevoyage" target="_blank">
-            <img class="game-thumbnail-image"  src="files/img/thumbnails/space_voyage.png" />
+        <a class="game-thumbnail" href="https://a1creator.com/spacevoyage" target="_blank">
+            <img class="game-thumbnail-image" src="files/img/thumbnails/space_voyage.png" />
         </a>
-        <a class="game-thumbnail"  href="https://a1creator.com/spacevoyage" target="_blank">
-            <img class="game-thumbnail-image"  src="files/img/thumbnails/space_voyage.png" />
+        <a class="game-thumbnail" href="https://a1creator.com/spacevoyage" target="_blank">
+            <img class="game-thumbnail-image" src="files/img/thumbnails/space_voyage.png" />
         </a>
-        <a class="game-thumbnail"  href="https://a1creator.com/spacevoyage" target="_blank">
-            <img class="game-thumbnail-image"  src="files/img/thumbnails/space_voyage.png" />
+        <a class="game-thumbnail" href="https://a1creator.com/spacevoyage" target="_blank">
+            <img class="game-thumbnail-image" src="files/img/thumbnails/space_voyage.png" />
         </a>
-        <a class="game-thumbnail"  href="https://a1creator.com/spacevoyage" target="_blank">
-            <img class="game-thumbnail-image"  src="files/img/thumbnails/space_voyage.png" />
+        <a class="game-thumbnail" href="https://a1creator.com/spacevoyage" target="_blank">
+            <img class="game-thumbnail-image" src="files/img/thumbnails/space_voyage.png" />
         </a>
-        <a class="game-thumbnail"  href="https://a1creator.com/spacevoyage" target="_blank">
-            <img class="game-thumbnail-image"  src="files/img/thumbnails/space_voyage.png" />
+        <a class="game-thumbnail" href="https://a1creator.com/spacevoyage" target="_blank">
+            <img class="game-thumbnail-image" src="files/img/thumbnails/space_voyage.png" />
         </a>
-        <a class="game-thumbnail"  href="https://a1creator.com/spacevoyage" target="_blank">
-            <img class="game-thumbnail-image"  src="files/img/thumbnails/space_voyage.png" />
+        <a class="game-thumbnail" href="https://a1creator.com/spacevoyage" target="_blank">
+            <img class="game-thumbnail-image" src="files/img/thumbnails/space_voyage.png" />
         </a>
-        <a class="game-thumbnail"  href="https://a1creator.com/spacevoyage" target="_blank">
-            <img class="game-thumbnail-image"  src="files/img/thumbnails/space_voyage.png" />
+        <a class="game-thumbnail" href="https://a1creator.com/spacevoyage" target="_blank">
+            <img class="game-thumbnail-image" src="files/img/thumbnails/space_voyage.png" />
         </a>
-        <a class="game-thumbnail"  href="https://a1creator.com/spacevoyage" target="_blank">
-            <img class="game-thumbnail-image"  src="files/img/thumbnails/space_voyage.png" />
+        <a class="game-thumbnail" href="https://a1creator.com/spacevoyage" target="_blank">
+            <img class="game-thumbnail-image" src="files/img/thumbnails/space_voyage.png" />
         </a>
-        <a class="game-thumbnail"  href="https://a1creator.com/spacevoyage" target="_blank">
-            <img class="game-thumbnail-image"  src="files/img/thumbnails/space_voyage.png" />
+        <a class="game-thumbnail" href="https://a1creator.com/spacevoyage" target="_blank">
+            <img class="game-thumbnail-image" src="files/img/thumbnails/space_voyage.png" />
         </a>
-        <a class="game-thumbnail"  href="https://a1creator.com/spacevoyage" target="_blank">
-            <img class="game-thumbnail-image"  src="files/img/thumbnails/space_voyage.png" />
+        <a class="game-thumbnail" href="https://a1creator.com/spacevoyage" target="_blank">
+            <img class="game-thumbnail-image" src="files/img/thumbnails/space_voyage.png" />
         </a>
-        <a class="game-thumbnail"  href="https://a1creator.com/spacevoyage" target="_blank">
-            <img class="game-thumbnail-image"  src="files/img/thumbnails/space_voyage.png" />
+        <a class="game-thumbnail" href="https://a1creator.com/spacevoyage" target="_blank">
+            <img class="game-thumbnail-image" src="files/img/thumbnails/space_voyage.png" />
         </a>
-        <a class="game-thumbnail"  href="https://a1creator.com/spacevoyage" target="_blank">
-            <img class="game-thumbnail-image"  src="files/img/thumbnails/space_voyage.png" />
+        <a class="game-thumbnail" href="https://a1creator.com/spacevoyage" target="_blank">
+            <img class="game-thumbnail-image" src="files/img/thumbnails/space_voyage.png" />
         </a>
-        <a class="game-thumbnail"  href="https://a1creator.com/spacevoyage" target="_blank">
-            <img class="game-thumbnail-image"  src="files/img/thumbnails/space_voyage.png" />
+        <a class="game-thumbnail" href="https://a1creator.com/spacevoyage" target="_blank">
+            <img class="game-thumbnail-image" src="files/img/thumbnails/space_voyage.png" />
         </a>
-        <a class="game-thumbnail"  href="https://a1creator.com/spacevoyage" target="_blank">
-            <img class="game-thumbnail-image"  src="files/img/thumbnails/space_voyage.png" />
+        <a class="game-thumbnail" href="https://a1creator.com/spacevoyage" target="_blank">
+            <img class="game-thumbnail-image" src="files/img/thumbnails/space_voyage.png" />
         </a>
-        <a class="game-thumbnail"  href="https://a1creator.com/spacevoyage" target="_blank">
-            <img class="game-thumbnail-image"  src="files/img/thumbnails/space_voyage.png" />
+        <a class="game-thumbnail" href="https://a1creator.com/spacevoyage" target="_blank">
+            <img class="game-thumbnail-image" src="files/img/thumbnails/space_voyage.png" />
         </a>
-        <a class="game-thumbnail"  href="https://a1creator.com/spacevoyage" target="_blank">
-            <img class="game-thumbnail-image"  src="files/img/thumbnails/space_voyage.png" />
+        <a class="game-thumbnail" href="https://a1creator.com/spacevoyage" target="_blank">
+            <img class="game-thumbnail-image" src="files/img/thumbnails/space_voyage.png" />
         </a>
-        <a class="game-thumbnail"  href="https://a1creator.com/spacevoyage" target="_blank">
-            <img class="game-thumbnail-image"  src="files/img/thumbnails/space_voyage.png" />
+        <a class="game-thumbnail" href="https://a1creator.com/spacevoyage" target="_blank">
+            <img class="game-thumbnail-image" src="files/img/thumbnails/space_voyage.png" />
         </a>
-        <a class="game-thumbnail"  href="https://a1creator.com/spacevoyage" target="_blank">
-            <img class="game-thumbnail-image"  src="files/img/thumbnails/space_voyage.png" />
+        <a class="game-thumbnail" href="https://a1creator.com/spacevoyage" target="_blank">
+            <img class="game-thumbnail-image" src="files/img/thumbnails/space_voyage.png" />
         </a>
-        <a class="game-thumbnail"  href="https://a1creator.com/spacevoyage" target="_blank">
-            <img class="game-thumbnail-image"  src="files/img/thumbnails/space_voyage.png" />
+        <a class="game-thumbnail" href="https://a1creator.com/spacevoyage" target="_blank">
+            <img class="game-thumbnail-image" src="files/img/thumbnails/space_voyage.png" />
         </a>
-        <a class="game-thumbnail"  href="https://a1creator.com/spacevoyage" target="_blank">
-            <img class="game-thumbnail-image"  src="files/img/thumbnails/space_voyage.png" />
+        <a class="game-thumbnail" href="https://a1creator.com/spacevoyage" target="_blank">
+            <img class="game-thumbnail-image" src="files/img/thumbnails/space_voyage.png" />
         </a>
     </div>
 

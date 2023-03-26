@@ -14,9 +14,6 @@ jsonsInDir.forEach(file => {
 });
 
 
-
-
-
 const GAMES = [ ];
 
 function loadGame() {
@@ -32,12 +29,17 @@ function loadGame() {
     return JSON.parse(jsonstring);
 }
 
+
+
+
 function addItem(container, template) {
 
-    let color = COLORS[_.random(COLORS.length - 1)];
-    let num = _.random(10000);
+    var gameObj = loadGame()
 
-    container.append(Mustache.render(template, { color, num }));
+    var imagename = gameObj.imagename
+    var href = gameObj.href
+
+    container.append(Mustache.render(template, { imagename, href }));
 }
 
 $(() => {
