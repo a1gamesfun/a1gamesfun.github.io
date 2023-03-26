@@ -1,3 +1,4 @@
+/*
 import fs from "fs";
 import path from "path";
 
@@ -12,6 +13,18 @@ jsonsInDir.forEach(file => {
     //set the string into our list of games
     GAMES.push(json);
 });
+
+*/
+$(() => {
+
+    var filepath = 'https://a1games.fun/json/games'
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", filepath, false);
+
+
+
+});
+
 
 
 const GAMES = [ ];
