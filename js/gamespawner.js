@@ -36,21 +36,19 @@ const GAMES = [ ];
 
 $(() => {
 
-
-    var people = [];
-
     $.getJSON('json/games.json', function (data) {
         $.each(data, () => {
             GAMES.push(data)
         });
-        /*
-        $.each(data, function (i, f) {
-            var tblRow = "<tr>" + "<td>" + f.firstName + "</td>" +
-                "<td>" + f.lastName + "</td>" + "<td>" + f.job + "</td>" + "<td>" + f.roll + "</td>" + "</tr>"
-            $(tblRow).appendTo("#userdata tbody");
-        });
-        */
     });
+    /*
+    $.each(data, function (i, f) {
+        var tblRow = "<tr>" + "<td>" + f.firstName + "</td>" +
+            "<td>" + f.lastName + "</td>" + "<td>" + f.job + "</td>" + "<td>" + f.roll + "</td>" + "</tr>"
+        $(tblRow).appendTo("#userdata tbody");
+    });
+    */
+});
 
 
 function loadGame() {
@@ -71,18 +69,21 @@ function loadGame() {
 
 function addItem(container, template) {
 
-    var gameObj = loadGame()
+    var gameObj = loadGame();
 
-    var imagename = gameObj.imagename
-    var href = gameObj.href
+    var imagename = gameObj.imagename;
+    var href = gameObj.href;
 
     container.append(Mustache.render(template, { imagename, href }));
 }
 
 $(() => {
-    const tmpl = $('#item_template').html()
+    const tmpl = $('#item_template').html();
     const container = $('#app');
 
-    for (let i = 0; i < 5; i++) { addItem(container, tmpl); }
+    for (let i = 0; i < 5; i++)
+    {
+        addItem(container, tmpl);
+    }
 
 });
