@@ -12,6 +12,7 @@
     <!-- Dynamically Loading the Games-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+    <script src="js/getgames.php"></script>
     <script src="js/gamespawner.js"></script>
     <!--<script type="module" src="https://a1games.fun/js/gamespawner.js"></script>-->
     <!-- Google AdSense -->
@@ -22,8 +23,15 @@
             $("#footer").load("jquery/footer.html");
         });
     </script>
+        var files = <? php $out = array(); foreach(glob('file/*.html') as $filename) { $p = pathinfo($filename); $out[] = $p['filename']; } echo json_encode($out); ?>;
+    <script type="text/javascript">
+
+    </script>
 </head>
 <body class="body">
+
+
+
     <!-- load header in -->
     <header id="header"></header>
 
