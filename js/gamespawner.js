@@ -39,6 +39,7 @@ $(() => {
     $.getJSON('json/games.json', function (data) {
         $.each(data, () => {
             GAMES.push(data)
+            print("pushed data: " + data);
         });
     });
     /*
