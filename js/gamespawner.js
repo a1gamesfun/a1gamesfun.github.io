@@ -35,8 +35,8 @@ $(() => {
 const GAMES = [ ];
 
 $(() => {
-
-    $.getJSON('json/games.json', function (data) {
+    print("Getting json file")
+    $.getJSON('../json/games/space_voyage.json', function (data) {
         $.each(data, () => {
             GAMES.push(data)
             print("pushed data: " + data);
