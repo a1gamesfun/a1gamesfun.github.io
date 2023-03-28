@@ -8,8 +8,23 @@
     <link rel="stylesheet" href="../../CSS/textmod.css" media="screen">
     <link rel="stylesheet" href="../../CSS/unity.css" media="screen">
     <link rel="shortcut icon" href="../../files/img/icon/a1Icon16px.ico" type="image/x-icon">
+    <!-- Jquery (load first!) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4290613853758058" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $("#header").load("jquery/header.html");
+            $("#footer").load("jquery/footer.html");
+        });
+    </script>
   </head>
+
   <body>
+    <!-- load header in -->
+    <header id="header"></header>
+
+
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=960 height=600></canvas>
       <div id="unity-loading-bar">
@@ -57,6 +72,9 @@
         updateBannerVisibility();
       }
 
+
+
+      // Change this to change the game that is displayed
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/crab_island.loader.js";
       var config = {
@@ -65,7 +83,7 @@
         codeUrl: buildUrl + "/crab_island.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "a1creator",
-        productName: "CrabZoo",
+        productName: "Crab Island",
         productVersion: "1.1",
         showBanner: unityShowBanner,
       };
@@ -105,5 +123,10 @@
       };
       document.body.appendChild(script);
     </script>
+
+    
+
+    <!-- FOOTER -->
+    <footer style="background-color: #4d4d4d;" id="footer"> </footer>
   </body>
 </html>
