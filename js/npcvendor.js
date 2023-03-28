@@ -17,6 +17,8 @@ class Shed extends House {
         super(height, width, length);
         this.tools = tools;
     }
+
+    
 }
 
 
