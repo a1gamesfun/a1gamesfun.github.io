@@ -39,11 +39,11 @@ $(() => {
 
 /*
 $(() => {
-    window.print("Getting json file")
+    console.log("Getting json file")
     $.getJSON('../json/games/space_voyage.json', function (data) {
         $.each(data, () => {
             GAMES.push(data)
-            window.print("pushed data: " + data);
+            console.log("pushed data: " + data);
         });
     });
     
