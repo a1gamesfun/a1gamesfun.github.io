@@ -71,8 +71,8 @@ async function spawnHTML()
 {
     await setGAMES();
     // spawn the games as html
-    const tmpl = $('#item_template').html();
-        const container = $('#app');
+    const tmpl = $('#game_template').html();
+        const container = $('#gamegrid');
     
         for (let i = 0; i < GAMES.length; i++)
         {
