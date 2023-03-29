@@ -67,10 +67,8 @@
 }
 #unity-build-title 
 { 
-    width: 0; /*This autofits to child width*/
+    margin-right: 1rem;
     text-align: right;
-    margin-right: 10px;
-    line-height: 38px;
     font-family: arial;
     font-size: 18px;
 }
