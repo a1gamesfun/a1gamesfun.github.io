@@ -41,7 +41,7 @@ async function loadGame() {
         .then((jsonresponse) =>  {
     
             // remove one item at given index
-            GAMES.splice(gamename, 1);
+            GAMES.splice(rnd, 1);
 
             // return generated json object
             return jsonresponse;
