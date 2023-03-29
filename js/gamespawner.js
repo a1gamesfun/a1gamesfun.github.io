@@ -17,7 +17,7 @@ jsonsInDir.forEach(file => {
 */
 
 
-fetch("http://a1games.fun/json/gamelist.json")
+fetch("https://a1games.fun/json/gamelist.json")
     .then((response) => response.json())
     .then((data) =>  {
         console.log(data);
