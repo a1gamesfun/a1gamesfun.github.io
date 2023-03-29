@@ -58,8 +58,8 @@ async function addItem(container, template) {
 
     var gameObj = await loadGame();
 
-    var imagename = gameObj.imagename;
-    var href = gameObj.href;
+    var imagename = gameObj["imagename"];
+    var href = gameObj["href"];
 
     container.append(Mustache.render(template, { imagename, href }));
 }
