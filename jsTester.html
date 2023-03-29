@@ -15,11 +15,50 @@
 
     <button id="mybutton">test</button>
 
+    <h2 id="datetime" >time</h2>
+
+    <h2 id="stoptimer">Stopwatch: 0.0</h2>
+    <button id="stopwatch" onclick="startwatch()">Stopwatch</button>
+
+
     <script>
         document.getElementById("mybutton").onclick = (() => {
             document.getElementById("mytitle").innerHTML = "new text";
         });
 
+        function setDateTime() {
+            var newdate = new Date();
+            document.getElementById("datetime").innerHTML = "test " + newdate;
+        }
+
+        setInterval(setDateTime, 1000);
+
+        var intervalID = 0
+        var startTime;
+
+        function runTimer()
+        {
+            console.log("sasjdiajdoasjd");
+            //date += 1;
+            let ms = Date.now() - startTime;
+            let time = 
+            document.getElementById("stoptimer").innerHTML = "Stopwatch: " + ms;
+        }
+        function startwatch()
+        {
+            startTime = Date.now();
+            intervalID = setInterval(runTimer, 100);
+            let element = document.getElementById("stopwatch");
+            element.onclick = stopwatch;
+            element.innerHTML = "Stop"
+        }
+        function stopwatch()
+        {
+            clearInterval(intervalID);
+            let element = document.getElementById("stopwatch");
+            element.onclick = startwatch;
+            element.innerHTML = "Start"
+        }
 
     </script>
 </body>

@@ -1,17 +1,35 @@
-body { padding: 0; margin: 0 }
+
+
 #unity-container 
 { 
-    position: relative; width: 80%;  
+    position: relative; 
+    width: 100%;
+    height: 100%;
+    
+}
+#canvas-holder
+{
+    margin: auto;
+    position: relative;
+    width: 960px;
+    height: 600px;
+}
+#unity-canvas 
+{ 
+    /*padding: 80px;*/
+    width: 960px;
+    height: 600px;
+    background: #231F20;
 }
 /*
 #unity-container.unity-desktop 
 {
 
 }*/
-#unity-container.unity-mobile { width: 100%; height: 100% }
-#unity-canvas 
+#unity-container.unity-mobile 
 { 
-    background: #231F20 
+    width: 100%; 
+    height: 100% 
 }
 .unity-mobile #unity-canvas 
 { 
@@ -20,7 +38,7 @@ body { padding: 0; margin: 0 }
 }
 #unity-loading-bar 
 { 
-    position: relative; 
+    position: absolute; 
     left: 50%; 
     top: 50%; 
     transform: translate(-50%, -50%); 
