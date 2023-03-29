@@ -35,23 +35,29 @@
 }
 #unity-logo 
 { 
-    width: 154px; 
-    height: 130px; 
-    background: url('../files/img/webplayer/loading.png') no-repeat center;
+    width: 154px;
+    height: 130px;
+    background: no-repeat;
+    background-image: url('../files/img/webplayer/loading.png');
+    background-position: center;
 }
 #unity-progress-bar-empty 
 { 
     width: 141px; 
     height: 18px; 
     margin-top: 10px; 
-    background: url('../files/img/webplayer/progress-bar-empty-dark.png') no-repeat center; 
+    background: no-repeat;
+    background-image: url('../files/img/webplayer/progress-bar-empty-dark.png');
+    background-position: center;
 }
 #unity-progress-bar-full 
 { 
-    width: 0%; 
-    height: 18px; 
-    margin-top: 10px; 
-    background: url('../files/img/webplayer/progress-bar-full-dark.png') no-repeat center; 
+    width: 0%;
+    height: 18px;
+    margin-top: 10px;
+    background: no-repeat;
+    background-image: url('../files/img/webplayer/progress-bar-full-dark.png');
+    background-position: center;
 }
 #unity-footer 
 { 
@@ -61,9 +67,11 @@
 }
 #unity-webgl-logo 
 { 
-    width: 204px; 
-    height: 38px; 
-    background: url('../files/img/webplayer/webgl-logo.png') no-repeat center;
+    width: 204px;
+    height: 38px;
+    background: no-repeat;
+    background-image: url('../files/img/webplayer/webgl-logo.png');
+    background-position: center;
 }
 #unity-build-title 
 { 
@@ -74,9 +82,11 @@
 }
 #unity-fullscreen-button 
 { 
-    width: 38px; 
-    height: 38px; 
-    background: url('../files/img/webplayer/fullscreen-button.png') no-repeat center;
+    width: 38px;
+    height: 38px;
+    background: no-repeat;
+    background-image: url('../files/img/webplayer/fullscreen-button.png');
+    background-position: center;
 }
 #unity-warning 
 { 
