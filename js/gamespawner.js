@@ -16,8 +16,17 @@ jsonsInDir.forEach(file => {
 
 */
 
-const GAMES = [ ];
 
+fetch("http://a1games.fun/json/gamelist.json")
+    .then((response) => response.json())
+    .then((data) =>  {
+        console.log(data);
+    });
+
+
+
+const GAMES = [ ];
+/*
 $(() => {
     /*
     var filepath = 'https://a1games.fun/json/games'
@@ -25,7 +34,7 @@ $(() => {
     rawFile.open("GET", filepath, false);
 
     var imagenames = new Array()
-    */
+    
     var files = "<? php $out = array(); foreach(glob('file/*.html') as $filename) { $p = pathinfo($filename); $out[] = $p['filename']; } echo json_encode($out); ?>";
 
     for (var i = 0; i < files.length; i++) {
@@ -34,7 +43,7 @@ $(() => {
 
 });
 
-
+*/
 
 
 /*
@@ -81,7 +90,7 @@ function addItem(container, template) {
 
     container.append(Mustache.render(template, { imagename, href }));
 }
-
+/*
 $(() => {
     const tmpl = $('#item_template').html();
     const container = $('#app');
@@ -91,4 +100,4 @@ $(() => {
         addItem(container, tmpl);
     }
 
-});
+});*/

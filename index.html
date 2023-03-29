@@ -24,7 +24,7 @@
             $("#footer").load("jquery/footer.html");
         });
     </script>
-    <script type="text/javascript">
+    <!--<script type="text/javascript">
         var files = <?php 
         $out = array(); 
         foreach(glob('file/*.html') as $filename) 
@@ -35,7 +35,7 @@
         echo json_encode($out); 
         ?>;
 
-    </script>
+    </script>-->
 </head>
 <body class="body">
 
@@ -44,7 +44,7 @@
     <!-- load header in -->
     <header id="header"></header>
 
-
+<!--
     <template id="item_template">
         <a class="game-thumbnail" href="{{href}}" target="_blank">
             <img class="game-thumbnail-image" src="files/img/thumbnails/{{imagename}}.png" />
@@ -53,6 +53,7 @@
 
     <div id="app" class="container">
     </div>
+-->
 
     <!-- grid layout thing for showcases -->
     <div class="no-text-deco games-grid">
