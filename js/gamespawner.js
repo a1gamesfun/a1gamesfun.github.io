@@ -19,7 +19,7 @@ async function setGAMES()
         .then((jsonresponse) =>  {
     
             var list = jsonresponse.gamelist;
-            console.log(list);
+            //console.log(list);
             let l = list.length;
 
             for (let i = 0; i < l; i++) {
@@ -78,7 +78,7 @@ async function addItem(i, container, template) {
 async function spawnHTML()
 {
     await setGAMES();
-    console.log(GAMES);
+    //console.log(GAMES);
     // spawn the games as html
     const tmpl = $('#game_template').html();
         const container = $('#gamegrid');
