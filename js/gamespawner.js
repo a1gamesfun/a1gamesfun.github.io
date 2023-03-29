@@ -21,30 +21,16 @@ fetch("https://a1games.fun/json/gamelist.json")
     .then((response) => response.json())
     .then((jsonresponse) =>  {
         console.log(jsonresponse);
+
+        console.log(jsonresponse.gamelist.length)
+
+        console.log(jsonresponse.gamelist[2])
     });
 
 
 
+
 const GAMES = [ ];
-/*
-$(() => {
-    /*
-    var filepath = 'https://a1games.fun/json/games'
-    var rawFile = new XMLHttpRequest();
-    rawFile.open("GET", filepath, false);
-
-    var imagenames = new Array()
-    
-    var files = "<? php $out = array(); foreach(glob('file/*.html') as $filename) { $p = pathinfo($filename); $out[] = $p['filename']; } echo json_encode($out); ?>";
-
-    for (var i = 0; i < files.length; i++) {
-        GAMES.push(files[i]);
-    }
-
-});
-
-*/
-
 
 /*
 $(() => {
