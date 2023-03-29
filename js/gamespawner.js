@@ -36,7 +36,7 @@ async function loadGame() {
     let gamename = GAMES[rnd];
     
     // fetch the json game info file
-    await fetch(`https://a1games.fun/json/games/${gamename}.json`)
+    return await fetch(`https://a1games.fun/json/games/${gamename}.json`)
         .then((response) => response.json())
         .then((jsonresponse) =>  {
     
@@ -60,6 +60,9 @@ async function addItem(container, template) {
 
     var imagename = gameObj["imagename"];
     var href = gameObj["href"];
+    var classes = gameObj["support_controller"].includes("t") ? "support_controller" : "" + " " + gameObj["support_mobile"].includes("t") ? "support_mobile" : "" + " " + gameObj["support_pc"].includes("t") ? "support_pc" : "";
+    console.log(classes);
+
 
     container.append(Mustache.render(template, { imagename, href }));
 }

@@ -2,6 +2,6 @@
   "imagename": "crab_island",
   "href": "https://a1creator.com/spacevoyage",
   "support_controller": "false",
-  "support_mobile": "false",
+  "support_mobile": "true",
   "support_pc": "true"
 }
