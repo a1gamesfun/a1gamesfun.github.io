@@ -35,8 +35,8 @@
 }
 #unity-logo 
 { 
-    width: 154px;
-    height: 130px;
+    width: 150px;
+    height: 150px;
     background: no-repeat;
     background-image: url('../files/img/webplayer/loading.png');
     background-position: center;
@@ -69,9 +69,10 @@
 { 
     width: 204px;
     height: 38px;
-    background: no-repeat;
+    background:  no-repeat;
+    background-size: contain;
     background-image: url('../files/img/webplayer/webgl-logo.png');
-    background-position: center;
+    background-position: left;
 }
 #unity-build-title 
 { 

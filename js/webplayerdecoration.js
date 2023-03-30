@@ -1,13 +1,36 @@
 const gamename = "crab_island"
 
-function LoadDecorations () {
-    console.log(gamename);
-    document.getElementById("unity-webgl-logo").style.backgroundImage = `url('../files/img/gameIcons/${gamename}.png') no-repeat center;`
-    console.log(document.getElementById("unity-webgl-logo").style.background)
-    document.getElementById("unity-logo").style.backgroundImage = `url('../files/img/gameIcons/${gamename}.png') no-repeat center;`
 
+function setCharAt(str,index,chr) {
+    if(index > str.length-1) return str;
+    return str.substring(0,index) + chr + str.substring(index+1);
+}
 
-    document.getElementById("unity-build-title").innerHTML = `${gamename} THIS IS A TEST`
+async function LoadDecorations () {
+
+    // set ugly logo to game logo
+    document.getElementById("unity-webgl-logo").style.backgroundImage = `url('../../files/img/gameIcons/${gamename}.png')`;
+    
+    // set loading logo to game logo
+    document.getElementById("unity-logo").style.backgroundImage = `url('../../files/img/gameIcons/${gamename}.png')`;
+
+    let name = gamename.replace("_", " ");
+    let indexes = [];
+    for(var i = 0; i < name.length; i++) {
+        
+        if (name[i] === " ") indexes.push(i);
+    }
+
+    // always start with first chat uppercase
+    name = setCharAt(name, 0, name[0].toUpperCase());
+
+    // set all words after spaces uppercase
+    for (let i = 0; i < indexes.length; i++) {
+        setCharAt(name, 0, name[i+1].toUpperCase());
+    }
+    
+    // override it in html
+    document.getElementById("unity-build-title").innerHTML = name;
 }
 
 LoadDecorations();
