@@ -51,7 +51,7 @@ async function loadGame(i) {
 
 var container = document.getElementById("gamegrid");
 //var tmpl = document.getElementById("game_template");
-var tmpl = document.getElementsByClassName("body")[0].getElementsByClassName("game-thumbnail")[0];
+var tmpl = document.body.getElementsByClassName("game-thumbnail")[0];
 
 async function addItem(i) 
 {
