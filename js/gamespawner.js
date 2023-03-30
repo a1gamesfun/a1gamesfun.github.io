@@ -63,7 +63,7 @@ async function addItem(i)
     
     let clone = tmpl.cloneNode(true);
     
-    console.log(clone)
+    //console.log(clone)
 
     clone.href = href;
     
@@ -89,7 +89,7 @@ async function spawnHTML()
     {
         addItem(i);
     }
-    console.log(container);
+    //console.log(container);
 }
   
 
