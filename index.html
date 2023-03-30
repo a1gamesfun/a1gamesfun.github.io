@@ -11,10 +11,7 @@
     <!-- Jquery (load first!) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- Dynamically Loading the Games-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
-    
-    <script src="js/gamespawner.js"></script>
     
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4290613853758058" crossorigin="anonymous"></script>
@@ -46,11 +43,9 @@
 
     
     <!-- grid layout thing for showcases -->
-    <template id="game_template">
-        <a class="game-thumbnail" href="{{href}}">
-            <img class="game-thumbnail-image" src="files/img/thumbnails/{{imagename}}.png" />
-        </a>
-    </template>
+    <a class="game-thumbnail" href="{{href}}" hidden>
+        <img class="game-thumbnail-image" src="files/img/thumbnails/{{imagename}}.png" />
+    </a>
 
     <div id="gamegrid" class="container no-text-deco games-grid">
     </div>
@@ -60,6 +55,10 @@
 
     <!-- FOOTER -->
     <footer style="background-color: #4d4d4d;" id="footer"> </footer>
+
+
+
+    <script src="js/gamespawner.js"></script>
 
 </body>
 

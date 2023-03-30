@@ -1,8 +1,4 @@
 
-
-
-
-
 // define games array
 var GAMES = []
 
@@ -35,12 +31,6 @@ async function setGAMES()
         });
 }
 
-
-
-
-
-
-
 async function loadGame(i) {
 
     // get json string
@@ -59,34 +49,48 @@ async function loadGame(i) {
 
 }
 
+var container = document.getElementById("gamegrid");
+//var tmpl = document.getElementById("game_template");
+var tmpl = document.getElementsByClassName("body")[0].getElementsByClassName("game-thumbnail")[0];
 
-
-
-async function addItem(i, container, template) {
-
+async function addItem(i) 
+{
     var gameObj = await loadGame(i);
 
     var imagename = gameObj["imagename"];
     var href = gameObj["href"];
     var classes = gameObj["support_controller"].includes("t") ? "support_controller" : "" + " " + gameObj["support_mobile"].includes("t") ? "support_mobile" : "" + " " + gameObj["support_pc"].includes("t") ? "support_pc" : "";
-    //console.log(classes);
+    
+    let clone = tmpl.cloneNode(true);
+    
+    console.log(clone)
 
+    clone.href = href;
+    
+    clone.getElementsByClassName("game-thumbnail-image")[0].src = `files/img/thumbnails/${imagename}.png`
 
-    container.append(Mustache.render(template, { imagename, href }));
+    clone.removeAttribute("hidden");
+    
+    container.append(clone);
 }
+
+
+
+
+
 
 async function spawnHTML()
 {
     await setGAMES();
     //console.log(GAMES);
     // spawn the games as html
-    const tmpl = $('#game_template').html();
-        const container = $('#gamegrid');
-    
-        for (let i = 0; i < GAMES.length; i++)
-        {
-            addItem(i, container, tmpl);
-        }
+
+    for (let i = 0; i < GAMES.length; i++)
+    {
+        addItem(i);
+    }
+    console.log(container);
 }
+  
 
 spawnHTML();
