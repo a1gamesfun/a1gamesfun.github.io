@@ -64,6 +64,7 @@
     width: 100%;
     position: relative;
     overflow: auto;
+    background-color: lightblue;
 }
 #unity-webgl-logo 
 { 
