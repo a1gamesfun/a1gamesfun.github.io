@@ -1,12 +1,7 @@
 
 
 #background {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    background-color: transparent;
+    height: 100vh;
     background: linear-gradient(0deg, rgba(0,52,255,1) 0%, rgba(76,157,249,1) 50%, rgba(45,210,253,1) 100%);
 }
 

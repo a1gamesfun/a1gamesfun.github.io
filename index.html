@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html id="background" style="font-size: 16px;">
+<html style="font-size: 16px;">
 <head>
     <title>a1games.fun</title>
     <link rel="stylesheet" href="CSS/index.css" media="screen">
@@ -21,22 +21,8 @@
             $("#footer").load("jquery/footer.html");
         });
     </script>
-    <!--<script type="text/javascript">
-        var files = <?php 
-        $out = array(); 
-        foreach(glob('file/*.html') as $filename) 
-        { 
-            $p = pathinfo($filename); 
-            $out[] = $p['filename']; 
-        } 
-        echo json_encode($out); 
-        ?>;
-
-    </script>-->
 </head>
-<body id="body">
-
-
+<body id="background">
 
     <!-- load header in -->
     <header id="header"></header>
@@ -57,7 +43,7 @@
     <footer style="background-color: #4d4d4d;" id="footer"> </footer>
 
 
-
+    <!-- Spawn Games -->
     <script src="js/gamespawner.js"></script>
 
 </body>
