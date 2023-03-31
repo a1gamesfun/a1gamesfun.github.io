@@ -1,7 +1,9 @@
 
 
 #background {
-    height: 100vh;
+    margin: 0;
+    min-height: 100vh;
+    max-height: 100%;
     background: linear-gradient(0deg, rgba(0,52,255,1) 0%, rgba(76,157,249,1) 50%, rgba(45,210,253,1) 100%);
 }
 

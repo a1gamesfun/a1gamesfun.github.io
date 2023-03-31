@@ -1,24 +1,32 @@
+td {
+    padding: 0;
+}
 
+
+#game-description {
+    height: 8rem;
+    background-color: aquamarine;
+}
 
 #unity-container 
 { 
     position: relative; 
     width: 100%;
     height: 100%;
-    
 }
 #canvas-holder
 {
     margin: auto;
     position: relative;
     width: 960px;
+    height: auto;
 }
 #unity-canvas 
 { 
-    /*padding: 80px;*/
     width: 960px;
     height: 600px;
     background: #231F20;
+    display: block;
 }
 /*
 #unity-container.unity-desktop 
@@ -61,13 +69,18 @@
 }
 #unity-footer 
 { 
+    margin: 0;
+    padding: 0;
     width: 100%;
+    height: 50px;
     position: relative;
     overflow: auto;
     background-color: lightblue;
+    vertical-align: top;
 }
 #unity-webgl-logo 
 { 
+    margin-left: 0.4rem;
     width: 204px;
     height: 38px;
     background:  no-repeat;
@@ -84,6 +97,7 @@
 }
 #unity-fullscreen-button 
 { 
+    margin-right: 0.4rem;
     width: 38px;
     height: 38px;
     background: no-repeat;

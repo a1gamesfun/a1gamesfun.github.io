@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Crab Island</title>
-    <link rel="stylesheet" href="https://a1games.fun/CSS/index.css" media="screen">
-    <link rel="stylesheet" href="https://a1games.fun/CSS/unity.css" media="screen">
+    <link rel="stylesheet" href="../../CSS/index.css" media="screen">
+    <link rel="stylesheet" href="../../CSS/unity.css" media="screen">
     <link rel="shortcut icon" href="https://a1games.fun/files/img/icon/a1Icon16px.ico" type="image/x-icon">
     <!-- Jquery (load first!) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -27,12 +27,14 @@
     <div id="unity-container" class="unity-desktop">
       <div id="canvas-holder">
         <canvas id="unity-canvas" ></canvas>
+
         <div id="unity-loading-bar">
           <div id="unity-logo"></div>
           <div id="unity-progress-bar-empty">
             <div id="unity-progress-bar-full"></div>
           </div>
         </div>
+        
         <div id="unity-warning"> </div>
         
         <table id="unity-footer">
@@ -46,7 +48,12 @@
             <div id="unity-fullscreen-button"></div>
           </td>
         </table>
-        
+
+
+        <div id="game-description">
+          
+      </div>
+
       </div>
     </div>
 
@@ -113,8 +120,7 @@
         config.devicePixelRatio = 1;
         unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
-        canvas.style.width = "960px";
-        canvas.style.height = "600px";
+        // If build works:
       }
       loadingBar.style.display = "block";
 
