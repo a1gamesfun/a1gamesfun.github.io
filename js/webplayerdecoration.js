@@ -35,7 +35,7 @@ async function LoadDecorations () {
           
         let clone = tmpl.cloneNode(true);
 
-        clone.src = `files/img/screenshots/${gameinfo["gamename"]}/${i}.png`;
+        clone.src = `files/img/screenshots/${gameinfo["gamename"]}/${i+1}.png`;
         clone.classList.add("screenshot");
 
         clone.removeAttribute("hidden");

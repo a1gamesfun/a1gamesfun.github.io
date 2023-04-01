@@ -2,6 +2,24 @@ td {
     padding: 0;
 }
 
+::-webkit-scrollbar {
+    background-color: #ffffff20;
+    height: 1rem;
+    -webkit-overflow-scrolling: touch;
+}
+/* Handle */
+::-webkit-scrollbar-thumb:horizontal {
+    background: rgb(30, 195, 255);
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #ffffff40;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:horizontal:hover {
+    background: rgb(0, 204, 255);
+}
+
 #screenshot-row {
     height: 0;
 }
