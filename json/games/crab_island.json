@@ -1,7 +1,9 @@
 {
-  "imagename": "crab_island",
-  "href": "games/crab_island/index.html",
+  "gamename": "crab_island",
+  "href": "webplayer.html",
   "support_controller": "false",
   "support_mobile": "true",
-  "support_pc": "true"
+  "support_pc": "true",
+  "description": "This game has no description."
+
 }

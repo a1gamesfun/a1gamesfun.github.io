@@ -10,9 +10,15 @@ td {
 }
 
 #game-description {
+    font-size: medium;
+    font: bold;
+    font-style: normal;
+}
+
+#description-container {
     height: 16rem;
     width: 100%;
-    background-color: #597eac;
+    background-color: yellow;
 }
 
 #unity-container 

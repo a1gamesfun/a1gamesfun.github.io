@@ -1,6 +1,6 @@
 
 // define games array
-var GAMES = []
+var GAMES = [];
 
 // get the array of gamenames
 // Example: [
@@ -57,7 +57,7 @@ async function addItem(i)
 {
     var gameObj = await loadGame(i);
 
-    var imagename = gameObj["imagename"];
+    var gamename = gameObj["gamename"];
     var href = gameObj["href"];
     var classes = gameObj["support_controller"].includes("t") ? "support_controller" : "" + " " + gameObj["support_mobile"].includes("t") ? "support_mobile" : "" + " " + gameObj["support_pc"].includes("t") ? "support_pc" : "";
     
@@ -66,8 +66,10 @@ async function addItem(i)
     //console.log(clone)
 
     clone.href = href;
+
+    clone.id = gamename;
     
-    clone.getElementsByClassName("game-thumbnail-image")[0].src = `files/img/thumbnails/${imagename}.png`
+    clone.getElementsByClassName("game-thumbnail-image")[0].src = `files/img/thumbnails/${gamename}.png`
 
     clone.removeAttribute("hidden");
     
