@@ -30,7 +30,7 @@ td {
 }
 #unity-canvas 
 { 
-    width: 960px;
+    width: 100%;
     height: 600px;
     background: #231F20;
     display: block;
