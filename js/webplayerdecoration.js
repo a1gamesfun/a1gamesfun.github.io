@@ -1,4 +1,5 @@
-const gamename = GAMES;
+let games = localStorage.getItem("GAMES");
+const gamename = games[localStorage.getItem("SelectedGame")];
 
 
 function setCharAt(str,index,chr) {

@@ -27,7 +27,7 @@ async function setGAMES()
 
             }
             //console.log(GAMES);
-            
+            localStorage.setItem("GAMES", GAMES);
         });
 }
 
@@ -65,17 +65,25 @@ async function addItem(i)
     
     //console.log(clone)
 
-    clone.href = href;
+    console.log(clone.onclick)
+    //clone.href = href;
+    clone.onclick = function() { 
+        localStorage.setItem("SelectedGame", i);
+        //window.location.href = href; 
+    };
+    console.log(clone.onclick)
+    
+    clone.onclick = "test";     
 
     clone.id = gamename;
     
     clone.getElementsByClassName("game-thumbnail-image")[0].src = `files/img/thumbnails/${gamename}.png`
 
     clone.removeAttribute("hidden");
+
     
     container.append(clone);
 }
-
 
 
 

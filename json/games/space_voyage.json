@@ -1,7 +1,8 @@
 {
-  "imagename": "space_voyage",
+  "gamename": "space_voyage",
   "href": "https://a1creator.com/spacevoyage",
   "support_controller": "false",
   "support_mobile": "false",
-  "support_pc": "true"
+  "support_pc": "true",
+  "description": "This game has no description."
 }
