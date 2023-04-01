@@ -27,7 +27,7 @@ table {
     border-collapse: collapse;
 }
 
-img {
+.full-stretch {
     width: 100%;
     height: 100%;
 }
