@@ -82,6 +82,8 @@
 
     
     <script>
+      var gameinfo = JSON.parse(localStorage.getItem("SelectedGame"));
+
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
       var loadingBar = document.querySelector("#unity-loading-bar");
@@ -116,16 +118,16 @@
 
 
       // Change this to change the game that is displayed
-      var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/crab_island.loader.js";
+      var buildUrl = `games/${gameinfo.gamename}`;
+      var loaderUrl = buildUrl + `/${gameinfo.gamename}.loader.js`;
       var config = {
-        dataUrl: buildUrl + "/crab_island.data",
-        frameworkUrl: buildUrl + "/crab_island.framework.js",
-        codeUrl: buildUrl + "/crab_island.wasm",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "a1creator",
-        productName: "Crab Island",
-        productVersion: "1.1",
+        dataUrl: buildUrl + `/${gameinfo.gamename}.data`,
+        frameworkUrl: buildUrl + `/${gameinfo.gamename}.framework.js`,
+        codeUrl: buildUrl + `/${gameinfo.gamename}.wasm`,
+        streamingAssetsUrl: `StreamingAssets`,
+        companyName: `${gameinfo.developer}`,
+        productName: `${gameinfo.title}`,
+        productVersion: `1.1`,
         showBanner: unityShowBanner,
       };
 
