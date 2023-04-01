@@ -3,9 +3,16 @@ td {
 }
 
 
+#made-with-unity {
+    display: block;
+    width: 8rem;
+    height: auto;
+}
+
 #game-description {
-    height: 8rem;
-    background-color: aquamarine;
+    height: 16rem;
+    width: 100%;
+    background-color: #597eac;
 }
 
 #unity-container 
@@ -37,7 +44,7 @@ td {
 { 
     position: absolute; 
     left: 50%; 
-    top: 50%; 
+    top: 35%; 
     transform: translate(-50%, -50%); 
     display: none 
 }
@@ -45,9 +52,6 @@ td {
 { 
     width: 150px;
     height: 150px;
-    background: no-repeat;
-    background-image: url('../files/img/webplayer/loading.png');
-    background-position: center;
 }
 #unity-progress-bar-empty 
 { 
@@ -75,18 +79,14 @@ td {
     height: 50px;
     position: relative;
     overflow: auto;
-    background-color: lightblue;
+    background-color: #aff2ff;
     vertical-align: top;
 }
-#unity-webgl-logo 
+#game-logo 
 { 
-    margin-left: 0.4rem;
-    width: 204px;
-    height: 38px;
-    background:  no-repeat;
-    background-size: contain;
-    background-image: url('../files/img/webplayer/webgl-logo.png');
-    background-position: left;
+    margin: 0 0.4rem;
+    width: 40px;
+    height: auto;
 }
 #unity-build-title 
 { 

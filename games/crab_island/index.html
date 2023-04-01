@@ -26,20 +26,25 @@
 
     <div id="unity-container" class="unity-desktop">
       <div id="canvas-holder">
-        <canvas id="unity-canvas" ></canvas>
+        <canvas id="unity-canvas">
 
+        </canvas>
         <div id="unity-loading-bar">
-          <div id="unity-logo"></div>
+          <img id="unity-logo" src="../files/img/webplayer/loading.png"/>
           <div id="unity-progress-bar-empty">
             <div id="unity-progress-bar-full"></div>
           </div>
         </div>
+
         
         <div id="unity-warning"> </div>
         
         <table id="unity-footer">
+          <td align="left" style="width: 0;">
+            <img id="game-logo" src="../../files/img/gameIcons/crab_island.png" />
+          </td>
           <td align="left">
-            <div id="unity-webgl-logo"></div>
+            <img id="made-with-unity" src="../../files/img/webplayer/madewithunity.png" />
           </td>
           <td align="right">
             <div id="unity-build-title">Crab Island</div>
@@ -50,9 +55,26 @@
         </table>
 
 
-        <div id="game-description">
-          
-      </div>
+        <table id="game-description">
+          <tr>
+            <th align="left">
+              Developer: {{developer}}
+            </th>
+          </tr>
+          <tr>
+            <td>
+              Description: {{description}}
+            </td>
+          </tr>
+          </tr>
+          <tr>
+            <td>
+              Find the developer(s) here: {{socials}}
+            </td>
+          </tr>
+        </table>
+
+      <div style="height: 4rem;"/>
 
       </div>
     </div>

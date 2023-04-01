@@ -9,11 +9,13 @@ function setCharAt(str,index,chr) {
 async function LoadDecorations () {
 
     // set ugly logo to game logo
-    document.getElementById("unity-webgl-logo").style.backgroundImage = `url('../../files/img/gameIcons/${gamename}.png')`;
+    document.getElementById("game-logo").src = `../../files/img/gameIcons/${gamename}.png`;
     
     // set loading logo to game logo
-    document.getElementById("unity-logo").style.backgroundImage = `url('../../files/img/gameIcons/${gamename}.png')`;
+    document.getElementById("unity-logo").src = `../../files/img/gameIcons/${gamename}.png`;
 
+
+    // set game title
     let name = gamename.replace("_", " ");
     let indexes = [];
     for(var i = 0; i < name.length; i++) {
