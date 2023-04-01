@@ -30,15 +30,21 @@ async function LoadDecorations () {
 
     var ssContainer = document.getElementById("screenshot-container");
     var tmpl = document.getElementById("screenshot-template");
-    let clone = tmpl.cloneNode(true);
 
-    clone.src = `files/img/screenshots/${gameinfo["gamename"]}/1.png`
-    clone.classList.add("screenshot"); 
-    
-    clone.removeAttribute("hidden");
-    clone.removeAttribute("id");
-    
-    ssContainer.append(clone);
+    for (let i = 0; i < gameinfo["screenshot-count"]; i++) {
+          
+        let clone = tmpl.cloneNode(true);
+
+        clone.src = `files/img/screenshots/${gameinfo["gamename"]}/${i}.png`;
+        clone.classList.add("screenshot");
+
+        clone.removeAttribute("hidden");
+        clone.removeAttribute("id");
+
+        ssContainer.append(clone);
+
+    }
+
     tmpl.remove();
 
     // set the description
@@ -47,4 +53,4 @@ async function LoadDecorations () {
 
 LoadDecorations();
 
-console.log(localStorage.getItem("SelectedGame"))
+//console.log(localStorage.getItem("SelectedGame"))
