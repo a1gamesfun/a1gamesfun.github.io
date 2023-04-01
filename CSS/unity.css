@@ -2,6 +2,13 @@ td {
     padding: 0;
 }
 
+.screenshot {
+    height: 9rem;
+}
+#screenshot-container {
+    height: 8rem;
+    width: 100%;
+}
 
 #made-with-unity {
     display: block;
@@ -18,7 +25,7 @@ td {
 #description-container {
     height: 16rem;
     width: 100%;
-    background-color: yellow;
+    background-color: rgb(142, 184, 212);
 }
 
 #unity-container 

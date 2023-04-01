@@ -27,17 +27,13 @@ async function setGAMES()
 
             }
             //console.log(GAMES);
-            localStorage.setItem("GAMES", GAMES);
         });
 }
 
 async function loadGame(i) {
-
-    // get json string
-    let gamename = GAMES[i];
     
     // fetch the json game info file
-    return await fetch(`https://a1games.fun/json/games/${gamename}.json`)
+    return await fetch(`https://a1games.fun/json/games/${GAMES[i]}.json`)
         .then((response) => response.json())
         .then((jsonresponse) =>  {
 
@@ -45,7 +41,6 @@ async function loadGame(i) {
             return jsonresponse;
             
         });
-
 
 }
 
@@ -65,15 +60,10 @@ async function addItem(i)
     
     //console.log(clone)
 
-    console.log(clone.onclick)
-    //clone.href = href;
     clone.onclick = function() { 
-        localStorage.setItem("SelectedGame", i);
-        //window.location.href = href; 
+        localStorage.setItem("SelectedGame", JSON.stringify(gameObj));
+        window.location.href = href; 
     };
-    console.log(clone.onclick)
-    
-    clone.onclick = "test";     
 
     clone.id = gamename;
     
@@ -81,7 +71,6 @@ async function addItem(i)
 
     clone.removeAttribute("hidden");
 
-    
     container.append(clone);
 }
 

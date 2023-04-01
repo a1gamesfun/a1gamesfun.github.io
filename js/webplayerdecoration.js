@@ -1,6 +1,4 @@
-let games = localStorage.getItem("GAMES");
-const gamename = games[localStorage.getItem("SelectedGame")];
-
+var gameinfo = JSON.parse(localStorage.getItem("SelectedGame"));
 
 function setCharAt(str,index,chr) {
     if(index > str.length-1) return str;
@@ -8,16 +6,24 @@ function setCharAt(str,index,chr) {
 }
 
 async function LoadDecorations () {
-
-    // set ugly logo to game logo
-    document.getElementById("game-logo").src = `files/img/gameIcons/${gamename}.png`;
+    // fetch the game information first
+    /*await fetch(`https://a1games.fun/json/games/${localStorage.getItem("SelectedGame")}.json`)
+    .then((response) => response.json())
+    .then((jsonresponse) =>  {
+        gameinfo = jsonresponse;
+    });*/
     
-    // set loading logo to game logo
-    document.getElementById("unity-logo").src = `files/img/gameIcons/${gamename}.png`;
+    // ---- WEB PLAYER: ----
+
+    // replace ugly logo with game logo
+    document.getElementById("game-logo").src = `files/img/gameIcons/${gameinfo["gamename"]}.png`;
+    
+    // replace loading logo with game logo
+    document.getElementById("unity-logo").src = `files/img/gameIcons/${gameinfo["gamename"]}.png`;
 
 
     // set game title
-    let name = gamename.replace("_", " ");
+    let name = gameinfo["gamename"].replace("_", " ");
     let indexes = [];
     for(var i = 0; i < name.length; i++) {
         
@@ -34,8 +40,25 @@ async function LoadDecorations () {
     // override it in html
     document.getElementById("unity-build-title").innerHTML = name;
 
+
+    // ---- DESCRIPTION: ----
+
+    var ssContainer = document.getElementById("screenshot-container");
+    var tmpl = document.getElementById("screenshot-template");
+    let clone = tmpl.cloneNode(true);
+
+    clone.src = `files/img/screenshots/${gameinfo["gamename"]}/1.png`
+    clone.classList.add("screenshot"); 
+    
+    clone.removeAttribute("hidden");
+    clone.removeAttribute("id");
+    
+    ssContainer.append(clone)
+
     // set the description
-    document.getElementById("game-description").innerHTML = "test description asjoisajoijoaij";
+    document.getElementById("game-description").innerHTML = gameinfo["description"];
 }
 
 LoadDecorations();
+
+console.log(localStorage.getItem("SelectedGame"))
