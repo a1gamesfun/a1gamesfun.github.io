@@ -53,7 +53,8 @@ async function LoadDecorations () {
     clone.removeAttribute("hidden");
     clone.removeAttribute("id");
     
-    ssContainer.append(clone)
+    ssContainer.append(clone);
+    tmpl.remove();
 
     // set the description
     document.getElementById("game-description").innerHTML = gameinfo["description"];

@@ -2,12 +2,21 @@ td {
     padding: 0;
 }
 
+#screenshot-row {
+    height: 0;
+}
 .screenshot {
-    height: 9rem;
+    display: inline-block;
+    height: 10rem;
+    padding: 0;
+    margin: 0;
 }
 #screenshot-container {
-    height: 8rem;
+    height: auto;
     width: 100%;
+    overflow: auto;
+    white-space: nowrap;
+    font-size: 0;
 }
 
 #made-with-unity {
