@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Crab Island</title>
+    <link rel="stylesheet" href="CSS/slider.css" media="screen">
     <link rel="stylesheet" href="CSS/index.css" media="screen">
     <link rel="stylesheet" href="CSS/unity.css" media="screen">
     <link rel="shortcut icon" href="files/img/icon/a1Icon16px.ico" type="image/x-icon">
@@ -45,6 +46,15 @@
           </td>
           <td align="left">
             <img id="made-with-unity" src="files/img/webplayer/madewithunity.png" />
+          </td>
+          <td align="right">
+            <div class="slidecontainer">
+              <input type="range" min="1" max="100" value="50" class="slider" id="volumeSlider">
+            </div>
+          </td>
+          <td>
+            <h4 id="volumeNumber">100</h4>
+
           </td>
           <td align="right">
             <div id="unity-build-title">Crab Island</div>
@@ -172,6 +182,9 @@
     
     <!-- Apply Custom WebPlayer Decorations -->
     <script src="files/js/webplayerdecoration.js"></script>
+
+    <!-- Volume Slider -->
+    <script src="files/js/volumechanger.js"></script>
 
     <!-- FOOTER -->
     <footer style="background-color: #4d4d4d;" id="footer"> </footer>

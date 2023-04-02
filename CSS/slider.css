@@ -1,0 +1,22 @@
+
+
+
+
+
+#volumeNumber {
+    width: 2rem;
+}
+
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+    opacity: 0.4; /* Set transparency (for mouse-over effects on hover) */
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
