@@ -67,7 +67,7 @@ async function addItem(i)
 
     clone.id = gamename;
     
-    clone.getElementsByClassName("game-thumbnail-image")[0].src = `files/img/thumbnails/${gamename}.png`
+    clone.getElementsByClassName("game-thumbnail-image")[0].src = `games/${gamename}/thumbnail.png`
 
     clone.removeAttribute("hidden");
 
