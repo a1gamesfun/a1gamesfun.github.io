@@ -10,7 +10,7 @@ var GAMES = [];
 // ]
 async function setGAMES()
 {
-    await fetch("https://a1games.fun/json/gamelist.json")
+    await fetch("https://a1games.fun/files/json/gamelist.json")
         .then((response) => response.json())
         .then((jsonresponse) =>  {
     
@@ -33,7 +33,7 @@ async function setGAMES()
 async function loadGame(i) {
     
     // fetch the json game info file
-    return await fetch(`https://a1games.fun/json/games/${GAMES[i]}.json`)
+    return await fetch(`https://a1games.fun/files/json/games/${GAMES[i]}.json`)
         .then((response) => response.json())
         .then((jsonresponse) =>  {
 
