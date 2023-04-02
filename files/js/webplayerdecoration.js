@@ -16,11 +16,10 @@ async function LoadDecorations () {
     // ---- WEB PLAYER: ----
 
     // replace ugly logo with game logo
-    document.getElementById("game-logo").src = `files/img/gameIcons/${gameinfo["gamename"]}.png`;
+    document.getElementById("game-logo").src = `games/${gameinfo["gamename"]}/icon.png`;
     
     // replace loading logo with game logo
-    document.getElementById("unity-logo").src = `files/img/gameIcons/${gameinfo["gamename"]}.png`;
-
+    document.getElementById("unity-logo").src = `games/${gameinfo["gamename"]}/icon.png`;
 
     // set game title
     document.getElementById("unity-build-title").innerHTML = gameinfo["title"];
@@ -35,7 +34,7 @@ async function LoadDecorations () {
           
         let clone = tmpl.cloneNode(true);
 
-        clone.src = `files/img/screenshots/${gameinfo["gamename"]}/${i+1}.png`;
+        clone.src = `games/${gameinfo["gamename"]}/screenshots/${i+1}.png`;
         clone.classList.add("screenshot");
 
         clone.removeAttribute("hidden");
