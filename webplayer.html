@@ -58,17 +58,20 @@
           <div id="screenshot-container">
             <img id="screenshot-template" hidden>
           </div>
-
-          <table>
+          
+          <div id="game-description">
+            Description: {{description}}
+          </div>
+            
+          <table id="dev-tag">
             <tr>
-              <td id="game-description">
-                Description: {{description}}
+              <td style="width: 0;">
+                <img id="dev-logo" src="files/img/devIcons/a1creator.png" />
               </td>
-            </tr>
-            </tr>
-            <tr>
               <td>
-                Find the developer(s) here: {{socials}}
+                <h3 id="developed-by">
+                  Developed by {{developer}}
+                </h3>
               </td>
             </tr>
           </table>

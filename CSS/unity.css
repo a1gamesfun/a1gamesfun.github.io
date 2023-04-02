@@ -44,15 +44,29 @@ td {
 }
 
 #game-description {
-    font-size: medium;
-    font: bold;
-    font-style: normal;
+    padding: 2rem;
+    width: 100%;
 }
 
 #description-container {
-    height: 16rem;
     width: 100%;
     background-color: rgb(142, 184, 212);
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 500;
+}
+
+#dev-tag {
+    padding: 0 0 1rem 1rem;
+}
+
+#dev-logo {
+    height: 3rem;
+    padding: 0 0.5rem;
+}
+
+#developed-by {
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 700;
 }
 
 #unity-container 

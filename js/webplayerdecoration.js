@@ -49,6 +49,12 @@ async function LoadDecorations () {
 
     // set the description
     document.getElementById("game-description").innerHTML = gameinfo["description"];
+
+    // set the developer logo
+    document.getElementById("dev-logo").src = `files/img/devIcons/${gameinfo["developer"]}.png`;
+
+    // set "developed by _" text
+    document.getElementById("developed-by").innerHTML = `Developed by ${gameinfo["developer"]}`;
 }
 
 LoadDecorations();
