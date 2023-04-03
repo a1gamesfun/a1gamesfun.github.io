@@ -13,8 +13,8 @@ async function setGAMES()
     await fetch("https://a1games.fun/files/gamelist.json")
         .then((response) => response.json())
         .then((jsonresponse) =>  {
-    
-            var list = jsonresponse.gamelist;
+            // [...] makes a copy instead of a reference
+            var list = [...jsonresponse.gamelist];
             //console.log(list);
             let l = list.length;
 
