@@ -44,8 +44,8 @@ td {
 }
 
 #game-description {
-    padding: 2rem;
-    width: 100%;
+    margin: 2rem auto;
+    width: 94%;
 }
 
 #description-container {
