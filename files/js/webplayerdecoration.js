@@ -54,6 +54,7 @@ async function LoadDecorations () {
 
     // set "developed by _" text
     document.getElementById("developed-by").innerHTML = `Developed by ${gameinfo["developer"]}`;
+
 }
 
 LoadDecorations();

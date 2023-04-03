@@ -27,8 +27,14 @@
 
     <div id="unity-container" class="unity-desktop">
       <div id="canvas-holder">
-        <canvas id="unity-canvas">
 
+        <table id="unity-header">
+          <td align="middle">
+            <h1 id="unity-build-title">Crab Island</h1>
+          </td>
+        </table>
+
+        <canvas id="unity-canvas">
         </canvas>
         <div id="unity-loading-bar">
           <img id="unity-logo" src="files/img/webplayer/loading.png"/>
@@ -42,22 +48,20 @@
         
         <table id="unity-footer">
           <td align="left" style="width: 0;">
-            <img id="game-logo" src="files/img/gameIcons/crab_island.png" />
+            <img id="game-logo" src="games/crab_island/icon.png" />
           </td>
-          <td align="left">
-            <img id="made-with-unity" src="files/img/webplayer/madewithunity.png" />
-          </td>
-          <td align="right">
+          <td align="left>
             <div class="slidecontainer">
               <input type="range" min="0" max="100" value="25" class="slider" id="volumeSlider">
             </div>
           </td>
-          <td>
-            <h4 id="volumeNumber">100</h4>
-
+          <td align="left">
+            <h4 id="volumeNumber" style="margin: 0;">100</h4>
+            <!-- delete after debug-->
           </td>
+
           <td align="right">
-            <div id="unity-build-title">Crab Island</div>
+            <img id="made-with-unity" src="files/img/webplayer/madewithunity.png" />
           </td>
           <td align="right" style="width: 0;">
             <div id="unity-fullscreen-button"></div>
@@ -182,6 +186,8 @@
     
     <!-- Apply Custom WebPlayer Decorations -->
     <script src="files/js/webplayerdecoration.js"></script>
+    <!-- Apply Color Style -->
+    <script src="files/js/webplayercolorizer.js"></script>
 
     <!-- Volume Slider -->
     <script src="files/js/volumechanger.js"></script>
