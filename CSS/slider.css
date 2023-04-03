@@ -16,7 +16,7 @@
 
 
 #volumeSlider::-webkit-slider-thumb {
-    
+
     --thumb-radius: calc((var(--thumb-height) * 0.5) - 1px);
 	--clip-top: calc((var(--thumb-height) - var(--track-height)) * 0.5 - 0.5px);
 	--clip-bottom: calc(var(--thumb-height) - var(--clip-top));
@@ -47,7 +47,7 @@
 
 
 #volumeSlider  {
-	color: red;
+	color: gray;
     width: 6rem;
 	--thumb-height: 1.0rem;
 	--track-height: 0.5em;

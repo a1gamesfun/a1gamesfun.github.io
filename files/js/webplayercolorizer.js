@@ -23,11 +23,16 @@ async function ColorizePage()
     document.getElementById("unity-header").style.backgroundColor = style["primary-color"];
     
     // Secondary Color:
-    document.getElementById("unity-build-title").style.color = style["secondary-color"];
+    document.getElementById("game-title").style.color = style["secondary-color"];
     document.getElementById("game-description").style.color = style["secondary-color"];
     document.getElementById("developed-by").style.color = style["secondary-color"];
     
     document.getElementById("volumeSlider").style.color = style["secondary-color"];
+    document.getElementById("volumeSlider").innerHTML = style["secondary-color"];
+
+    //document.querySelector('screenshot-container::-webkit-slider-thumb').style.color = style["secondary-color"];
+
+    document.getElementById("screenshot-container").style.color = style["secondary-color"];
     
     // Tertiary Color:
     document.getElementById("description-container").style.backgroundColor = style["tertiary-color"];
@@ -42,7 +47,6 @@ async function ColorizePage()
     document.getElementById("game-description").style.fontFamily = style["p-font"];
     document.getElementById("developed-by").style.fontFamily = style["p-font"];
 
-    document.body.style.scrollbar = "yellow"
 
 }
 
