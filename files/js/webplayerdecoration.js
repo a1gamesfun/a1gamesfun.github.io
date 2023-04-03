@@ -22,7 +22,7 @@ async function LoadDecorations () {
     document.getElementById("unity-logo").src = `games/${gameinfo["gamename"]}/icon.png`;
 
     // set game title
-    document.getElementById("unity-build-title").innerHTML = gameinfo["title"];
+    document.getElementById("game-title").innerHTML = gameinfo["title"];
 
 
     // ---- DESCRIPTION: ----

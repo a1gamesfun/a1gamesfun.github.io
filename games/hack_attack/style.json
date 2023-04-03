@@ -1,46 +1,8 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 {
-  "background": "#69988E",
-  "primary-color": "#55F0CB",
-  "secondary-color": "#B1B8FE",
-  "tertiary-color": "#BADED5",
-  "font-color": "hack_attack",
+  "background": "#404040",
+  "primary-color": "#f2f2f2",
+  "secondary-color": "262626",
+  "tertiary-color": "#999999",
   "header-font": "Roboto",
   "p-font": "Roboto"
 }
