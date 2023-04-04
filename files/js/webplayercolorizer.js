@@ -18,6 +18,16 @@ async function ColorizePage()
 
 
 
+    // Background:
+    document.getElementById("background").style.background = style["background"];
+    
+    // Fonts:
+    // Header
+    document.getElementById("game-title").style.fontFamily = style["header-font"];
+    // Plain Text
+    document.getElementById("game-description").style.fontFamily = style["p-font"];
+    document.getElementById("developed-by").style.fontFamily = style["p-font"];
+
     // Primary Color:
     document.getElementById("unity-footer").style.backgroundColor = style["primary-color"];
     document.getElementById("unity-header").style.backgroundColor = style["primary-color"];
@@ -36,16 +46,8 @@ async function ColorizePage()
     
     // Tertiary Color:
     document.getElementById("description-container").style.backgroundColor = style["tertiary-color"];
+    document.getElementById("footerbackground").style.backgroundColor = style["tertiary-color"];
 
-    // Background:
-    document.getElementById("background").style.background = style["background"];
-    
-    // Fonts:
-    // Header
-    document.getElementById("game-title").style.fontFamily = style["header-font"];
-    // Plain Text
-    document.getElementById("game-description").style.fontFamily = style["p-font"];
-    document.getElementById("developed-by").style.fontFamily = style["p-font"];
 
 
 }
