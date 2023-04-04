@@ -1,5 +1,5 @@
 {
-  "background": "#404040 url('games/hack_attack/background.png') repeating center",
+  "background": "url('games/hack_attack/background.png')",
   "primary-color": "#f2f2f2",
   "secondary-color": "#262626",
   "tertiary-color": "#999999",
