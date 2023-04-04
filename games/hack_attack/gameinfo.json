@@ -1,6 +1,6 @@
 {
   "title": "Hack Attack",
-  "developer": "Ribbo",
+  "developers": [ "Ribbo" ],
   "gamename": "hack_attack",
   "href": "webplayer.html",
   "support_controller": "false",

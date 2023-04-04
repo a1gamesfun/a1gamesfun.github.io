@@ -49,11 +49,38 @@ async function LoadDecorations () {
     // set the description
     document.getElementById("game-description").innerHTML = gameinfo["description"];
 
+    // DEVELOPER CREDITS
     // set the developer logo
-    document.getElementById("dev-logo").src = `files/img/devIcons/${gameinfo["developer"]}.png`;
+    var devlogoContainer = document.getElementById("dev-logo-container");
+    var develogotmpl = document.getElementById("dev-logo-template");
+    
+    for (let i = 0; i < gameinfo["developers"].length; i++) {
+          
+        let clone = develogotmpl.cloneNode(true);
+
+        clone.src = `files/img/devIcons/${gameinfo["developers"][i]}.png`;
+        clone.classList.add("dev-logo");
+
+        clone.removeAttribute("hidden");
+        clone.removeAttribute("id");
+
+        devlogoContainer.append(clone);
+
+    }
+    develogotmpl.remove();
 
     // set "developed by _" text
-    document.getElementById("developed-by").innerHTML = `Developed by ${gameinfo["developer"]}`;
+    var devByString = `Developed by ${gameinfo["developers"][0]}`;
+    if (gameinfo["developers"].length > 1)
+    {
+        // add "& [developername]" for each other developer
+        for (let i = 1; i < gameinfo["developers"].length; i++) {
+              devByString += ` & ${gameinfo["developers"][i]}`;
+        }
+    }
+    document.getElementById("developed-by").innerHTML = devByString;
+
+    
 
 }
 

@@ -1,6 +1,6 @@
 {
   "title": "Crab Defense",
-  "developer": "a1creator",
+  "developers": ["a1creator"],
   "gamename": "crab_defense",
   "href": "webplayer.html",
   "support_controller": "false",
