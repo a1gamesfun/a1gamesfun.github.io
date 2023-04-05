@@ -26,7 +26,7 @@ async function ColorizePage()
     document.getElementById("game-title").style.fontFamily = style["header-font"];
     // Plain Text
     document.getElementById("game-description").style.fontFamily = style["p-font"];
-    document.getElementById("developed-by").style.fontFamily = style["p-font"];
+    // \/ 'Developed by' text font is set further down \/
 
     // Primary Color:
     document.getElementById("unity-footer").style.backgroundColor = style["primary-color"];
@@ -35,7 +35,14 @@ async function ColorizePage()
     // Secondary Color:
     document.getElementById("game-title").style.color = style["secondary-color"];
     document.getElementById("game-description").style.color = style["secondary-color"];
-    document.getElementById("developed-by").style.color = style["secondary-color"];
+
+    let devbys = document.getElementById("dev-logo-container").getElementsByClassName("developed-by");
+
+    for (let i = 0; i < devbys.length; i++) {
+        devbys[i].style.fontFamily = style["p-font"];
+        devbys[i].style.color = style["secondary-color"];
+    }
+    
     
     document.getElementById("volumeSlider").style.color = style["secondary-color"];
     document.getElementById("volumeSlider").innerHTML = style["secondary-color"];

@@ -1,6 +1,6 @@
 {
   "title": "Net Pong",
-  "developers": [ "a1creator", "Ribbo" ],
+  "developers": [ "a1creator" ],
   "gamename": "net_pong",
   "href": "webplayer.html",
   "support_controller": "false",
@@ -8,5 +8,5 @@
   "support_pc": "true",
   "has_sound": "false",
   "description": "Traditional pong that is played over the network. The game keeps the score but it goes on forever. Play as long as you please.",
-  "screenshot-count": 7
+  "screenshot-count": 0
 }

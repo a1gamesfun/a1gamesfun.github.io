@@ -76,12 +76,18 @@ table {
 
 .dev-logo {
     height: 3rem;
-    padding: 0 0.5rem;
+    padding: 0 0.2rem;
+    display: inline-block;
+    vertical-align: middle;
 }
 
-#developed-by {
+.developed-by {
     font-family: 'Roboto', sans-serif; 
     font-weight: 700;
+    padding: 0 0.5rem;
+    margin: auto 0;
+    display: inline;
+    vertical-align: middle;
 }
 
 #unity-container 
