@@ -47,7 +47,7 @@ async function LoadDecorations () {
     tmpl.remove();
 
     // set the description
-    document.getElementById("game-description").innerHTML = gameinfo["description"];
+    document.getElementById("game-description").innerText = gameinfo["description"];
 
     // DEVELOPER CREDITS
     // set the developer logo
@@ -78,7 +78,7 @@ async function LoadDecorations () {
               devByString += ` & ${gameinfo["developers"][i]}`;
         }
     }
-    document.getElementById("developed-by").innerHTML = devByString;
+    document.getElementById("developed-by").innerText = devByString;
 
     
 
