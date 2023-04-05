@@ -161,6 +161,7 @@ table {
 }
 #game-logo 
 { 
+    display: block;
     margin: auto 0.4rem;
     width: 40px;
     height: auto;
@@ -173,11 +174,11 @@ table {
 }
 #unity-fullscreen-button 
 { 
-    margin: 0 0.5rem;
-    width: 38px;
-    height: 38px;
+    margin: 0 0.16rem 0 1rem;
+    width: 36px;
+    height: 36px;
     background: no-repeat;
-    background-image: url('https://a1games.fun/files/img/webplayer/fullscreen-button.png');
+    background-image: url('../files/img/webplayer/fullscreen-button.png');
     background-position: center;
 }
 #unity-warning 

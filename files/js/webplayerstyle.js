@@ -40,9 +40,9 @@ async function ColorizePage()
     document.getElementById("volumeSlider").style.color = style["secondary-color"];
     document.getElementById("volumeSlider").innerHTML = style["secondary-color"];
 
-    //document.querySelector('screenshot-container::-webkit-slider-thumb').style.color = style["secondary-color"];
-
     document.getElementById("screenshot-container").style.color = style["secondary-color"];
+
+    document.getElementById("unity-fullscreen-button").style.backgroundColor = style["secondary-color"];
     
     // Tertiary Color:
     document.getElementById("description-container").style.backgroundColor = style["tertiary-color"];

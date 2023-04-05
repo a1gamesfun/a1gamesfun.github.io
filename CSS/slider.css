@@ -55,7 +55,8 @@
 	--brightness-hover: 180%;
 	--brightness-down: 80%;
 	--clip-edges: 0.125em;
-
+	display: block;
+	margin: auto 0;
 }
 
 /* === range commons === */
