@@ -34,6 +34,7 @@ button, input[type="submit"], input[type="reset"] {
 }
 .game-thumbnail-image {
     border-radius: 0;
+    outline: 2px solid black;
 }
 /* The image itself */
 .game-thumbnail-image:hover {
