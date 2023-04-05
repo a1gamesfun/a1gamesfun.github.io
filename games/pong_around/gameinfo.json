@@ -6,6 +6,7 @@
   "support_controller": "false",
   "support_mobile": "false",
   "support_pc": "true",
+  "has_sound": "false",
   "description": "Classic pong with a big twist: Everyone plays in one big circle. \nSupports up to as many players as you have keys on your keyboard.",
   "screenshot-count": 6
 }

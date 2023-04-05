@@ -23,6 +23,13 @@ async function LoadDecorations () {
 
     // set game title
     document.getElementById("game-title").innerHTML = gameinfo["title"];
+    
+    // set volume slider
+    if (gameinfo["has_sound"].includes("alse")) // if game has_sound == "false" or "False":
+    {
+        document.getElementById("volumeSlider").value = 0;
+        document.getElementById("volumeSlider").setAttribute("disabled", "true");
+    }
 
 
     // ---- DESCRIPTION: ----

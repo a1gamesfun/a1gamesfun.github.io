@@ -6,6 +6,7 @@
   "support_controller": "false",
   "support_mobile": "true",
   "support_pc": "true",
+  "has_sound": "false",
   "description": "This game has no description.",
   "screenshot-count": 6
 }
