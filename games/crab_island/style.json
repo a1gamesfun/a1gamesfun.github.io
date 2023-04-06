@@ -4,5 +4,7 @@
   "secondary-color": "#e60000",
   "tertiary-color": "#80d9ff",
   "header-font": "'Roboto', sans-serif",
-  "p-font": "'Roboto', sans-serif"
+  "p-font": "'Roboto', sans-serif",
+  "x": "960",
+  "y": "600"
 }
