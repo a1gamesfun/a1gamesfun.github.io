@@ -11,15 +11,25 @@
     width: 8%;
 }
 
+.header-h1 {
+    display: block;
+    margin: auto 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 5rem;
+}
+
 #free {
+    height: 100%;
     padding: 0 0 0 1.5rem;
-    width: 17%;
+    margin: auto;
 }
 
 #browsergames {
     padding: 0 0 0 1.5rem;
-    width: 55%;
+    margin: auto;
 }
+
+
 .full-stretch {
     width: 100%;
     height: 100%;
