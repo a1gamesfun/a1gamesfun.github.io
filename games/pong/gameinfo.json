@@ -1,0 +1,12 @@
+{
+  "title": "Pong",
+  "developers": [ "a1creator" ],
+  "gamename": "pong",
+  "href": "webplayer.html",
+  "support_controller": "false",
+  "support_mobile": "false",
+  "support_pc": "true",
+  "has_sound": "false",
+  "description": "Traditional pong with the ability to choose different pads.",
+  "screenshot-count": 0
+}
