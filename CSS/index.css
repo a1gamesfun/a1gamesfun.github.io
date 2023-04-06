@@ -31,6 +31,18 @@ button, input[type="submit"], input[type="reset"] {
     margin: auto;
 }
 
+#sorting-options {
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+}
+.sorting-option {
+    background-color: yellow;
+    height: 2rem;
+    width: 2rem;
+    display: inline-block;
+}
+
 .game-thumbnail {
     z-index: 9;
 }
