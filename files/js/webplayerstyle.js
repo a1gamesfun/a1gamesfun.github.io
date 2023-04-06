@@ -57,7 +57,7 @@ async function ColorizePage()
 
     
     // Custom Screensize:
-    document.getElementById("canvas-holder").style.width = style["x"];
+    document.getElementById("unity-canvas").style.width = style["x"];
     document.getElementById("unity-canvas").style.height = style["y"];
 
 
