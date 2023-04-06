@@ -51,16 +51,16 @@ async function ColorizePage()
 
     document.getElementById("unity-fullscreen-button").style.backgroundColor = style["secondary-color"];
     
+    
+    // Custom Screensize:
+    var aspect_X = 960 / style["x"]; // width is always 960 so we just take the game's native res and scale it according to the fixed x value
+
+    document.getElementById("unity-canvas").height = style["y"] * aspect_X;
+    
+    
     // Tertiary Color:
     document.getElementById("description-container").style.backgroundColor = style["tertiary-color"];
     document.getElementById("footerbackground").style.backgroundColor = style["tertiary-color"];
-
-    
-    // Custom Screensize:
-    document.getElementById("unity-canvas").style.width = style["x"];
-    document.getElementById("unity-canvas").style.height = style["y"];
-
-
 
 }
 

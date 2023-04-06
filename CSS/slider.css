@@ -59,6 +59,10 @@
 	margin: auto 0;
 }
 
+#volumeSlider:disabled {
+	opacity: 0.4;
+}
+
 /* === range commons === */
 input[type="range"] {
 	position: relative;
@@ -87,6 +91,10 @@ input[type="range"]::-webkit-slider-thumb {
 input[type="range"]:hover::-webkit-slider-thumb {
 	filter: brightness(var(--brightness-hover));
 	cursor: grab;
+}
+
+input[type="range"]:disabled:hover:-webkit-slider-thumb {
+	cursor: not-allowed;
 }
 
 input[type="range"]:active::-webkit-slider-thumb {
