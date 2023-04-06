@@ -55,6 +55,11 @@ async function ColorizePage()
     document.getElementById("description-container").style.backgroundColor = style["tertiary-color"];
     document.getElementById("footerbackground").style.backgroundColor = style["tertiary-color"];
 
+    
+    // Custom Screensize:
+    document.getElementById("canvas-holder").style.width = style["x"];
+    document.getElementById("unity-canvas").style.height = style["y"];
+
 
 
 }
