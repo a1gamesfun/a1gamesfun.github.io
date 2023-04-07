@@ -33,14 +33,27 @@ button, input[type="submit"], input[type="reset"] {
 
 #sorting-options {
     align-items: center;
-    height: 4rem;
+    height: 6rem;
     width: 100%;
 }
 .sorting-option {
+    vertical-align: middle;
     background-color: yellow;
-    height: 2rem;
-    width: 2rem;
+    height: 1.2rem;
+    width: 1.2rem;
     display: inline-block;
+    line-height: 0;
+}
+.sorting-icon {
+    line-height: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+.sorting-item {
+    line-height: 0;
+    vertical-align: middle;
+    display: inline-block;
+    padding: 0 2rem;
 }
 
 .game-thumbnail {
