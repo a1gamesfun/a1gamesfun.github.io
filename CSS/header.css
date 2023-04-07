@@ -5,6 +5,8 @@
     width: 60%;
     border-collapse: collapse;
     overflow-x: hidden;
+
+    background-color: #ffffff20;
 }
 
 #icon {
