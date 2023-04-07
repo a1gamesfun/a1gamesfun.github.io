@@ -75,7 +75,7 @@ async function addItem(gameObj)
 async function clearthumbnails()
 {
     let items = document.getElementById("gamegrid").getElementsByClassName("game-thumbnail");
-
+    
     for (let i = 0; i < items.length; i++) {
         items[i].remove();
         i--;
@@ -88,12 +88,14 @@ async function sortBySupported(s_pc, s_controller, s_mobile)
     SORTED_GAMES = [];
     
     GAMES.forEach(gameObj => {
-
+        
         //console.log(gameObj)
+        console.log(gameObj["title"])
+        //console.log(gameObj["title"] + ": " + valid)
 
         let pc = gameObj["support_pc"].includes("rue") ? true : false;
-        let controller = gameObj["support_mobile"].includes("rue") ? true : false;
-        let mobile = gameObj["support_controller"].includes("rue") ? true : false;
+        let mobile = gameObj["support_mobile"].includes("rue") ? true : false;
+        let controller = gameObj["support_controller"].includes("rue") ? true : false;
 
 
         let valid = true;
@@ -106,13 +108,13 @@ async function sortBySupported(s_pc, s_controller, s_mobile)
         
         if (s_controller && !controller)
         {
-            console.log("s_pc: " + s_controller + "| pc: " + controller)
+            console.log("s_contr: " + s_controller + "| contr: " + controller)
             valid = false;
         }
         
-        if (s_mobile && mobile)
+        if (s_mobile && !mobile)
         {
-            console.log("s_pc: " + s_mobile + "| pc: " + mobile)
+            console.log("s_mobil: " + s_mobile + "| mobi: " + mobile)
             valid = false;
         }
 
@@ -120,7 +122,6 @@ async function sortBySupported(s_pc, s_controller, s_mobile)
         {
             SORTED_GAMES.push(gameObj);
         }
-        console.log(gameObj["title"] + ": " + valid)
         console.log('------------------------')
     });
     
@@ -148,7 +149,10 @@ async function applySortingOnClicks()
 
     for (let i = 0; i < toggles.length; i++) {
         toggles[i].onclick = () => { toggleSortingElement(toggles[i].value) };
-        toggles[i].checked = localStorage.getItem(toggles[i].value);
+        if (localStorage.getItem(toggles[i].value).includes("rue"))
+        {
+            toggles[i].checked = "true";
+        }
     }
 }
 
