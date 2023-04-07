@@ -7,13 +7,13 @@ var SORTED_GAMES = [];
 // add jsonObject to GAMES
 async function loadAndAddGame(gamename) {
     // fetch the json game info file
-    await fetch(`https://a1games.fun/games/${gamename}/gameinfo.json`)
+    fetch(`https://a1games.fun/games/${gamename}/gameinfo.json`)
         .then((response) => response.json())
         .then((jsonresponse) =>  {
 
             // return generated json object
             GAMES.push(jsonresponse);
-            
+            addItem(jsonresponse);
         });
 
 }
@@ -26,20 +26,21 @@ async function loadAndAddGame(gamename) {
 async function setGAMES()
 {
     var list;
-    await fetch("https://a1games.fun/files/gamelist.json")
+    fetch("https://a1games.fun/files/gamelist.json")
         .then((response) => response.json())
         .then((jsonresponse) =>  {
             // [...] makes a copy instead of a reference
             list = [...jsonresponse.gamelist];
-        });
-    let l = list.length;
+            let l = list.length;
 
-    for (let i = 0; i < l; i++) {
-        // get rnd index
-        let rnd = _.random(list.length - 1);
-        await loadAndAddGame(list[rnd]);
-        list.splice(rnd, 1);
-    }
+            for (let i = 0; i < l; i++) {
+                // get rnd index
+                let rnd = _.random(list.length - 1);
+                loadAndAddGame(list[rnd]);
+                list.splice(rnd, 1);
+            }
+        });
+    
 }
 
 
@@ -54,7 +55,7 @@ async function addItem(gameObj)
     
     let clone = tmpl.cloneNode(true);
     
-    console.log(clone)
+    //console.log(clone)
 
     clone.onclick = function() { 
         localStorage.setItem("SelectedGame", JSON.stringify(gameObj));
@@ -67,66 +68,68 @@ async function addItem(gameObj)
 
     clone.removeAttribute("hidden");
 
-    console.log(clone)
+    //console.log(clone)
     container.append(clone);
 }
 
 async function clearthumbnails()
 {
-    var items = clone.getElementsByClassName("game-thumbnail-image");
+    let items = document.getElementById("gamegrid").getElementsByClassName("game-thumbnail");
 
     for (let i = 0; i < items.length; i++) {
         items[i].remove();
+        i--;
     }
 }
 
 async function sortBySupported(s_pc, s_controller, s_mobile)
 {
+    // clear sortedgames
     SORTED_GAMES = [];
     
     GAMES.forEach(gameObj => {
+
+        //console.log(gameObj)
+
         let pc = gameObj["support_pc"].includes("rue") ? true : false;
         let controller = gameObj["support_mobile"].includes("rue") ? true : false;
         let mobile = gameObj["support_controller"].includes("rue") ? true : false;
 
+
         let valid = true;
 
-        if (s_pc == true)
+        if (s_pc && !pc)
         {
-            if (!pc)
-            {
-                valid = false;
-            }
+            console.log("s_pc: " + s_pc + "| pc: " + pc)
+            valid = false;
         }
-
-        if (s_controller == true)
+        
+        if (s_controller && !controller)
         {
-            if (!controller)
-            {
-                valid = false;
-            }
+            console.log("s_pc: " + s_controller + "| pc: " + controller)
+            valid = false;
         }
-
-        if (s_mobile == true)
+        
+        if (s_mobile && mobile)
         {
-            if (!mobile)
-            {
-                valid = false;
-            }
+            console.log("s_pc: " + s_mobile + "| pc: " + mobile)
+            valid = false;
         }
 
         if (valid)
         {
             SORTED_GAMES.push(gameObj);
         }
+        console.log(gameObj["title"] + ": " + valid)
+        console.log('------------------------')
     });
     
 }
 
 async function sortGameGrid(s_pc, s_controller, s_mobile)
 {
-    clearthumbnails();
-    sortBySupported(s_pc, s_controller, s_mobile);
+    await clearthumbnails();
+    await sortBySupported(s_pc, s_controller, s_mobile);
 
     for (let i = 0; i < SORTED_GAMES.length; i++)
     {
@@ -134,21 +137,43 @@ async function sortGameGrid(s_pc, s_controller, s_mobile)
     }
 }
 
-
-
-
-async function spawnHTML()
+async function applySortingOnClicks()
 {
-    await setGAMES();
-    //console.log(GAMES);
-    // spawn the games as html
+    let toggles = document.getElementsByClassName("sorting-option");
 
-    for (let i = 0; i < GAMES.length; i++)
-    {
-        addItem(GAMES[i]);
+    localStorage.setItem("PC", "true");
+    localStorage.setItem("Controller", "false");
+    localStorage.setItem("Mobile", "false");
+
+
+    for (let i = 0; i < toggles.length; i++) {
+        toggles[i].onclick = () => { toggleSortingElement(toggles[i].value) };
+        toggles[i].checked = localStorage.getItem(toggles[i].value);
     }
-    //console.log(container);
 }
 
-// do on load
-spawnHTML();
+async function toggleSortingElement(key)
+{
+    let item = localStorage.getItem(key);
+    if (item.includes("rue"))
+    {
+        localStorage.setItem(key, "false");
+    }
+    else
+    {
+        localStorage.setItem(key, "true");
+    }
+    
+    
+    let pc = localStorage.getItem("PC").includes("rue");
+    let controller = localStorage.getItem("Controller").includes("rue");
+    let mobile = localStorage.getItem("Mobile").includes("rue");
+
+    sortGameGrid(pc, controller, mobile);
+}
+
+
+// set GAMES array and spawn the initial games
+setGAMES();
+// apply sorting functionality
+applySortingOnClicks();
