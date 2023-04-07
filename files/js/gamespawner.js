@@ -90,7 +90,7 @@ async function sortBySupported(s_pc, s_controller, s_mobile)
     GAMES.forEach(gameObj => {
         
         //console.log(gameObj)
-        console.log(gameObj["title"])
+        //console.log(gameObj["title"])
         //console.log(gameObj["title"] + ": " + valid)
 
         let pc = gameObj["support_pc"].includes("rue") ? true : false;
@@ -102,19 +102,19 @@ async function sortBySupported(s_pc, s_controller, s_mobile)
 
         if (s_pc && !pc)
         {
-            console.log("s_pc: " + s_pc + "| pc: " + pc)
+            //console.log("s_pc: " + s_pc + "| pc: " + pc)
             valid = false;
         }
         
         if (s_controller && !controller)
         {
-            console.log("s_contr: " + s_controller + "| contr: " + controller)
+            //console.log("s_contr: " + s_controller + "| contr: " + controller)
             valid = false;
         }
         
         if (s_mobile && !mobile)
         {
-            console.log("s_mobil: " + s_mobile + "| mobi: " + mobile)
+            //console.log("s_mobil: " + s_mobile + "| mobi: " + mobile)
             valid = false;
         }
 
@@ -122,7 +122,7 @@ async function sortBySupported(s_pc, s_controller, s_mobile)
         {
             SORTED_GAMES.push(gameObj);
         }
-        console.log('------------------------')
+        //console.log('------------------------')
     });
     
 }
