@@ -1,3 +1,33 @@
+/*
+font-family: 'Audiowide', cursive;
+font-family: 'Bangers', cursive;
+font-family: 'Bungee Shade', cursive;
+font-family: 'Creepster', cursive;
+font-family: 'Dancing Script', cursive;
+font-family: 'Delicious Handrawn', cursive;
+font-family: 'Major Mono Display', monospace;
+font-family: 'Megrim', cursive;
+font-family: 'Monoton', cursive;
+font-family: 'Mr Dafoe', cursive;
+font-family: 'MuseoModerno', cursive;
+font-family: 'Nabla', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Press Start 2P', cursive;
+font-family: 'Redacted Script', cursive;
+font-family: 'Rubik 80s Fade', cursive;
+font-family: 'Rubik Moonrocks', cursive;
+font-family: 'Rubik Pixels', cursive;
+font-family: 'Rubik Vinyl', cursive;
+font-family: 'Ruslan Display', cursive;
+font-family: 'Rye', cursive;
+font-family: 'Sacramento', cursive;
+font-family: 'Sedgwick Ave Display', cursive;
+font-family: 'Silkscreen', cursive;
+font-family: 'Tilt Prism', cursive;
+font-family: 'Titan One', cursive;
+font-family: 'Tourney', cursive;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Bangers&family=Bungee+Shade&family=Creepster&family=Dancing+Script:wght@700&family=Delicious+Handrawn&family=Major+Mono+Display&family=Megrim&family=Monoton&family=Mr+Dafoe&family=MuseoModerno:wght@300&family=Nabla&family=Pacifico&family=Press+Start+2P&family=Redacted+Script:wght@300&family=Rubik+80s+Fade&family=Rubik+Moonrocks&family=Rubik+Pixels&family=Rubik+Vinyl&family=Ruslan+Display&family=Rye&family=Sacramento&family=Sedgwick+Ave+Display&family=Silkscreen&family=Tilt+Prism&family=Titan+One&family=Tourney:wght@200&display=swap');
 
 
 
@@ -12,7 +42,5 @@ font-family: 'Crimson Text', serif;
 font-family: 'Inspiration', cursive;
 font-family: 'Righteous', cursive;
 */
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Indie+Flower&family=Inspiration&family=Righteous&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Crimson+Text&family=Inspiration&family=Righteous&display=swap');
 

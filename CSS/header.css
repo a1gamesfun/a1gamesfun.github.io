@@ -31,16 +31,21 @@
     width: 0;
 
     -webkit-text-fill-color: yellow;
-    -webkit-text-stroke: 3px black;
+    -webkit-text-stroke: 0.1rem black;
 }
 
 #browsergames {
     height: 100%;
     padding: 0 0 0 1.5rem;
     margin: auto;
-    width: auto;
+    width: 0;
 }
 
+.collapse-width {
+    width: 0;
+    margin: 0;
+    padding: 0;
+}
 
 .full-stretch {
     width: 100%;
