@@ -14,7 +14,7 @@ async function LoadDecorations () {
     });*/
     // -- Title --
     // replace ugly logo with game logo
-    document.title.innerText = `${gameinfo["title"]}`;
+    document.title = gameinfo["title"];
     
     // ---- WEB PLAYER: ----
 
