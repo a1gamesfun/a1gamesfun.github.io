@@ -21,6 +21,9 @@ async function ColorizePage()
     // Background:
     document.getElementById("background").style.background = style["background"];
     
+    // Text Color:
+    document.getElementById("game-description").style.color = style["text-color"];
+
     // Fonts:
     // Plain Text
     document.getElementById("game-description").style.fontFamily = style["p-font"];
@@ -30,7 +33,6 @@ async function ColorizePage()
     document.getElementById("unity-footer").style.backgroundColor = style["primary-color"];
     
     // Secondary Color:
-    document.getElementById("game-description").style.color = style["secondary-color"];
 
     let devbys = document.getElementById("dev-logo-container").getElementsByClassName("developed-by");
 
