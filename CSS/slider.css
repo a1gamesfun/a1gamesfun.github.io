@@ -5,6 +5,7 @@
 }
 
 .slidecontainer {
+	padding-left: 1rem;
     width: 100%; /* Width of the outside container */
 }
 

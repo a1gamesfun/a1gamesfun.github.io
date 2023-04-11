@@ -28,11 +28,7 @@
     <div id="unity-container" class="unity-desktop">
       <div id="canvas-holder">
 
-        <table id="unity-header">
-          <td align="middle">
-            <h1 id="game-title">Crab Island</h1>
-          </td>
-        </table>
+        <img id="game-banner"/>
 
         <canvas id="unity-canvas" width="960" height="600">
         </canvas>
@@ -47,9 +43,7 @@
         <div id="unity-warning"> </div>
         
         <table id="unity-footer">
-          <td align="left" style="width: 0;">
-            <img id="game-logo" src="games/crab_island/icon.png" />
-          </td>
+          
           <td align="left">
             <div class="slidecontainer">
               <input type="range" min="0" max="100" value="25" id="volumeSlider">
@@ -60,9 +54,6 @@
             <!-- delete after debug-->
           </td>
 
-          <td align="right">
-            <img id="made-with-unity" src="files/img/webplayer/madewithunity.png" />
-          </td>
           <td align="right" style="width: 0;">
             <div id="unity-fullscreen-button"></div>
           </td>

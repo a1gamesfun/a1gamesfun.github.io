@@ -22,18 +22,14 @@ async function ColorizePage()
     document.getElementById("background").style.background = style["background"];
     
     // Fonts:
-    // Header
-    document.getElementById("game-title").style.fontFamily = style["header-font"];
     // Plain Text
     document.getElementById("game-description").style.fontFamily = style["p-font"];
     // \/ 'Developed by' text font is set further down \/
 
     // Primary Color:
     document.getElementById("unity-footer").style.backgroundColor = style["primary-color"];
-    document.getElementById("unity-header").style.backgroundColor = style["primary-color"];
     
     // Secondary Color:
-    document.getElementById("game-title").style.color = style["secondary-color"];
     document.getElementById("game-description").style.color = style["secondary-color"];
 
     let devbys = document.getElementById("dev-logo-container").getElementsByClassName("developed-by");

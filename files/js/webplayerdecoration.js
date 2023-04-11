@@ -18,14 +18,13 @@ async function LoadDecorations () {
     
     // ---- WEB PLAYER: ----
 
-    // replace ugly logo with game logo
-    document.getElementById("game-logo").src = `games/${gameinfo["gamename"]}/icon.png`;
+    // set game banner
+    document.getElementById("game-banner").src = `games/${gameinfo["gamename"]}/banner.png`;
+    
     
     // replace loading logo with game logo
     document.getElementById("unity-logo").src = `games/${gameinfo["gamename"]}/icon.png`;
 
-    // set game title
-    document.getElementById("game-title").innerHTML = gameinfo["title"];
     
     // set volume slider
     if (gameinfo["has_sound"].includes("alse")) // if game has_sound == "false" or "False":

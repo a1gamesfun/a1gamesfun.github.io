@@ -51,12 +51,6 @@ table {
     font-size: 0;
 }
 
-#made-with-unity {
-    display: block;
-    width: 8rem;
-    height: auto;
-}
-
 #game-description {
     margin: 2rem auto;
     width: 94%;
@@ -155,32 +149,10 @@ table {
     background-color: #aff2ff;
     vertical-align: top;
 }
-#unity-header
-{ 
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    position: relative;
-    overflow: auto;
-    background-color: #aff2ff;
 
-}
-#game-logo 
-{ 
-    display: block;
-    margin: auto 0.4rem;
-    width: 40px;
-    height: auto;
-}
-#game-title
-{
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-}
 #unity-fullscreen-button 
 { 
-    margin: 0 0.16rem 0 1rem;
+    margin: 0.3rem;
     width: 36px;
     height: 36px;
     background: no-repeat;
