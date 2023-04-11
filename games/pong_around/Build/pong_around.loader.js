@@ -41,7 +41,7 @@ function createUnityInstance(t, r, d)
             { 
                 if (c.SetFullscreen) return c.SetFullscreen.apply(c, arguments); 
                 c.print("Failed to set Fullscreen mode: Player not loaded yet.") 
-            }, 
+            },
             SetVolume: function (volume)
             {
                 C.SetVolume(volume);

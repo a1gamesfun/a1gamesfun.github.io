@@ -1,4 +1,16 @@
 
+right after the start of module in framework.js:
     Module["SetVolume"] = function SetMainVolume (volume) {
         Browser._JS_Sound_SetVolume(0, volume);
     };
+
+
+
+
+search for "SendMessage: function" and insert this above as a function:
+
+            SetVolume: function (volume)
+            {
+                C.SetVolume(volume);
+            },
+
