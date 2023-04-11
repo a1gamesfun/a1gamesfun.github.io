@@ -44,7 +44,7 @@ function createUnityInstance(t, r, d)
             },
             SetVolume: function (volume)
             {
-                C.SetVolume(volume);
+                c.SetVolume(volume);
             },
             SendMessage: function () 
             { 
