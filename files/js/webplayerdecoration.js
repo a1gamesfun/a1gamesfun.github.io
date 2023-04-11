@@ -12,6 +12,9 @@ async function LoadDecorations () {
     .then((jsonresponse) =>  {
         gameinfo = jsonresponse;
     });*/
+    // -- Title --
+    // replace ugly logo with game logo
+    document.title.innerText = `${gameinfo["title"]}`;
     
     // ---- WEB PLAYER: ----
 
