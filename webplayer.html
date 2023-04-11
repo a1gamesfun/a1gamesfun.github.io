@@ -167,6 +167,9 @@
           fullscreenButton.onclick = () => {
             unityInstance.SetFullscreen(1);
           };
+          volumeSlider.onclick = () => {
+            unityInstance.SetVolume(volumeSlider.value);
+          };
         }).catch((message) => {
           alert(message);
         });
