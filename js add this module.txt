@@ -6,7 +6,7 @@ right after the start of module in framework.js:
 
 
 
-
+ // this works:
 search for "SendMessage: function" and insert this above as a function:
 
             SetVolume: function (volume)

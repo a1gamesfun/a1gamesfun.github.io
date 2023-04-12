@@ -1,5 +1,6 @@
 function unityFramework(Module) {
     Module["SetVolume"] = function SetMainVolume (volume) {
+        // vi kommer herind
         Browser._JS_Sound_SetVolume(0, volume);
     };
 var Module=typeof Module!=="undefined"?Module:{};
