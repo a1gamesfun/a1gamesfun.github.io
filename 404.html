@@ -1,9 +1,18 @@
 
 <script>
 
-    async function loadPongAround() {
+    var suburl = window.location.pathname;
+
+    console.log(url)
+
+    async function loadGamePage() {
         // fetch the json game info file
-        fetch(`https://a1games.fun/games/pong_around/gameinfo.json`)
+        fetch(`https://a1games.fun/games/${suburl}/gameinfo.json`)
+            .catch((error) => {
+                console.log(error);
+                return;
+            })
+            // if we didnt get an error:
             .then((response) => response.json())
             .then((jsonresponse) =>  {
 
@@ -15,6 +24,6 @@
 
     }
 
-    loadPongAround();
+    loadGamePage();
 
 </script>
