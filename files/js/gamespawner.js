@@ -35,7 +35,7 @@ async function setGAMES()
 
             for (let i = 0; i < l; i++) {
                 // get rnd index
-                let rnd = _.random(list.length - 1);
+                let rnd = Math.floor(Math.random() * list.length);
                 loadAndAddGame(list[rnd]);
                 list.splice(rnd, 1);
             }

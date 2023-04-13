@@ -45,7 +45,7 @@ function setRandomFontReferences()
 {
     for (let i = 0; i < 2; i++) {
         // get rnd index
-        let rnd = _.random(fontObjects.length - 1);
+        let rnd = Math.floor(Math.random() * fontObjects.length);
         
         // append to use later
         fontObjectsToLoad.push(fontObjects[rnd]);
