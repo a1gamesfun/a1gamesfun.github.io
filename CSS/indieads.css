@@ -1,5 +1,5 @@
 
-#ad-left {
+#indiead-left {
     background-color: black;
     display: block;
     position: absolute;
@@ -8,7 +8,7 @@
     transform: translateX(-150%);
 }
 
-#ad-right {
+#indiead-right {
     background-color: black;
     display: block;
     position: absolute;
