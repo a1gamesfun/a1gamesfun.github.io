@@ -8,12 +8,13 @@
     async function loadGamePage() {
         // fetch the json game info file
         fetch(`https://a1games.fun/games/${suburl}/gameinfo.json`)
+            .then((response) => response.json())
+            // if conversion failed:
             .catch((error) => {
                 window.location.replace("https://a1games.fun/");
                 return;
             })
             // if we didnt get an error:
-            .then((response) => response.json())
             .then((jsonresponse) =>  {
 
                 localStorage.setItem("SelectedGame", JSON.stringify(jsonresponse));
