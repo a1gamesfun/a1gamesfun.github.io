@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="CSS/index.css" media="screen">
     <link rel="stylesheet" href="CSS/unity.css" media="screen">
     <link rel="stylesheet" href="CSS/slider.css" media="screen">
+    <link rel="stylesheet" href="CSS/indieads.css" media="screen">
     <link rel="shortcut icon" href="files/img/icon/a1Icon16px.ico" type="image/x-icon">
     <!-- Jquery (load first!) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -28,8 +29,17 @@
     <div id="unity-container" class="unity-desktop">
       <div id="canvas-holder">
 
-        <img id="game-banner" style="display: block;"/>
+        <div id="ad-left" class="indieads">
 
+        </div>
+
+        <div id="ad-right" class="indieads">
+
+        </div>
+        
+
+        <img id="game-banner" style="display: block;"/>
+        
         <canvas id="unity-canvas" width="960" height="600">
         </canvas>
         <div id="unity-loading-bar">
@@ -186,6 +196,9 @@
 
     <!-- Volume Slider -->
     <script src="files/js/volumechanger.js"></script>
+
+    <!-- Volume Slider -->
+    <script src="files/js/indieads.js"></script>
 
     <!-- FOOTER -->
     <footer style="background-color: #4d4d4d;" id="footer"> </footer>

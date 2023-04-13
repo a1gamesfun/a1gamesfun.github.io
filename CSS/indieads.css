@@ -1,0 +1,41 @@
+
+#ad-left {
+    background-color: black;
+    display: block;
+    position: absolute;
+    top: 8rem;
+    left: 0;
+    transform: translateX(-150%);
+}
+
+#ad-right {
+    background-color: black;
+    display: block;
+    position: absolute;
+    top: 8rem;
+    right: 0;
+    transform: translateX(150%);
+}
+
+
+.indiead-img {
+    height: 300px;
+    width: 200px;
+}
+
+
+.indiead-link {
+    display: block;
+    height: 300px;
+    width: 200px;
+}
+
+.indieads {
+    background-image: url('https://a1creator.com/indieads/defaultSizes/374x448.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: fill;
+    height: auto;
+    width: auto;
+}
+
