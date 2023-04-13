@@ -10,6 +10,7 @@
         fetch(`https://a1games.fun/games/${suburl}/gameinfo.json`)
             .catch((error) => {
                 console.log(error);
+                window.location.replace("https://a1games.fun/");
                 return;
             })
             // if we didnt get an error:
