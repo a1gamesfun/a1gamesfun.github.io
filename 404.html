@@ -11,7 +11,7 @@
             .then((response) => response.json())
             // if conversion failed:
             .catch((error) => {
-                window.location.replace("https://a1games.fun/");
+                window.location = "https://a1games.fun/";
                 return;
             })
             // if we didnt get an error:
@@ -19,7 +19,7 @@
 
                 localStorage.setItem("SelectedGame", JSON.stringify(jsonresponse));
 
-                window.location.replace("https://a1games.fun/webplayer.html");
+                window.location = "https://a1games.fun/webplayer.html";
 
             });
 
