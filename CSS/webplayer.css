@@ -12,7 +12,7 @@ table {
 
 #screenshot-container::-webkit-scrollbar {
     color: inherit;
-    background-color: #ffffff40;
+    background-color: transparent;
     height: 1rem;
     -webkit-overflow-scrolling: touch;
 }
@@ -43,12 +43,20 @@ table {
     outline: 2px solid currentColor;
 }
 #screenshot-container {
-    color: gray;
+    display: block;
+    position: relative;
+    background-color: #000000;
+
     height: auto;
-    width: 100%;
+    width: fit-content;
+    max-width: 96%;
+    margin: 1rem auto;
+    
     overflow: auto;
     white-space: nowrap;
     font-size: 0;
+    border-radius: 2rem;
+    text-align: center;
 }
 
 #game-description {
@@ -57,11 +65,14 @@ table {
 }
 
 #description-container {
-    width: 100%;
+    width: 96%;
+    margin: 1rem auto;
     background-color: rgb(142, 184, 212);
     font-family: 'Roboto', sans-serif; 
     font-size: 1.2rem;
     font-weight: 500;
+    border-radius: 2rem;
+    overflow: hidden;
 }
 
 #dev-tag {
@@ -152,6 +163,7 @@ table {
 
 #unity-fullscreen-button 
 { 
+    border-radius: 0.2rem;
     margin: 0.3rem;
     width: 36px;
     height: 36px;

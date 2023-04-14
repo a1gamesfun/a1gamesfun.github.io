@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Fun Game Title</title>
     <link rel="stylesheet" href="CSS/index.css" media="screen">
-    <link rel="stylesheet" href="CSS/unity.css" media="screen">
+    <link rel="stylesheet" href="CSS/webplayer.css" media="screen">
     <link rel="stylesheet" href="CSS/slider.css" media="screen">
     <link rel="stylesheet" href="CSS/indieads.css" media="screen">
     <link rel="shortcut icon" href="files/img/icon/a1Icon16px.ico" type="image/x-icon">
@@ -40,66 +40,68 @@
 
         <img id="game-banner" style="display: block;"/>
         
-        <canvas id="unity-canvas" width="960" height="600">
-        </canvas>
-        <div id="unity-loading-bar">
-          <img id="unity-logo" src="files/img/webplayer/loading.png"/>
-          <div id="unity-progress-bar-empty">
-            <div id="unity-progress-bar-full"></div>
-          </div>
-        </div>
+        <div id="unity-background">
 
-        
-        <div id="unity-warning"> </div>
-        
-        <table id="unity-footer">
-          
-          <td align="left">
-            <div class="slidecontainer">
-              <input type="range" min="0" max="100" value="25" id="volumeSlider">
+            <canvas id="unity-canvas" width="960" height="600">
+            </canvas>
+          <div id="unity-loading-bar">
+            <img id="unity-logo" src="files/img/webplayer/loading.png"/>
+            <div id="unity-progress-bar-empty">
+              <div id="unity-progress-bar-full"></div>
             </div>
-          </td>
-          <td align="left">
-            <h4 id="volumeNumber" style="margin: 0;">100</h4>
-            <!-- delete after debug-->
-          </td>
+          </div>
 
-          <td align="right" style="width: 0;">
-            <div id="unity-fullscreen-button"></div>
-          </td>
-        </table>
-
-        <div id="description-container">
+          
+          <div id="unity-warning"> </div>
+          
+          <table id="unity-footer">
+            
+            <td align="left">
+              <div class="slidecontainer">
+                <input type="range" min="0" max="100" value="25" id="volumeSlider">
+              </div>
+            </td>
+            <td align="left">
+              <h4 id="volumeNumber" style="margin: 0;">100</h4>
+              <!-- delete after debug-->
+            </td>
+            
+            <td align="right" style="width: 0;">
+              <div id="unity-fullscreen-button"></div>
+            </td>
+          </table>
+          
           <div id="screenshot-container">
-            <img id="screenshot-template" hidden>
           </div>
           
-          <p id="game-description">
-            Description: {{description}}
-          </p>
+          <div id="description-container">
             
-          <table id="dev-tag">
-            <tr>
-              <td id="dev-logo-container">
-                <img id="dev-logo-template" src="files/img/devIcons/a1creator.png" hidden/>
-                <h3 id="developed-by" class="developed-by">
-                  Developed by 
-                </h3>
-              </td>
-            </tr>
-          </table>
+            <p id="game-description">
+              Description: {{description}}
+            </p>
+              
+            <table id="dev-tag">
+              <tr>
+                <td id="dev-logo-container">
+                  <h3 id="developed-by" class="developed-by">
+                    Developed by 
+                  </h3>
+                </td>
+              </tr>
+            </table>
+          </div>
+          
+          
+          <div style="height: 4rem;"/>
         </div>
         
-
-      <div style="height: 4rem;"/>
-
       </div>
     </div>
-
+    
     
     <script>
       var gameinfo = JSON.parse(localStorage.getItem("SelectedGame"));
-
+      
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
       var loadingBar = document.querySelector("#unity-loading-bar");

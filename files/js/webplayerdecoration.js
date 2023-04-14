@@ -37,23 +37,17 @@ async function LoadDecorations () {
     // ---- DESCRIPTION: ----
 
     var ssContainer = document.getElementById("screenshot-container");
-    var tmpl = document.getElementById("screenshot-template");
 
     for (let i = 0; i < gameinfo["screenshot-count"]; i++) {
           
-        let clone = tmpl.cloneNode(true);
+        let clone = document.createElement("img");
 
         clone.src = `games/${gameinfo["gamename"]}/screenshots/${i+1}.png`;
         clone.classList.add("screenshot");
 
-        clone.removeAttribute("hidden");
-        clone.removeAttribute("id");
-
         ssContainer.append(clone);
 
     }
-
-    tmpl.remove();
 
     // set the description
     document.getElementById("game-description").innerText = gameinfo["description"];
@@ -61,16 +55,12 @@ async function LoadDecorations () {
     // DEVELOPER CREDITS
     // set the developer logo
     var devlogoContainer = document.getElementById("dev-logo-container");
-    var develogotmpl = document.getElementById("dev-logo-template");
     
     // spawn developers[0] since at least 1 is required
-    let clone = develogotmpl.cloneNode(true);
+    let clone = document.createElement("img");
     
     clone.src = `files/img/devIcons/${gameinfo["developers"][0]}.png`;
     clone.classList.add("dev-logo");
-    
-    clone.removeAttribute("hidden");
-    clone.removeAttribute("id");
     
     devlogoContainer.append(clone);
         
