@@ -1,7 +1,7 @@
 {
   "title": "Do You Believe?",
   "developers": [ "a1creator" ],
-  "gamename": "pong",
+  "gamename": "doyoubelieve",
   "href": "webplayer.html",
   "support_controller": "false",
   "support_mobile": "false",
