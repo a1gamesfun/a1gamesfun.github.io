@@ -1,9 +1,9 @@
 {
   "background": "",
   "text-color": "#000000",
-  "primary-color": "#F2EBC5",
-  "secondary-color": "#C5F2F0",
-  "tertiary-color": "#CF5A39",
+  "primary-color": "#B42135",
+  "secondary-color": "#1B97FF",
+  "tertiary-color": "#F2EBC5",
   "header-font": "'Roboto', sans-serif",
   "p-font": "'Roboto', sans-serif",
   "x": "960",
