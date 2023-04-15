@@ -1,0 +1,12 @@
+{
+  "title": "Do You Believe?",
+  "developers": [ "a1creator" ],
+  "gamename": "pong",
+  "href": "webplayer.html",
+  "support_controller": "false",
+  "support_mobile": "false",
+  "support_pc": "true",
+  "has_sound": "true",
+  "description": "Made for a game jam with the theme 'It's not real'. ",
+  "screenshot-count": 5
+}
