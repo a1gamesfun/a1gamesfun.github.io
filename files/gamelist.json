@@ -1,11 +1,10 @@
 {
     "gamelist": [
-        "space_voyage", 
         "crab_island",
         "crab_defense",
         "hack_attack",
         "pong_around",
-        "doyoubelieve",
+        "jumpingbacteria",
         "pong"
     ]
 }
