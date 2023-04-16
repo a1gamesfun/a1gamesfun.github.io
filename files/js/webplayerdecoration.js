@@ -92,7 +92,7 @@ async function LoadDecorations () {
             devlogoContainer.append(clone);
 
             // ADD developer icon
-            clone = develogotmpl.cloneNode(true);
+            clone = document.createElement("img");
     
             clone.src = `files/img/devIcons/${gameinfo["developers"][i]}.png`;
             clone.classList.add("dev-logo");
