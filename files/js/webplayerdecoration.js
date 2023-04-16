@@ -114,8 +114,6 @@ async function LoadDecorations () {
     }
     
     
-    
-    develogotmpl.remove();
 }
 
 LoadDecorations();
