@@ -93,19 +93,19 @@ async function sortBySupported(s_pc, s_controller, s_mobile)
         let mobile = gameObj["support_mobile"].includes("rue") ? true : false;
         let controller = gameObj["support_controller"].includes("rue") ? true : false;
 
-        let valid = true;
+        let valid = false;
 
-        if (s_pc && !pc)
+        if (s_pc && pc)
         {
-            valid = false;
+            valid = true;
         }
-        if (s_controller && !controller)
+        if (s_controller && controller)
         {
-            valid = false;
+            valid = true;
         }
-        if (s_mobile && !mobile)
+        if (s_mobile && mobile)
         {
-            valid = false;
+            valid = true;
         }
         if (valid)
         {
