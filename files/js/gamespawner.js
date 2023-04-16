@@ -131,8 +131,8 @@ async function applySortingOnClicks()
     let toggles = document.getElementsByClassName("sorting-option");
 
     localStorage.setItem("PC", "true");
-    localStorage.setItem("Controller", "false");
-    localStorage.setItem("Mobile", "false");
+    localStorage.setItem("Controller", "true");
+    localStorage.setItem("Mobile", "true");
 
 
     for (let i = 0; i < toggles.length; i++) {
