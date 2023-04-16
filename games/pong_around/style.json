@@ -2,7 +2,7 @@
   "background": "#000000",
   "text-color": "#000000",
   "primary-color": "#000000",
-  "secondary-color": "#000000",
+  "secondary-color": "#FFFFFF",
   "tertiary-color": "#7F7F7F",
   "header-font": "'Roboto', sans-serif",
   "p-font": "'Roboto', sans-serif",
