@@ -14,20 +14,20 @@ async function LoadDecorations () {
     });*/
     // -- Title --
     // replace ugly logo with game logo
-    document.title = gameinfo["title"];
+    document.title = gameinfo.title;
     
     // ---- WEB PLAYER: ----
 
     // set game banner
-    document.getElementById("game-banner").src = `games/${gameinfo["gamename"]}/banner.png`;
+    document.getElementById("game-banner").src = `games/${gameinfo.gamename}/banner.png`;
     
     
     // replace loading logo with game logo
-    document.getElementById("unity-logo").src = `games/${gameinfo["gamename"]}/icon.png`;
+    document.getElementById("unity-logo").src = `games/${gameinfo.gamename}/icon.png`;
 
     
     // set volume slider
-    if (gameinfo["has_sound"].includes("alse")) // if game has_sound == "false" or "False":
+    if (gameinfo.has_sound.includes("alse")) // if game has_sound == "false" or "False":
     {
         document.getElementById("volumeSlider").value = 0;
         document.getElementById("volumeSlider").setAttribute("disabled", "true");
@@ -42,7 +42,7 @@ async function LoadDecorations () {
           
         let clone = document.createElement("img");
 
-        clone.src = `games/${gameinfo["gamename"]}/screenshots/${i+1}.png`;
+        clone.src = `games/${gameinfo.gamename}/screenshots/${i+1}.png`;
         clone.classList.add("screenshot");
 
         ssContainer.append(clone);
@@ -50,7 +50,7 @@ async function LoadDecorations () {
     }
 
     // set the description
-    document.getElementById("game-description").innerText = gameinfo["description"];
+    document.getElementById("game-description").innerText = gameinfo.description;
 
     // DEVELOPER CREDITS
     // set the developer logo
@@ -59,7 +59,7 @@ async function LoadDecorations () {
     // spawn developers[0] since at least 1 is required
     let clone = document.createElement("img");
     
-    clone.src = `files/img/devIcons/${gameinfo["developers"][0]}.png`;
+    clone.src = `files/img/devIcons/${gameinfo.developers[0]}.png`;
     clone.classList.add("dev-logo");
     
     devlogoContainer.append(clone);
@@ -70,7 +70,7 @@ async function LoadDecorations () {
     clone = devbytmpl.cloneNode(true);
     clone.removeAttribute("id");
     
-    clone.innerText = `${gameinfo["developers"][0]}`
+    clone.innerText = `${gameinfo.developers[0]}`
     devlogoContainer.append(clone);
     
     
@@ -79,10 +79,10 @@ async function LoadDecorations () {
 
     
     // set "Developed by _" text
-    if (gameinfo["developers"].length > 1)
+    if (gameinfo.developers.length > 1)
     {
         // add "& [developername]" for each other developer
-        for (let i = 1; i < gameinfo["developers"].length; i++) {
+        for (let i = 1; i < gameinfo.developers.length; i++) {
             
             // ADD "&" <h3>
             clone = devbytmpl.cloneNode(true);
@@ -94,7 +94,7 @@ async function LoadDecorations () {
             // ADD developer icon
             clone = document.createElement("img");
     
-            clone.src = `files/img/devIcons/${gameinfo["developers"][i]}.png`;
+            clone.src = `files/img/devIcons/${gameinfo.developers[i]}.png`;
             clone.classList.add("dev-logo");
             
             clone.removeAttribute("hidden");
@@ -106,13 +106,19 @@ async function LoadDecorations () {
             clone = devbytmpl.cloneNode(true);
             clone.removeAttribute("id");
             
-            clone.innerText = `${gameinfo["developers"][i]}`
+            clone.innerText = `${gameinfo.developers[i]}`
             devlogoContainer.append(clone);
         }
         
         
+
     }
     
+    // set share link copy button onclick
+    document.getElementById("copy-game-link").onclick = () => {
+        navigator.clipboard.writeText(`https://a1games.fun/${gameinfo.gamename}`);
+        document.getElementById("copy-game-link").innerText = "Link Copied!";
+    };
     
 }
 

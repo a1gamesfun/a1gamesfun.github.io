@@ -65,6 +65,7 @@ table {
 }
 
 #description-container {
+    height: auto;
     width: 96%;
     margin: 1rem auto;
     background-color: rgb(142, 184, 212);
@@ -77,6 +78,7 @@ table {
 
 #dev-tag {
     padding: 0 0 1rem 1rem;
+    width: 100%;
 }
 
 .dev-logo {
@@ -95,6 +97,27 @@ table {
     vertical-align: middle;
 }
 
+#copy-game-link {
+    display: block;
+    position: relative;
+
+    padding: 0;
+    margin: 0 2rem 0 0;
+    background-color: aqua;
+
+    width: 6rem;
+    height: 2rem;
+    border-radius: 0.4rem;
+
+    font-size: 0.7rem;
+}
+
+
+
+#unity-background {
+    height: 100%;
+}
+
 #unity-container 
 { 
     position: relative; 
@@ -106,7 +129,7 @@ table {
     margin: auto;
     position: relative;
     width: 960px;
-    height: auto;
+    height: 2000px;
 }
 #unity-canvas 
 { 
