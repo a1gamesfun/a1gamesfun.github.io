@@ -1,0 +1,12 @@
+{
+  "title": "Fishing for Humans",
+  "developers": [ "a1creator", "Constantin" ],
+  "gamename": "fishing_for_humans",
+  "href": "webplayer.html",
+  "support_controller": "false",
+  "support_mobile": "false",
+  "support_pc": "true",
+  "has_sound": "false",
+  "description": "The fish are tired of humans being in power.",
+  "screenshot-count": 0
+}
