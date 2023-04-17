@@ -39,12 +39,17 @@ async function ColorizePage()
     document.getElementById("unity-footer").style.backgroundColor = style["primary-color"];
     document.getElementById("copy-game-link").style.backgroundColor = style["primary-color"];
     
-    
+    document.getElementById("screenshot-container").style.color = style["primary-color"];
+
+    var screenshots = document.getElementById("screenshot-container").getElementsByClassName("screenshot");
+    for (let i = 0; i < screenshots.length; i++) {
+        
+        screenshots[i].style.outlineColor = style["primary-color"];
+    }
+    //document.getElementById("screenshot-container").style.outlineColor
     // Secondary Color:
     document.getElementById("volumeSlider").style.color = style["secondary-color"];
     document.getElementById("volumeSlider").innerHTML = style["secondary-color"];
-    
-    document.getElementById("screenshot-container").style.color = style["secondary-color"];
     
     document.getElementById("unity-fullscreen-button").style.backgroundColor = style["secondary-color"];
     
@@ -55,8 +60,11 @@ async function ColorizePage()
     
     // Custom Screensize:
     var aspect_X = 960 / style["x"]; // width is always 960 so we just take the game's native res and scale it according to the fixed x value
-    
-    document.getElementById("unity-canvas").height = style["y"] * aspect_X;
+    var y = style["y"] * aspect_X;
+    document.getElementById("unity-canvas").height = y;
+    // Fit Loading Icon to screen
+    document.getElementById("canvas-frame").style.height = y;
+
     
     
     // Tertiary Color:
