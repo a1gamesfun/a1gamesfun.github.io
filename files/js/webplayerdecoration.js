@@ -20,6 +20,14 @@ async function LoadDecorations () {
         question.innerText = "This game is large.\nPlay anyway?";
         question.id = "lfs-question";
         frame.append(question);
+
+        fetch(`${gameinfo.LFS_data}`, { method: 'HEAD', } )
+            .then((response) => {
+                if (response.ok)
+                {
+                    question.innerText = `This game is ${response.headers.get('content-length')}.\nPlay anyway?`;
+                }
+            })
     }
 
 
