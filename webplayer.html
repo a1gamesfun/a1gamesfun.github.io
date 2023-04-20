@@ -180,19 +180,40 @@
       var script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
+        if (!gameinfo.LFS_data)
+        {
+          createUnityInstance(canvas, config, (progress) => {
           progressBarFull.style.width = 100 * progress + "%";
-        }).then((unityInstance) => {
-          loadingBar.style.display = "none";
-          fullscreenButton.onclick = () => {
-            unityInstance.SetFullscreen(1);
+          }).then((unityInstance) => {
+            loadingBar.style.display = "none";
+            fullscreenButton.onclick = () => {
+              unityInstance.SetFullscreen(1);
+            };
+            volumeSlider.onclick = () => {
+              unityInstance.SetVolume(volumeSlider.value);
+            };
+          }).catch((message) => {
+            alert(message);
+          });
+        }
+        else // If the game uses Git LFS, add loading behaviour to load double check button
+        {
+          document.getElementById("lfs-question").onclick = () => {
+            createUnityInstance(canvas, config, (progress) => {
+            progressBarFull.style.width = 100 * progress + "%";
+            }).then((unityInstance) => {
+              loadingBar.style.display = "none";
+              fullscreenButton.onclick = () => {
+                unityInstance.SetFullscreen(1);
+              };
+              volumeSlider.onclick = () => {
+                unityInstance.SetVolume(volumeSlider.value);
+              };
+            }).catch((message) => {
+              alert(message);
+            });
           };
-          volumeSlider.onclick = () => {
-            unityInstance.SetVolume(volumeSlider.value);
-          };
-        }).catch((message) => {
-          alert(message);
-        });
+        }
       };
       document.body.appendChild(script);
     </script>

@@ -148,10 +148,16 @@ table {
 }*/
 #lfs-question
 { 
+    padding: 0.5rem;
     position: absolute; 
     left: 50%; 
     top: 50%; 
     transform: translate(-50%, -50%); 
+
+    background-color: #252525;
+    color: white;
+    border-width: 1px;
+    border-color: white;
 }
 
 #unity-loading-bar 

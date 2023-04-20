@@ -7,5 +7,5 @@ slider.oninput = function() {
   output.innerHTML = this.value;
   //console.log(document.volume)
   //document.volume = this.value / 100;
-  localStorage.setItem("volume", this.value);
+  localStorage.setItem("gamevolume", this.value);
 }
