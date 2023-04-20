@@ -57,12 +57,28 @@ async function LoadDecorations () {
     var devlogoContainer = document.getElementById("dev-logo-container");
     
     // spawn developers[0] since at least 1 is required
+    linkElement = document.createElement("a");
+
+    linkElement.href = fetch(`https://a1games.fun/files/developers/${gameinfo.developers[0]}.href`)
+                .then((response) => {
+                    if (!response.ok)
+                    {
+                        return "";
+                    }
+                    let tt = response.text();
+                    //console.log(tt);
+                    return tt;
+                })
+                
+    linkElement.target = "_blank";
+
     let clone = document.createElement("img");
     
-    clone.src = `files/img/devIcons/${gameinfo.developers[0]}.png`;
+    clone.src = `files/developers/${gameinfo.developers[0]}.png`;
     clone.classList.add("dev-logo");
     
-    devlogoContainer.append(clone);
+    linkElement.append(clone);
+    devlogoContainer.append(linkElement);
         
     // ADD "developer_name" <h3>
     var devbytmpl = document.getElementById("developed-by");
@@ -92,9 +108,22 @@ async function LoadDecorations () {
             devlogoContainer.append(clone);
 
             // ADD developer icon
+            linkElement = document.createElement("a");
+            link.href = fetch(`https://a1games.fun/files/developers/${gameinfo.developers[i]}.href`)
+                        .then((response) => {
+                            if (!response.ok)
+                            {
+                                return "";
+                            }
+                            let tt = response.text();
+                            //console.log(tt);
+                            return tt;
+                        })
+
+            link.target = "_blank";
             clone = document.createElement("img");
     
-            clone.src = `files/img/devIcons/${gameinfo.developers[i]}.png`;
+            clone.src = `files/developers/${gameinfo.developers[i]}.png`;
             clone.classList.add("dev-logo");
             
             clone.removeAttribute("hidden");
@@ -107,10 +136,10 @@ async function LoadDecorations () {
             clone.removeAttribute("id");
             
             clone.innerText = `${gameinfo.developers[i]}`
-            devlogoContainer.append(clone);
+            
+            linkElement.append(clone);
+            devlogoContainer.append(linkElement);
         }
-        
-        
 
     }
     
