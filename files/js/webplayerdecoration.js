@@ -65,9 +65,9 @@ async function LoadDecorations () {
                     {
                         return "";
                     }
-                    let tt = response.text();
-                    //console.log(tt);
-                    return tt;
+                    response.text();
+                    //console.log(response);
+                    return response;
                 })
                 
     linkElement.target = "_blank";
@@ -115,9 +115,9 @@ async function LoadDecorations () {
                             {
                                 return "";
                             }
-                            let tt = response.text();
-                            //console.log(tt);
-                            return tt;
+                            response.text();
+                            //console.log(response);
+                            return response;
                         })
 
             link.target = "_blank";
