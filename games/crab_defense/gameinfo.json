@@ -7,6 +7,7 @@
   "support_mobile": "true",
   "support_pc": "true",
   "has_sound": "true",
+  "LFS_data": "https://github.com/a1gamesfun/a1gamesfun.github.io/blob/main/games/doyoubelieve/Build/doyoubelieve.data?raw=true",
   "description": "A tower defense experience that should take no more than 10 minutes. Beat your friends' high scores!",
   "screenshot-count": 4
 }
