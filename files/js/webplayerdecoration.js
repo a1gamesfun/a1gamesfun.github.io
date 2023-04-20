@@ -18,6 +18,7 @@ async function LoadDecorations () {
         var frame = document.getElementById("canvas-frame");
         var question = document.createElement("button");
         question.innerText = "This game is large.\nPlay anyway?";
+        question.id = "lfs-question";
         frame.append(question);
     }
 
@@ -63,7 +64,7 @@ async function LoadDecorations () {
     // spawn developers[0] since at least 1 is required
     linkElement = document.createElement("a");
 
-    linkElement.href = fetch(`https://a1games.fun/files/developers/${gameinfo.developers[0]}.href`)
+    fetch(`https://a1games.fun/files/developers/${gameinfo.developers[0]}.href`)
                 .then((response) => {
                     if (!response.ok)
                     {
@@ -71,7 +72,7 @@ async function LoadDecorations () {
                     }
                     response.text();
                     //console.log(response);
-                    return response;
+                    linkElement.href = response;
                 })
                 
     linkElement.target = "_blank";
@@ -113,7 +114,7 @@ async function LoadDecorations () {
 
             // ADD developer icon
             linkElement = document.createElement("a");
-            link.href = fetch(`https://a1games.fun/files/developers/${gameinfo.developers[i]}.href`)
+            fetch(`https://a1games.fun/files/developers/${gameinfo.developers[i]}.href`)
                         .then((response) => {
                             if (!response.ok)
                             {
@@ -121,7 +122,7 @@ async function LoadDecorations () {
                             }
                             response.text();
                             //console.log(response);
-                            return response;
+                            link.href = response;
                         })
 
             link.target = "_blank";
