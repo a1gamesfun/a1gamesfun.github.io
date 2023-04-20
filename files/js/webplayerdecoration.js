@@ -21,7 +21,11 @@ async function LoadDecorations () {
         question.id = "lfs-question";
         frame.append(question);
 
-        fetch(`${gameinfo.LFS_data}`, { method: 'HEAD', } )
+        fetch(`${gameinfo.LFS_data}`, 
+        { 
+            method: 'HEAD', 
+            mode: 'cors', 
+        } )
             .then((response) => {
                 if (response.ok)
                 {

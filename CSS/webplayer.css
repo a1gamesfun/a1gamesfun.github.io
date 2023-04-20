@@ -156,8 +156,8 @@ table {
 
     background-color: #252525;
     color: white;
-    border-width: 1px;
-    border-color: white;
+    border: white 2px;
+    border-radius: 0.5rem;
 }
 
 #unity-loading-bar 
