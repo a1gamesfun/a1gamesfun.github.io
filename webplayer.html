@@ -149,7 +149,7 @@
       var buildUrl = `games/${gameinfo.gamename}/Build`;
       var loaderUrl = buildUrl + `/${gameinfo.gamename}.loader.js`;
       var config = {
-        dataUrl: gameinfo.LFS_data ? buildUrl + gameinfo.LFS_data : buildUrl + `/${gameinfo.gamename}.data`,
+        dataUrl: gameinfo.LFS_data ? gameinfo.LFS_data : buildUrl + `/${gameinfo.gamename}.data`,
         frameworkUrl: buildUrl + `/${gameinfo.gamename}.framework.js`,
         codeUrl: buildUrl + `/${gameinfo.gamename}.wasm`,
         streamingAssetsUrl: `StreamingAssets`,
@@ -212,6 +212,9 @@
             }).catch((message) => {
               alert(message);
             });
+
+            // remove self so we cant trigger the load multiple times
+            document.getElementById("lfs-question").remove();
           };
         }
       };
