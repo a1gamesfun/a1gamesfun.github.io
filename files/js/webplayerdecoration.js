@@ -6,17 +6,21 @@ function setCharAt(str,index,chr) {
 }
 
 async function LoadDecorations () {
-    // fetch the game information first
-    /*await fetch(`https://a1games.fun/json/games/${localStorage.getItem("SelectedGame")}.json`)
-    .then((response) => response.json())
-    .then((jsonresponse) =>  {
-        gameinfo = jsonresponse;
-    });*/
+    
     // -- Title --
-    // replace ugly logo with game logo
     document.title = gameinfo.title;
     
     // ---- WEB PLAYER: ----
+
+    // -- Ask to load game --
+    if (gameinfo.LFS_data)
+    {
+        var frame = document.getElementById("canvas-frame");
+        var question = document.createElement("button");
+        question.innerText = "This game is large.\nPlay anyway?";
+        frame.append(question);
+    }
+
 
     // set game banner
     document.getElementById("game-banner").src = `games/${gameinfo.gamename}/banner.png`;
