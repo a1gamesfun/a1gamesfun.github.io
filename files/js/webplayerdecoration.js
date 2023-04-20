@@ -23,19 +23,26 @@ async function LoadDecorations () {
     }
 
 
-    // set game banner
+    // -- BANNER --
     document.getElementById("game-banner").src = `games/${gameinfo.gamename}/banner.png`;
     
     
-    // replace loading logo with game logo
+    // -- LOADING ICON --
     document.getElementById("unity-logo").src = `games/${gameinfo.gamename}/icon.png`;
 
     
-    // set volume slider
+    // -- VOLUME SLIDER --
     if (gameinfo.has_sound.includes("alse")) // if game has_sound == "false" or "False":
     {
+        // Disable slider if the game has no volume
         document.getElementById("volumeSlider").value = 0;
         document.getElementById("volumeSlider").setAttribute("disabled", "true");
+    }
+    else
+    {
+        // If we have a saved game volume, use that on load. If not, use 0.25
+        let vol = localStorage.getItem("gamevolume")
+        document.getElementById("volumeSlider").value = vol == null ? 0.25 : vol;
     }
 
 
