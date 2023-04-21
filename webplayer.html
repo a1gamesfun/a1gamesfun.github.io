@@ -149,9 +149,9 @@
       var buildUrl = `games/${gameinfo.gamename}/Build`;
       var loaderUrl = buildUrl + `/${gameinfo.gamename}.loader.js`;
       var config = {
-        //dataUrl: gameinfo.LFS_data ? gameinfo.LFS_data : buildUrl + `/${gameinfo.gamename}.data`,
+        dataUrl: gameinfo.LFS_data ? gameinfo.LFS_data : buildUrl + `/${gameinfo.gamename}.data`,
         //dataUrl: gameinfo.LFS_data ? "https://api.github.com/repos/a1gamesfun/a1gamesfun.github.io/git/blobs/41553899f901843f5339794256s2444ed351708a" : buildUrl + `/${gameinfo.gamename}.data`,
-        dataUrl: gameinfo.LFS_data ? "https://media.githubusercontent.com/media/a1gamesfun/a1gamesfun.github.io/main/games/doyoubelieve/Build/doyoubelieve.data" : buildUrl + `/${gameinfo.gamename}.data`,
+        //dataUrl: gameinfo.LFS_data ? "https://media.githubusercontent.com/media/a1gamesfun/a1gamesfun.github.io/main/games/doyoubelieve/Build/doyoubelieve.data" : buildUrl + `/${gameinfo.gamename}.data`,
         frameworkUrl: buildUrl + `/${gameinfo.gamename}.framework.js`,
         codeUrl: buildUrl + `/${gameinfo.gamename}.wasm`,
         streamingAssetsUrl: `StreamingAssets`,
