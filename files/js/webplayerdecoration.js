@@ -28,11 +28,12 @@ async function LoadDecorations () {
             mode: 'cors', 
         } )
             .then((response) => {
-                if (response.ok)
-                {
-                    response.json();
-                    question.innerText = `This game is ${response.size} MB.\nPlay anyway?`;
-                }
+                return response.text()
+                
+            })
+            .then((response) => {
+                console.log(response)
+                question.innerText = `This game is ${response.size} MB.\nPlay anyway?`;
             })
     }
 

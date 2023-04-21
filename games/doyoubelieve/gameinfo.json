@@ -7,7 +7,7 @@
   "support_mobile": "false",
   "support_pc": "true",
   "has_sound": "true",
-  "LFS_data": "https://github.com/a1gamesfun/a1gamesfun.github.io/blob/c653892ad352ddb52ed33e467b4475bc8f44ed6a/games/doyoubelieve/Build/doyoubelieve.data?raw",
+  "LFS_data": "https://api.github.com/repos/a1gamesfun/a1gamesfun.github.io/git/blobs/85f3b8ec124b0e1eac7219a901331a76646aa317",
   "description": "Made for a game jam with the theme 'It's not real'. ",
   "screenshot-count": 5
 }
