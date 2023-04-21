@@ -21,7 +21,8 @@ async function LoadDecorations () {
         question.id = "lfs-question";
         frame.append(question);
 
-        fetch(`${gameinfo.LFS_data}`, 
+        //fetch(`${gameinfo.LFS_data}`, 
+        fetch(`https://api.github.com/repos/a1gamesfun/a1gamesfun.github.io/contents/games/doyoubelieve/Build/doyoubelieve.data`, 
         { 
             method: 'HEAD', 
             mode: 'cors', 
@@ -29,7 +30,8 @@ async function LoadDecorations () {
             .then((response) => {
                 if (response.ok)
                 {
-                    question.innerText = `This game is ${response.headers.get('content-length')}.\nPlay anyway?`;
+                    response.json();
+                    question.innerText = `This game is ${response.size} MB.\nPlay anyway?`;
                 }
             })
     }
