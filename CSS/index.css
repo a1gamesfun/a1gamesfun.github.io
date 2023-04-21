@@ -86,7 +86,6 @@ button, input[type="submit"], input[type="reset"] {
 }
 .game-thumbnail-image {
     position: relative;
-    z-index: 8;
     border-radius: 1rem;
     outline: 2px solid white;
 }
