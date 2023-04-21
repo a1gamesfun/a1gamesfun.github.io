@@ -22,18 +22,12 @@ async function LoadDecorations () {
         frame.append(question);
 
         //fetch(`${gameinfo.LFS_data}`, 
-        fetch(`https://api.github.com/repos/a1gamesfun/a1gamesfun.github.io/contents/games/doyoubelieve/Build/doyoubelieve.data`, 
-        { 
-            method: 'HEAD', 
-            mode: 'cors', 
-        } )
+        fetch(`https://api.github.com/repos/a1gamesfun/a1gamesfun.github.io/contents/games/doyoubelieve/Build/doyoubelieve.data`)
             .then((response) => {
-                return response.text()
-                
+                return response.json();
             })
             .then((response) => {
-                console.log(response)
-                question.innerText = `This game is ${response.size} MB.\nPlay anyway?`;
+                question.innerText = `This game is ${ Math.floor(response.size / 1024 / 1024) } MB.\nPlay anyway?`;
             })
     }
 
