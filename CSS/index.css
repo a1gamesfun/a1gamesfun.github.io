@@ -79,12 +79,14 @@ button, input[type="submit"], input[type="reset"] {
     border-radius: 0.4rem;
     font-family: 'Roboto', sans-serif;
     font-size: 0.7rem;
+    font-weight: 500;
 }
 .game-thumbnail {
     position: relative;
-    z-index: 9;
 }
 .game-thumbnail-image {
+    position: relative;
+    z-index: 8;
     border-radius: 1rem;
     outline: 2px solid white;
 }
@@ -100,5 +102,4 @@ button, input[type="submit"], input[type="reset"] {
     -ms-transform: scale(1.05); /* IE 9 */
     -webkit-transform: scale(1.05); /* Safari 3-8 */
     transform: scale(1.05);
-    z-index: 10;
 }

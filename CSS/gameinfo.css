@@ -1,0 +1,77 @@
+
+
+#gameinfo-resume {
+    position: relative;
+    margin: 0;
+    padding: 0;
+
+    height: 2rem;
+    overflow: hidden;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+#gameinfobox {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    margin: 0;
+    padding: 0;
+
+    background-color: #c2c2c2;
+    color: black;
+
+    width: 100%;
+    height: 200%;
+
+    border-radius: 1rem;
+}
+
+#gameinfobox-visible {
+    position: absolute;
+    top: 52%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#gameinfobox:hover {
+    transition: all .4s ease-in-out;
+    
+    background-color: palevioletred;
+    color: black;
+}
+
+.gameinfo-support-icon {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+
+    background-size: contain;
+}
+
+
+#support-info {
+    position: absolute;
+    margin: 0.2rem 1rem;
+
+    right: 0;
+    bottom: 0;
+}
+
+
+#support-icon-pc {
+    background-image: url('../files/img/sorting-icons/keyboardmouse.png');
+}
+#support-icon-mobile {
+    background-image: url('../files/img/sorting-icons/mobile.png');
+}
+#support-icon-controller {
+    background-image: url('../files/img/sorting-icons/controller.png');
+}
+
+
+
