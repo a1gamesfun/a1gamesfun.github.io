@@ -13,22 +13,26 @@ async function LoadDecorations () {
     // ---- WEB PLAYER: ----
 
     // -- Ask to load game --
-    if (gameinfo.LFS_data)
-    {
-        var frame = document.getElementById("canvas-frame");
-        var question = document.createElement("button");
-        question.innerText = "This game is large.\nPlay anyway?";
-        question.id = "lfs-question";
-        frame.append(question);
 
-        //fetch(`${gameinfo.LFS_data}`, 
-        fetch(`https://api.github.com/repos/a1gamesfun/a1gamesfun.github.io/contents/games/doyoubelieve/Build/doyoubelieve.data`)
+    let gamesize = 0;
+    let link = `https://api.github.com/repos/a1gamesfun/a1gamesfun.github.io/contents/games/${gameinfo.gamename}/Build/${gameinfo.gamename}.data`;
+
+    await fetch(link)
             .then((response) => {
                 return response.json();
             })
             .then((response) => {
-                question.innerText = `This game is ${ Math.floor(response.size / 1024 / 1024) } MB.\nPlay anyway?`;
-            })
+                gamesize = Math.floor(response.size / 1024 / 1024);
+            });
+            
+    if (gamesize >= 30)
+    {
+        var frame = document.getElementById("canvas-frame");
+        var question = document.createElement("button");
+        //question.innerText = "This game is large.\nPlay anyway?";
+        question.innerText = `This game is ${gamesize} MB.\nClick to play`;
+        question.id = "lfs-question";
+        frame.append(question);
     }
 
 
@@ -138,10 +142,10 @@ async function LoadDecorations () {
                             }
                             response.text();
                             //console.log(response);
-                            link.href = response;
+                            linkElement.href = response;
                         })
 
-            link.target = "_blank";
+            linkElement.target = "_blank";
             clone = document.createElement("img");
     
             clone.src = `files/developers/${gameinfo.developers[i]}.png`;

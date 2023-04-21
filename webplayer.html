@@ -179,28 +179,23 @@
       }
       loadingBar.style.display = "block";
 
-      var script = document.createElement("script");
-      script.src = loaderUrl;
-      script.onload = () => {
-        if (!gameinfo.LFS_data)
-        {
-          createUnityInstance(canvas, config, (progress) => {
-          progressBarFull.style.width = 100 * progress + "%";
-          }).then((unityInstance) => {
-            loadingBar.style.display = "none";
-            fullscreenButton.onclick = () => {
-              unityInstance.SetFullscreen(1);
-            };
-            volumeSlider.onclick = () => {
-              unityInstance.SetVolume(volumeSlider.value);
-            };
-          }).catch((message) => {
-            alert(message);
-          });
-        }
-        else // If the game uses Git LFS, add loading behaviour to load double check button
-        {
-          document.getElementById("lfs-question").onclick = () => {
+      async function MakeWebPlayer()
+      {
+        let gamesize = 0;
+        let link = `https://api.github.com/repos/a1gamesfun/a1gamesfun.github.io/contents/games/${gameinfo.gamename}/Build/${gameinfo.gamename}.data`;
+
+        await fetch(link)
+              .then((response) => {
+                  return response.json();
+              })
+              .then((response) => {
+                  gamesize = Math.floor(response.size / 1024 / 1024);
+              })
+        var script = document.createElement("script");
+        script.src = loaderUrl;
+        script.onload = () => {
+          if (gamesize < 30)
+          {
             createUnityInstance(canvas, config, (progress) => {
             progressBarFull.style.width = 100 * progress + "%";
             }).then((unityInstance) => {
@@ -214,27 +209,48 @@
             }).catch((message) => {
               alert(message);
             });
+          }
+          else // If the game is large, add loading behaviour to load double check button
+          {
+            document.getElementById("lfs-question").onclick = () => {
+              createUnityInstance(canvas, config, (progress) => {
+              progressBarFull.style.width = 100 * progress + "%";
+              }).then((unityInstance) => {
+                loadingBar.style.display = "none";
+                fullscreenButton.onclick = () => {
+                  unityInstance.SetFullscreen(1);
+                };
+                volumeSlider.onclick = () => {
+                  unityInstance.SetVolume(volumeSlider.value);
+                };
+              }).catch((message) => {
+                alert(message);
+              });
 
-            // remove self so we cant trigger the load multiple times
-            document.getElementById("lfs-question").remove();
-          };
-        }
-      };
-      document.body.appendChild(script);
+              // remove self so we cant trigger the load multiple times
+              document.getElementById("lfs-question").remove();
+            };
+          }
+        };
+        document.body.appendChild(script);
+      }
+
+      MakeWebPlayer();
+      
     </script>
 
-    
+
     <!-- Apply Custom WebPlayer Decorations -->
     <script src="files/js/webplayerdecoration.js"></script>
+
+    <!-- Indie Ads -->
+    <script src="files/js/indieads.js"></script>
 
     <!-- Apply Unique CSS Style -->
     <script src="files/js/webplayerstyle.js"></script>
 
     <!-- Volume Slider -->
     <script src="files/js/volumechanger.js"></script>
-
-    <!-- Volume Slider -->
-    <script src="files/js/indieads.js"></script>
 
   </body>
 </html>
