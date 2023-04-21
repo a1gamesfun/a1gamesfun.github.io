@@ -63,7 +63,25 @@ button, input[type="submit"], input[type="reset"] {
     padding: 0 2rem;
 }
 
+
+
+.lfs-warning {
+    padding: 0.2rem;
+    margin: 0;
+
+
+    background-color: #a74747;
+    color: white;
+    position: absolute;
+    right: 0.4rem;
+    bottom: 0.4rem;
+
+    border-radius: 0.4rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.7rem;
+}
 .game-thumbnail {
+    position: relative;
     z-index: 9;
 }
 .game-thumbnail-image {

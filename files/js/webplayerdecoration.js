@@ -30,7 +30,7 @@ async function LoadDecorations () {
         var frame = document.getElementById("canvas-frame");
         var question = document.createElement("button");
         //question.innerText = "This game is large.\nPlay anyway?";
-        question.innerText = `This game is ${gamesize} MB.\nClick to play`;
+        question.innerText = `This game is ${gamesize} MB.\nClick to continue.`;
         question.id = "lfs-question";
         frame.append(question);
     }

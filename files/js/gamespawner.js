@@ -55,18 +55,32 @@ async function addItem(gameObj)
     
     let clone = tmpl.cloneNode(true);
     
-    //console.log(clone)
-
+    // -- Button Onclick --
+    
     clone.onclick = function() { 
         localStorage.setItem("SelectedGame", JSON.stringify(gameObj));
         window.location.href = href; 
     };
-
+    
     clone.id = gamename;
     
+    // -- Image Source --
     clone.getElementsByClassName("game-thumbnail-image")[0].src = `games/${gamename}/thumbnail.png`
 
     clone.removeAttribute("hidden");
+
+    // -- LFS Warning --
+    if (gameObj.LFS_data)
+    {
+        let lfs_warning = document.createElement("p");
+        lfs_warning.className = "lfs-warning";
+        lfs_warning.innerText = ">100MB";
+    
+        clone.append(lfs_warning);
+    }
+
+
+
 
     //console.log(clone)
     container.append(clone);
