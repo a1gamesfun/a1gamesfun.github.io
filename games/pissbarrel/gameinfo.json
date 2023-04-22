@@ -8,5 +8,7 @@
   "support_pc": "true",
   "has_sound": "true",
   "description": "SPACE to jump. \nA and D to walk. \nS to relieve yourself. \nHeadless Hobo is made up of 6 people; Philip Ullersted, Dani Felix Montoya Laynes, Mikkel, Magnus Håkon Petersen, Mads Martinussen (Sound), Isak S. Køster",
-  "screenshot-count": 0
+  "screenshot-count": 0,
+  "minplayers": 1,
+  "maxplayers": 1
 }

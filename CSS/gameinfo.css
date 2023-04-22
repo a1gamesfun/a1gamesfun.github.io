@@ -46,7 +46,7 @@
     color: black;
 }
 
-.gameinfo-support-icon {
+.gameinfo-icon {
     display: inline-block;
     width: 2rem;
     height: 2rem;
@@ -54,6 +54,22 @@
     background-size: contain;
 }
 
+#players-required {
+    position: absolute;
+    margin: 0.2rem 1rem;
+
+    left: 0;
+    bottom: 0;
+}
+#icon-singleplayer {
+    background-image: url('../files/img/sorting-icons/singleplayer.png');
+}
+#icon-multiplayer {
+    background-image: url('../files/img/sorting-icons/multiplayer.png');
+}
+#player-amount {
+    display: inline-block;
+}
 
 #support-info {
     position: absolute;
@@ -62,8 +78,6 @@
     right: 0;
     bottom: 0;
 }
-
-
 #support-icon-pc {
     background-image: url('../files/img/sorting-icons/keyboardmouse.png');
 }

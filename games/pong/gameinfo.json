@@ -8,5 +8,7 @@
   "support_pc": "true",
   "has_sound": "false",
   "description": "Traditional pong with the ability to choose different pads.",
-  "screenshot-count": 2
+  "screenshot-count": 2,
+  "minplayers": 2,
+  "maxplayers": 2
 }

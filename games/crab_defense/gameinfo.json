@@ -8,5 +8,7 @@
   "support_pc": "true",
   "has_sound": "true",
   "description": "A tower defense experience that should take no more than 10 minutes. Beat your friends' high scores!",
-  "screenshot-count": 4
+  "screenshot-count": 4,
+  "minplayers": 1,
+  "maxplayers": 1
 }

@@ -3,7 +3,9 @@ var supporticon_controller = document.getElementById("support-icon-controller");
 var supporticon_mobile = document.getElementById("support-icon-mobile");
 var shortdescription = document.getElementById("gameinfo-resume");
 var gameinfobox = document.getElementById("gameinfobox");
-
+var singleplayer = document.getElementById("icon-singleplayer");
+var multiplayer = document.getElementById("icon-multiplayer");
+var playerAmount = document.getElementById("player-amount");
 
 
 function loadGameInfoBox(GAMES)
@@ -33,6 +35,19 @@ function onHoverGame(gameinfo)
     shortdescription.innerText = `${gameinfo.description}`;
 
     showHideSupportIcons(gameinfo);
+
+    if (gameinfo.maxplayers === 1)
+    {
+        singleplayer.removeAttribute("hidden");
+        multiplayer.hidden = true;
+        playerAmount.innerText = "1";
+    }
+    else
+    {
+        multiplayer.removeAttribute("hidden");
+        singleplayer.hidden = true;
+        playerAmount.innerText = `${gameinfo.minplayers}-${gameinfo.maxplayers}`;
+    }
 }
 
 function showHideSupportIcons(gameinfo)
