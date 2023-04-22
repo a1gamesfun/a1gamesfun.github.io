@@ -7,6 +7,7 @@
   "support_mobile": "true",
   "support_pc": "true",
   "has_sound": "true",
+  "shortdescription": "Platformer game about shooting enemies and relieving yourself.",
   "description": "SPACE to jump. \nA and D to walk. \nS to relieve yourself. \nHeadless Hobo is made up of 6 people; Philip Ullersted, Dani Felix Montoya Laynes, Mikkel, Magnus Håkon Petersen, Mads Martinussen (Sound), Isak S. Køster",
   "screenshot-count": 0,
   "minplayers": 1,

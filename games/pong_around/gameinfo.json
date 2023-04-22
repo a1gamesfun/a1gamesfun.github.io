@@ -7,6 +7,7 @@
   "support_mobile": "false",
   "support_pc": "true",
   "has_sound": "true",
+  "shortdescription": "Pong in one big circle. Multiple balls. Multiple players.",
   "description": "Pong Around is played inside a circular arena, and your objective is to control your paddle and keep the ball bouncing around the circle without letting it escape. With multiple players, the game becomes even more exciting as you compete against friends and family in a fast-paced game of skill and reflexes. You can play all the way up to 12 players. With multiple players competing simultaneously, the game can quickly become very intense and chaotic. You can toggle full screen by pressing escape.",
   "screenshot-count": 0,
   "minplayers": 1,

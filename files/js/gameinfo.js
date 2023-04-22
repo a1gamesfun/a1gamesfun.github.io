@@ -32,7 +32,7 @@ function onHoverGame(gameinfo)
     
     parent.append(gameinfobox);
     
-    shortdescription.innerText = `${gameinfo.description}`;
+    shortdescription.innerText = `${gameinfo.shortdescription}`;
 
     showHideSupportIcons(gameinfo);
 
@@ -56,12 +56,10 @@ function setPlayerAmount(min, max)
         playerAmount.style.left = "2.2rem";
     }
 
-
     // Only show one number if they are the same anyway
     if (min == max)
-    {
         playerAmount.innerText = `${max}`;
-    }
+    
 }
 
 function showHideSupportIcons(gameinfo)
