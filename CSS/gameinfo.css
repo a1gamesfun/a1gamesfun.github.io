@@ -46,37 +46,60 @@
     color: black;
 }
 
-.gameinfo-icon {
-    display: inline-block;
-    width: 2rem;
-    height: 2rem;
+.playeramount-icon {
+    position: absolute;
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+
+    bottom: 0;
+    left: 0;
 
     background-size: contain;
 }
-
 #players-required {
+    display: block;
     position: absolute;
     margin: 0.2rem 1rem;
-
+    height: 1.5rem;
+    width: auto;
+    
     left: 0;
     bottom: 0;
-
+}
+#player-amount {
+    display: block;
+    position: absolute;
+    
+    height: auto;
+    width: auto;
+    
+    
+    white-space: nowrap;
+    
+    left: 2rem;
+    bottom: 0.75rem;
+    transform: translateY(50%);
+    
     font-size: 1rem;
-    vertical-align: middle;
+
 }
 #icon-singleplayer {
     background-image: url('../files/img/sorting-icons/singleplayer.png');
 }
 #icon-multiplayer {
     background-image: url('../files/img/sorting-icons/multiplayer.png');
-}
-#player-amount {
-    display: inline-block;
-    margin: auto 0;
-    height: 100%;
-    background-color: yellow;
+    left: 0.6rem;
 }
 
+.gameinfo-icon {
+    position: relative;
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+
+    background-size: contain;
+}
 #support-info {
     position: absolute;
     margin: 0.2rem 1rem;

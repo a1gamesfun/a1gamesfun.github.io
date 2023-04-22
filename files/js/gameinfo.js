@@ -36,17 +36,31 @@ function onHoverGame(gameinfo)
 
     showHideSupportIcons(gameinfo);
 
-    if (gameinfo.maxplayers === 1)
+    setPlayerAmount(gameinfo.minplayers, gameinfo.maxplayers);
+}
+
+function setPlayerAmount(min, max)
+{
+    singleplayer.style.display = "block";
+
+    if (max == 1)
     {
-        singleplayer.removeAttribute("hidden");
-        multiplayer.hidden = true;
-        playerAmount.innerText = "1";
+        playerAmount.innerText = `${max}`;    
+        multiplayer.style.display = "none";
+        playerAmount.style.left = "1.6rem";
     }
     else
     {
-        multiplayer.removeAttribute("hidden");
-        singleplayer.hidden = true;
-        playerAmount.innerText = `${gameinfo.minplayers}-${gameinfo.maxplayers}`;
+        playerAmount.innerText = `${min}-${max}`;
+        multiplayer.style.display = "block";
+        playerAmount.style.left = "2.2rem";
+    }
+
+
+    // Only show one number if they are the same anyway
+    if (min == max)
+    {
+        playerAmount.innerText = `${max}`;
     }
 }
 
