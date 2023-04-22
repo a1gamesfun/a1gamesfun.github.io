@@ -15,11 +15,12 @@ function loadGameInfoBox(GAMES)
 
     
     for (let i = 0; i < gamebuttons.length; i++) {
-        gamebuttons[i].addEventListener("pointerenter", (event) => {
+        let button = gamebuttons[i].getElementsByClassName("game-button")[0];
+        button.addEventListener("pointerenter", (event) => {
             gameinfobox.removeAttribute("hidden");
             onHoverGame(GAMES[i]);
         });
-        gamebuttons[i].addEventListener("pointerleave", (event) => {
+        button.addEventListener("pointerleave", (event) => {
             gameinfobox.hidden = true;
         });
     }

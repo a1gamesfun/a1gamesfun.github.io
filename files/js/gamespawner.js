@@ -58,9 +58,10 @@ async function addItem(gameObj)
     let clone = tmpl.cloneNode(true);
     clone.style.zIndex = 1000 - gamesAdded;
     
+    let button = clone.getElementsByClassName("game-button")[0];
     // -- Button Onclick --
     
-    clone.onclick = function() { 
+    button.onclick = function() { 
         localStorage.setItem("SelectedGame", JSON.stringify(gameObj));
         window.location.href = href; 
     };
@@ -68,7 +69,7 @@ async function addItem(gameObj)
     clone.id = gamename;
     
     // -- Image Source --
-    clone.getElementsByClassName("game-thumbnail-image")[0].src = `games/${gamename}/thumbnail.png`
+    button.getElementsByClassName("game-thumbnail-image")[0].src = `games/${gamename}/thumbnail.png`
 
     clone.removeAttribute("hidden");
 

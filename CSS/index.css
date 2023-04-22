@@ -23,7 +23,7 @@ button, input[type="submit"], input[type="reset"] {
     background: linear-gradient(10deg, rgba(170,170,170,1) 0%, rgba(228,228,228,1) 50%, rgba(255,255,255,1) 100%);
 }
 #fill-page {
-    min-height: 100vh;
+    min-height: 80vh;
     max-height: 100%;
 }
 
