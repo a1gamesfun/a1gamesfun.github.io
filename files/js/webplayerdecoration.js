@@ -84,7 +84,7 @@ async function LoadDecorations () {
     // spawn developers[0] since at least 1 is required
     linkElement = document.createElement("a");
 
-    fetch(`https://a1games.fun/files/developers/${gameinfo.developers[i]}.href`)
+    fetch(`https://a1games.fun/files/developers/${gameinfo.developers[0]}.href`)
                 .then((response) => { return response.text(); })
                 .then((response) => {
                     linkElement.href = response;
