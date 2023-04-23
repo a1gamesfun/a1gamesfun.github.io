@@ -84,17 +84,13 @@ async function LoadDecorations () {
     // spawn developers[0] since at least 1 is required
     linkElement = document.createElement("a");
 
-    fetch(`https://a1games.fun/files/developers/${gameinfo.developers[0]}.href`)
+    fetch(`https://a1games.fun/files/developers/${gameinfo.developers[i]}.href`)
+                .then((response) => { return response.text(); })
                 .then((response) => {
-                    if (!response.ok)
-                    {
-                        return "";
-                    }
-                    response.text();
-                    //console.log(response);
                     linkElement.href = response;
                 })
-                
+    
+
     linkElement.target = "_blank";
 
     let clone = document.createElement("img");
@@ -104,9 +100,6 @@ async function LoadDecorations () {
     
     linkElement.append(clone);
     devlogoContainer.append(linkElement);
-        
-    // ADD "developer_name" <h3>
-    var devbytmpl = document.getElementById("developed-by");
     
     clone = devbytmpl.cloneNode(true);
     clone.removeAttribute("id");
@@ -126,22 +119,15 @@ async function LoadDecorations () {
         for (let i = 1; i < gameinfo.developers.length; i++) {
             
             // ADD "&" <h3>
-            clone = devbytmpl.cloneNode(true);
-            clone.removeAttribute("id");
-            
+            clone = document.createElement("h3");
             clone.innerText = "&"
             devlogoContainer.append(clone);
 
             // ADD developer icon
             linkElement = document.createElement("a");
             fetch(`https://a1games.fun/files/developers/${gameinfo.developers[i]}.href`)
+                        .then((response) => { return response.text(); })
                         .then((response) => {
-                            if (!response.ok)
-                            {
-                                return "";
-                            }
-                            response.text();
-                            //console.log(response);
                             linkElement.href = response;
                         })
 
@@ -151,19 +137,15 @@ async function LoadDecorations () {
             clone.src = `files/developers/${gameinfo.developers[i]}.png`;
             clone.classList.add("dev-logo");
             
-            clone.removeAttribute("hidden");
             clone.removeAttribute("id");
-            
-            devlogoContainer.append(clone);
-            
-            // ADD "developer_name" <h3>
-            clone = devbytmpl.cloneNode(true);
-            clone.removeAttribute("id");
-            
-            clone.innerText = `${gameinfo.developers[i]}`
             
             linkElement.append(clone);
             devlogoContainer.append(linkElement);
+            
+            // ADD "developer_name" <h3>
+            clone = document.createElement("h3");
+            clone.innerText = `${gameinfo.developers[i]}`
+            devlogoContainer.append(clone);
         }
 
     }
