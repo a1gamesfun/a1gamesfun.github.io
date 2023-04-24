@@ -7,6 +7,9 @@
   "support_mobile": "true",
   "support_pc": "true",
   "has_sound": "false",
+  "shortdescription": "A new type of clicker game. Buy crabs and feed them.",
   "description": "Click the shell button to spawn a shell. \nBuy crabs to pick up the shells. \nBuy seaweed to feed the crabs. Otherwise the crabs' life will run out and they will die of starvation.",
-  "screenshot-count": 6
+  "screenshot-count": 6,
+  "minplayers": 1,
+  "maxplayers": 1
 }

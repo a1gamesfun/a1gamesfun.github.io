@@ -8,6 +8,9 @@
   "support_pc": "true",
   "has_sound": "true",
   "LFS_data": "https://media.githubusercontent.com/media/a1gamesfun/a1gamesfun.github.io/main/games/doyoubelieve/Build/doyoubelieve.data",
-  "description": "Made for a game jam with the theme 'It's not real'. ",
-  "screenshot-count": 5
+  "description": "A short story-type game that reflects on society. Made for a game jam with the theme 'It's not real'. ",
+  "shortdescription": "A short story-type game that reflects on society.",
+  "screenshot-count": 5,
+  "minplayers": 1,
+  "maxplayers": 1
 }

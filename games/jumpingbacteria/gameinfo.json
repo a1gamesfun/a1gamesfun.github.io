@@ -7,6 +7,9 @@
   "support_mobile": "true",
   "support_pc": "true",
   "has_sound": "true",
-  "description": "Press arrow up to jump and use arrow left and right to change direction. \nSurvive as long as you can. Red is dangerous, Yellow is neutral. Every 10 jumps gives you one coin that you can use in the shop.",
-  "screenshot-count": 0
+  "shortdescription": "Every jump is one point. Get the highscore and buy cosmetics.",
+  "description": "Every jump is one point. Get the highscore and buy cosmetics. Press arrow up to jump and use arrow left and right to change direction. \nSurvive as long as you can. Red is dangerous, Yellow is neutral. Every 10 jumps gives you one coin that you can use in the shop.",
+  "screenshot-count": 0,
+  "minplayers": 1,
+  "maxplayers": 1
 }

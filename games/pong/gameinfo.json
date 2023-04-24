@@ -7,6 +7,9 @@
   "support_mobile": "false",
   "support_pc": "true",
   "has_sound": "false",
+  "shortdescription": "Traditional pong with the ability to choose different pads.",
   "description": "Traditional pong with the ability to choose different pads.",
-  "screenshot-count": 2
+  "screenshot-count": 2,
+  "minplayers": 2,
+  "maxplayers": 2
 }

@@ -7,6 +7,9 @@
   "support_mobile": "false",
   "support_pc": "true",
   "has_sound": "false",
-  "description": "The fish are tired of humans being in power.",
-  "screenshot-count": 0
+  "shortdescription": "The fish are tired of humans being in power. Blub blub!",
+  "description": "The fish are tired of humans being in power. Blub blub!",
+  "screenshot-count": 0,
+  "minplayers": 1,
+  "maxplayers": 1
 }

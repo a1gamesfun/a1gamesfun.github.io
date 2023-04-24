@@ -3,6 +3,8 @@
 var GAMES = [];
 var SORTED_GAMES = [];
 
+var gamesAdded = 0;
+var gamesCount = 0;
 
 // add jsonObject to GAMES
 async function loadAndAddGame(gamename) {
@@ -31,9 +33,9 @@ async function setGAMES()
         .then((jsonresponse) =>  {
             // [...] makes a copy instead of a reference
             list = [...jsonresponse.gamelist];
-            let l = list.length;
+            gamesCount = list.length;
 
-            for (let i = 0; i < l; i++) {
+            for (let i = 0; i < gamesCount; i++) {
                 // get rnd index
                 let rnd = Math.floor(Math.random() * list.length);
                 loadAndAddGame(list[rnd]);
@@ -54,10 +56,12 @@ async function addItem(gameObj)
     var href = gameObj["href"];
     
     let clone = tmpl.cloneNode(true);
+    clone.style.zIndex = 1000 - gamesAdded;
     
+    let button = clone.getElementsByClassName("game-button")[0];
     // -- Button Onclick --
     
-    clone.onclick = function() { 
+    button.onclick = function() { 
         localStorage.setItem("SelectedGame", JSON.stringify(gameObj));
         window.location.href = href; 
     };
@@ -65,7 +69,7 @@ async function addItem(gameObj)
     clone.id = gamename;
     
     // -- Image Source --
-    clone.getElementsByClassName("game-thumbnail-image")[0].src = `games/${gamename}/thumbnail.png`
+    button.getElementsByClassName("game-thumbnail-image")[0].src = `games/${gamename}/thumbnail.png`
 
     clone.removeAttribute("hidden");
 
@@ -74,16 +78,17 @@ async function addItem(gameObj)
     {
         let lfs_warning = document.createElement("p");
         lfs_warning.className = "lfs-warning";
-        lfs_warning.innerText = ">100MB";
+        lfs_warning.innerText = "100 MB+";
     
         clone.append(lfs_warning);
     }
 
 
-
-
-    //console.log(clone)
     container.append(clone);
+
+    
+    gamesAdded += 1;
+    checkLoadGameInfoBox();
 }
 
 async function clearthumbnails()
@@ -181,5 +186,17 @@ async function toggleSortingElement(key)
 
 // set GAMES array and spawn the initial games
 setGAMES();
+
 // apply sorting functionality
 applySortingOnClicks();
+
+
+function checkLoadGameInfoBox()
+{
+    if (gamesAdded >= gamesCount)
+    {
+        // set on hover show game info
+        loadGameInfoBox(GAMES);
+    }
+}
+

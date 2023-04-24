@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="CSS/index.css" media="screen">
     <link rel="stylesheet" href="CSS/textmod.css" media="screen">
     <link rel="stylesheet" href="CSS/fonts.css" media="screen">
+    <link rel="stylesheet" href="CSS/gameinfo.css" media="screen">
 
     <link rel="shortcut icon" href="files/img/icon/a1Icon16px.ico" type="image/x-icon">
     <meta charset="UTF-8">
@@ -57,17 +58,39 @@
             </tr>
         </table>
         
-        <!-- grid layout thing for showcases -->
-        <button class="game-thumbnail" onclick="" hidden>
-            <img class="game-thumbnail-image" src="games/hack_attack/thumbnail.png" />
-        </button>
+        <div class="game-thumbnail" hidden>
+            <button class="game-button" onclick="" >
+                <img class="game-thumbnail-image" src="games/hack_attack/thumbnail.png" />
+            </button>
+        </div>
         
+        <!-- grid layout thing for showcases -->
         <div id="gamegrid" class="container no-text-deco games-grid">
+        </div>
+        
+        <!-- game info box -->
+        <div id="gameinfobox" hidden>
+            <div id="gameinfobox-visible">
+                <p id="gameinfo-resume"> Short Description </p>
+                <div id="players-required">
+                    <div id="icon-singleplayer" class="playeramount-icon" hidden></div>
+                    <div id="icon-multiplayer" class="playeramount-icon" hidden></div>
+                    <div id="player-amount">X</div>
+                </div>
+                <div id="support-info">
+                    <div id="support-icon-mobile" class="gameinfo-icon" ></div>
+                    <div id="support-icon-controller" class="gameinfo-icon" ></div>
+                    <div id="support-icon-pc" class="gameinfo-icon" ></div>
+                </div>
+            </div>
         </div>
         
     </div>
     <!-- FOOTER -->
     <footer style="background-color: #4d4d4d;" id="footer"> </footer>
+
+    <!-- Game Info On Hover -->
+    <script src="files/js/gameinfo.js"></script>
 
     <!-- Spawn Games -->
     <script src="files/js/gamespawner.js"></script>

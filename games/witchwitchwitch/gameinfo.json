@@ -7,6 +7,9 @@
   "support_mobile": "false",
   "support_pc": "true",
   "has_sound": "true",
+  "shortdescription": "Hihihihihhihihihiii",
   "description": "Hihihihihhihihihiii",
-  "screenshot-count": 0
+  "screenshot-count": 0,
+  "minplayers": 1,
+  "maxplayers": 1
 }
