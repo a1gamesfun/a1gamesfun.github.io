@@ -82,8 +82,8 @@ async function LoadDecorations () {
     var devlogoContainer = document.getElementById("dev-logo-container");
     
     // spawn developers[0] since at least 1 is required
+    // ADD developer icon
     linkElement = document.createElement("a");
-
     fetch(`https://a1games.fun/files/developers/${gameinfo.developers[0]}.href`)
                 .then((response) => {
                     if (!response.ok)
@@ -94,23 +94,17 @@ async function LoadDecorations () {
                     //console.log(response);
                     linkElement.href = response;
                 })
-                
     linkElement.target = "_blank";
 
-    let clone = document.createElement("img");
-    
+    clone = document.createElement("img");
     clone.src = `files/developers/${gameinfo.developers[0]}.png`;
     clone.classList.add("dev-logo");
     
     linkElement.append(clone);
     devlogoContainer.append(linkElement);
-        
+    
     // ADD "developer_name" <h3>
-    var devbytmpl = document.getElementById("developed-by");
-    
-    clone = devbytmpl.cloneNode(true);
-    clone.removeAttribute("id");
-    
+    clone = document.createElement("h3");
     clone.innerText = `${gameinfo.developers[0]}`
     devlogoContainer.append(clone);
     
@@ -126,9 +120,7 @@ async function LoadDecorations () {
         for (let i = 1; i < gameinfo.developers.length; i++) {
             
             // ADD "&" <h3>
-            clone = devbytmpl.cloneNode(true);
-            clone.removeAttribute("id");
-            
+            clone = document.createElement("h3");
             clone.innerText = "&"
             devlogoContainer.append(clone);
 
@@ -144,26 +136,19 @@ async function LoadDecorations () {
                             //console.log(response);
                             linkElement.href = response;
                         })
-
             linkElement.target = "_blank";
+
             clone = document.createElement("img");
-    
             clone.src = `files/developers/${gameinfo.developers[i]}.png`;
             clone.classList.add("dev-logo");
             
-            clone.removeAttribute("hidden");
-            clone.removeAttribute("id");
-            
-            devlogoContainer.append(clone);
-            
-            // ADD "developer_name" <h3>
-            clone = devbytmpl.cloneNode(true);
-            clone.removeAttribute("id");
-            
-            clone.innerText = `${gameinfo.developers[i]}`
-            
             linkElement.append(clone);
             devlogoContainer.append(linkElement);
+            
+            // ADD "developer_name" <h3>
+            clone = document.createElement("h3");
+            clone.innerText = `${gameinfo.developers[i]}`
+            devlogoContainer.append(clone);
         }
 
     }
