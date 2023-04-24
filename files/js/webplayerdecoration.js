@@ -18,9 +18,7 @@ async function LoadDecorations () {
     let link = `https://api.github.com/repos/a1gamesfun/a1gamesfun.github.io/contents/games/${gameinfo.gamename}/Build/${gameinfo.gamename}.data`;
 
     await fetch(link)
-            .then((response) => {
-                return response.json();
-            })
+            .then((response) => { return response.json(); })
             .then((response) => {
                 gamesize = Math.floor(response.size / 1024 / 1024);
             });
@@ -85,17 +83,13 @@ async function LoadDecorations () {
     // ADD developer icon
     linkElement = document.createElement("a");
     fetch(`https://a1games.fun/files/developers/${gameinfo.developers[0]}.href`)
-                .then((response) => {
-                    if (!response.ok)
-                    {
-                        return "";
-                    }
-                    response.text();
-                    //console.log(response);
-                    linkElement.href = response;
-                })
+        .then((response) => { return response.text(); })
+            .then(() => {
+                linkElement.href = response;
+            });
     linkElement.target = "_blank";
-
+    linkElement.classList.add("dev-logo");
+    
     clone = document.createElement("img");
     clone.src = `files/developers/${gameinfo.developers[0]}.png`;
     clone.classList.add("dev-logo");
@@ -106,12 +100,13 @@ async function LoadDecorations () {
     // ADD "developer_name" <h3>
     clone = document.createElement("h3");
     clone.innerText = `${gameinfo.developers[0]}`
+    clone.classList.add("developed-by");
     devlogoContainer.append(clone);
     
     
     
     
-
+    
     
     // set "Developed by _" text
     if (gameinfo.developers.length > 1)
@@ -122,22 +117,19 @@ async function LoadDecorations () {
             // ADD "&" <h3>
             clone = document.createElement("h3");
             clone.innerText = "&"
+            clone.classList.add("developed-by");
             devlogoContainer.append(clone);
-
+            
             // ADD developer icon
             linkElement = document.createElement("a");
             fetch(`https://a1games.fun/files/developers/${gameinfo.developers[i]}.href`)
-                        .then((response) => {
-                            if (!response.ok)
-                            {
-                                return "";
-                            }
-                            response.text();
-                            //console.log(response);
-                            linkElement.href = response;
-                        })
+            .then((response) => { return response.text(); })
+            .then((response) => {
+                linkElement.href = response;
+            })
             linkElement.target = "_blank";
-
+            linkElement.classList.add("dev-logo");
+            
             clone = document.createElement("img");
             clone.src = `files/developers/${gameinfo.developers[i]}.png`;
             clone.classList.add("dev-logo");
@@ -148,6 +140,7 @@ async function LoadDecorations () {
             // ADD "developer_name" <h3>
             clone = document.createElement("h3");
             clone.innerText = `${gameinfo.developers[i]}`
+            clone.classList.add("developed-by");
             devlogoContainer.append(clone);
         }
 
