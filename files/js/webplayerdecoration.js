@@ -84,9 +84,9 @@ async function LoadDecorations () {
     linkElement = document.createElement("a");
     fetch(`https://a1games.fun/files/developers/${gameinfo.developers[0]}.href`)
         .then((response) => { return response.text(); })
-            .then(() => {
+            .then((response) => {
                 linkElement.href = response;
-            });
+            })
     linkElement.target = "_blank";
     linkElement.classList.add("dev-logo");
     
@@ -123,10 +123,10 @@ async function LoadDecorations () {
             // ADD developer icon
             linkElement = document.createElement("a");
             fetch(`https://a1games.fun/files/developers/${gameinfo.developers[i]}.href`)
-            .then((response) => { return response.text(); })
-            .then((response) => {
-                linkElement.href = response;
-            })
+                .then((response) => { return response.text(); })
+                    .then((response) => {
+                        linkElement.href = response;
+                    })
             linkElement.target = "_blank";
             linkElement.classList.add("dev-logo");
             
