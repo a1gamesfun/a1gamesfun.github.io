@@ -178,7 +178,8 @@ table {
     width: 100%; 
     height: 18px; 
     margin-top: 10px; 
-    background: no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-image: url('https://a1games.fun/files/img/webplayer/progress-bar-empty-dark.png');
     background-position: center;
 }
