@@ -81,7 +81,7 @@ async function LoadDecorations () {
     
     // spawn developers[0] since at least 1 is required
     // ADD developer icon
-    linkElement = document.createElement("a");
+    let linkElement = document.createElement("a");
     fetch(`https://a1games.fun/files/developers/${gameinfo.developers[0]}.href`)
         .then((response) => { return response.text(); })
             .then((response) => {
@@ -121,7 +121,7 @@ async function LoadDecorations () {
             devlogoContainer.append(clone);
             
             // ADD developer icon
-            linkElement = document.createElement("a");
+            let linkElement = document.createElement("a");
             fetch(`https://a1games.fun/files/developers/${gameinfo.developers[i]}.href`)
                 .then((response) => { return response.text(); })
                     .then((response) => {
