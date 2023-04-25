@@ -104,10 +104,6 @@ async function LoadDecorations () {
     devlogoContainer.append(clone);
     
     
-    
-    
-    
-    
     // set "Developed by _" text
     if (gameinfo.developers.length > 1)
     {
