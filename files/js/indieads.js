@@ -34,7 +34,7 @@ async function fetchIndieAd(link_elementID, img_elementID) {
     
 
     // fetch the json game info file
-    fetch(`https://www.a1creator.com/indieads/foldernames.json`)
+    fetch(`https://indieads.github.io/foldernames.json`)
         .then((response) => { return response.json(); })
         .then((response) =>  {
             
@@ -42,9 +42,9 @@ async function fetchIndieAd(link_elementID, img_elementID) {
 
             let foldername = foldernames[Math.floor(Math.random() * foldernames.length)];
 
-            document.getElementById(img_elementID).src = `https://www.a1creator.com/indieads/${foldername}/${600}x${900}.png`;
+            document.getElementById(img_elementID).src = `https://indieads.github.io/${foldername}/${600}x${900}.png`;
             
-            fetch(`https://www.a1creator.com/indieads/${foldername}/href`)
+            fetch(`https://indieads.github.io/${foldername}/href`)
             .then((response) => {
                 if (!response.ok)
                 {
