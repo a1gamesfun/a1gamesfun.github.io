@@ -1,0 +1,11 @@
+{
+  "background": "#fccc14",
+  "text-color": "#000000",
+  "primary-color": "#f2f2f2",
+  "secondary-color": "#262626",
+  "tertiary-color": "#999999",
+  "header-font": "'Roboto', sans-serif",
+  "p-font": "'Roboto', sans-serif",
+  "x": "1920",
+  "y": "1080"
+}

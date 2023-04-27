@@ -1,0 +1,15 @@
+{
+  "title": "I Need To Poop!",
+  "developers": [ "Headless Hobo" ],
+  "gamename": "pooprun",
+  "href": "webplayer.html",
+  "support_controller": "false",
+  "support_mobile": "false",
+  "support_pc": "true",
+  "has_sound": "true",
+  "shortdescription": "Run to the toilet before you poop your pants!",
+  "description": "Run to the toilet before you poop your pants! \nWASD to move. \nSPACE to jump. \nHeadless Hobo is made up of 6 people; Philip Ullersted, Dani Felix Montoya Laynes, Mikkel, Magnus Håkon Petersen, Mads Martinussen (Sound), Isak S. Køster",
+  "screenshot-count": 0,
+  "minplayers": 1,
+  "maxplayers": 1
+}
