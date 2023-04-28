@@ -4,7 +4,7 @@
   "gamename": "pissbarrel",
   "href": "webplayer.html",
   "support_controller": "false",
-  "support_mobile": "true",
+  "support_mobile": "false",
   "support_pc": "true",
   "has_sound": "true",
   "shortdescription": "Platformer game about shooting enemies and relieving yourself.",
