@@ -1,14 +1,9 @@
 
 
 const fontObjects = [
-    { name: "Roboto", fallback: "sans-serif", },
     { name: "Indie Flower", fallback: "cursive", }, 
-    { name: "Crimson Text", fallback: "cursive", }, 
     { name: "Inspiration", fallback: "cursive", }, 
     { name: "Righteous", fallback: "cursive", }, 
-    { name: "Righteous", fallback: "cursive", },
-    { name: "Righteous", fallback: "cursive", },
-    { name: "Righteous", fallback: "cursive", },
     { name: "Audiowide", fallback: "cursive", },
     { name: "Bangers", fallback: "cursive", },
     { name: "Bungee Shade", fallback: "cursive", },
@@ -18,15 +13,12 @@ const fontObjects = [
     { name: "Delicious Handrawn", fallback: "cursive", },
     { name: "Major Mono Display", fallback: "cursive", },
     { name: "Megrim", fallback: "cursive", },
-    { name: "Monoton", fallback: "cursive", },
     { name: "Mr Dafoe", fallback: "cursive", },
     { name: "MuseoModerno", fallback: "cursive", },
     { name: "Nabla", fallback: "cursive", },
     { name: "Pacifico", fallback: "cursive", },
     { name: "Press Start 2P", fallback: "cursive", },
     { name: "Redacted Script", fallback: "cursive", },
-    { name: "Rubik 80s Fade", fallback: "cursive", },
-    { name: "Rubik Moonrocks", fallback: "cursive", },
     { name: "Rubik Pixels", fallback: "cursive", },
     { name: "Rubik Vinyl", fallback: "cursive", },
     { name: "Ruslan Display", fallback: "cursive", },
@@ -36,7 +28,6 @@ const fontObjects = [
     { name: "Silkscreen", fallback: "cursive", },
     { name: "Tilt Prism", fallback: "cursive", },
     { name: "Titan One", fallback: "cursive", },
-    { name: "Tourney", fallback: "cursive", },
 ];
 
 var fontObjectsToLoad = [];
@@ -76,10 +67,10 @@ setRandomFontReferences();
 
 async function setFonts()
 {
-    let free = document.getElementById("free").getElementsByClassName("header-h1")[0];
+    let free = document.getElementById("free");
     free.style.fontFamily = `${fontObjectsToLoad[0].name}, ${fontObjectsToLoad[0].fallback}`;
 
-    let browsergames = document.getElementById("browsergames").getElementsByClassName("header-h1")[0];
+    let browsergames = document.getElementById("browsergames");
     browsergames.style.fontFamily = `${fontObjectsToLoad[1].name}, ${fontObjectsToLoad[1].fallback}`;
 }
 

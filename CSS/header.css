@@ -12,30 +12,27 @@
 
 .header-h1 {
     display: block;
-    margin: auto 0;
     font-family: 'Roboto', sans-serif;
     font-size: 4rem;
     white-space: nowrap;
-    padding: 0;
-    height: auto;
-    width: auto;
+    text-align: center;
 }
 
 #free {
     height: 100%;
     padding: 0 0 0 1.5rem;
     margin: auto;
-    width: 0;
+    width: auto;
 
-    -webkit-text-fill-color: yellow;
-    -webkit-text-stroke: 0.1rem black;
+    -webkit-text-fill-color: yellow !important;
+    -webkit-text-stroke: 0.1rem black !important;
 }
 
 #browsergames {
     height: 100%;
     padding: 0 0 0 1.5rem;
     margin: auto;
-    width: 0;
+    width: auto;
 }
 
 .collapse-width {
