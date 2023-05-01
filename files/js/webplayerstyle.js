@@ -59,8 +59,9 @@ async function ColorizePage()
     
     
     // Custom Screensize:
-    var aspect_X = 960 / style["x"]; // width is always 960 so we just take the game's native res and scale it according to the fixed x value
-    var y = style["y"] * aspect_X;
+    // width is always 960 so we just take the game's native res and scale it according to the fixed x value
+    var aspect_X = style["y"] / style["x"]; 
+    var y = 960 * aspect_X;
     document.getElementById("unity-canvas").height = y;
     // Fit Loading Icon to screen
     document.getElementById("canvas-frame").style.height = y;
