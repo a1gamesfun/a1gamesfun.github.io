@@ -42,9 +42,9 @@ async function fetchIndieAd(link_elementID, img_elementID) {
 
             let foldername = foldernames[Math.floor(Math.random() * foldernames.length)];
 
-            document.getElementById(img_elementID).src = `https://indieads.github.io/${foldername}/${600}x${900}.png`;
+            document.getElementById(img_elementID).src = `https://indieads.github.io/ads/${foldername}/${600}x${900}.png`;
             
-            fetch(`https://indieads.github.io/${foldername}/href`)
+            fetch(`https://indieads.github.io/ads/${foldername}/href`)
             .then((response) => {
                 if (!response.ok)
                 {
