@@ -12,5 +12,7 @@
   "shortdescription": "A short story-type game that reflects on society.",
   "screenshot-count": 5,
   "minplayers": 1,
-  "maxplayers": 1
+  "maxplayers": 1,
+  "x": "960",
+  "y": "600"
 }

@@ -152,7 +152,7 @@ async function LoadDecorations () {
     // Custom Screensize:
     // width is always 960 so we just take the game's native res and scale it according to the fixed x value
     document.getElementById("unity-canvas").width = 960;
-    var aspect_X = style["y"] / style["x"]; 
+    var aspect_X = gameinfo.y / gameinfo.x; 
     document.getElementById("unity-canvas").height = 960 * aspect_X;
     // Fit Loading Icon to screen
     document.getElementById("canvas-frame").style.height = y;

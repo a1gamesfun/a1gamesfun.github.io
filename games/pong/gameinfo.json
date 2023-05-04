@@ -11,5 +11,7 @@
   "description": "Traditional pong with the ability to choose different pads.",
   "screenshot-count": 2,
   "minplayers": 2,
-  "maxplayers": 2
+  "maxplayers": 2,
+  "x": "800",
+  "y": "400"
 }

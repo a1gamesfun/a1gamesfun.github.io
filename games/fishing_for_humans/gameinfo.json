@@ -11,5 +11,7 @@
   "description": "The fish are tired of humans being in power. Blub blub!",
   "screenshot-count": 0,
   "minplayers": 1,
-  "maxplayers": 1
+  "maxplayers": 1,
+  "x": "960",
+  "y": "600"
 }
