@@ -15,7 +15,7 @@ async function LoadDecorations () {
     // -- Ask to load game --
 
     let gamesize = 0;
-    let link = `https://api.github.com/repos/a1gamesfun/a1gamesfun.github.io/contents/games/${gameinfo.gamename}/Build/${gameinfo.gamename}.data`;
+    let link = `https://api.github.com/repos/a1gamesfun/a1gamesfun.github.io/contents/games/${gameinfo.gamename}/Build/${gameinfo.gamename}.data${gameinfo.compression == undefined ? "" : gameinfo.compression}`;
 
     await fetch(link)
             .then((response) => { return response.json(); })

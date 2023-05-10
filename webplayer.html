@@ -203,7 +203,7 @@
       async function MakeWebPlayer()
       {
         let gamesize = 0;
-        let link = `https://api.github.com/repos/a1gamesfun/a1gamesfun.github.io/contents/games/${gameinfo.gamename}/Build/${gameinfo.gamename}.data`;
+        let link = `https://api.github.com/repos/a1gamesfun/a1gamesfun.github.io/contents/games/${gameinfo.gamename}/Build/${gameinfo.gamename}.data${compressionfileextenstion}`;
 
         await fetch(link)
               .then((response) => {
