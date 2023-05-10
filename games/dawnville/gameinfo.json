@@ -1,0 +1,16 @@
+{
+  "title": "I Need To Poop!",
+  "developers": [ "Headless Hobo" ],
+  "gamename": "dawnville",
+  "href": "webplayer.html",
+  "support_controller": "false",
+  "support_mobile": "false",
+  "support_pc": "true",
+  "has_sound": "true",
+  "shortdescription": "Defend the village! Incremental Tower Defense",
+  "description": "Defend the village against the monsters. Controlled with cursor.",
+  "screenshot-count": 0,
+  "minplayers": 1,
+  "maxplayers": 1,
+  "compression": ".gz"
+}
