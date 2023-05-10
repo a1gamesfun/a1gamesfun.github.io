@@ -165,6 +165,7 @@
 
       // Change this to change the game that is displayed
       var compressionfileextenstion = gameinfo.compression == undefined ? "" : gameinfo.compression
+      console.log("compression: " + compressionfileextenstion)
 
       var buildUrl = `games/${gameinfo.gamename}/Build`;
       var loaderUrl = buildUrl + `/${gameinfo.gamename}.loader.js`;
