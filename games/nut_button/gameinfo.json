@@ -1,0 +1,14 @@
+{
+  "title": "Nut Button",
+  "developers": [ "a1creator" ],
+  "gamename": "nut_button",
+  "href": "games/nut/nut.html",
+  "support_controller": "false",
+  "support_mobile": "false",
+  "support_pc": "true",
+  "has_sound": "true",
+  "description": "Nut.",
+  "shortdescription": "Nut.",
+  "minplayers": 1,
+  "maxplayers": 1
+}
