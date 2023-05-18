@@ -3,22 +3,21 @@
 <head>
     <meta charset="utf-8">
     <title>Nut Button</title>
-    <link rel="stylesheet" href="CSS/contract.css" media="screen">
-    <link rel="stylesheet" href="CSS/header.css" media="screen">
-    <link rel="stylesheet" href="CSS/nutbutton.css" media="screen">
-    <link rel="stylesheet" href="CSS/index.css" media="screen">
-    <link rel="shortcut icon" href="images/a1Icon16px.ico" type="image/x-icon">
-    <script src="JAVASCRIPT/nut.js"></script>
+    <link rel="stylesheet" href="nutbutton.css" media="screen">
+    <link rel="shortcut icon" href="../../files/img/icon/a1Icon16px.ico" type="image/x-icon">
+    <!-- Jquery (load first!) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
         $(function () {
-            $("#header").load("php/header.html");
+            $("#header").load("z_header.html");
         });
     </script>
 </head>
 <body style="background-color: #d2d2d2;">
     <!-- load header in -->
     <header id="header"></header>
+    
+    <script src="nut.js"></script>
 
     <div class="nut-button-div">
         <input type="button" value="" onclick="playMusic()" class="nut-button" />
