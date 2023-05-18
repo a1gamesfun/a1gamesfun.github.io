@@ -157,7 +157,7 @@ async function LoadDecorations () {
     document.getElementById("unity-canvas").height = y;
     // Fit Loading Icon to screen
     document.getElementById("canvas-frame").style.height = y;
-    console.log(`set screensize to ${x} by ${y}`)
+    console.log(`set screensize to ${960} by ${y}`)
 }
 
 LoadDecorations();
