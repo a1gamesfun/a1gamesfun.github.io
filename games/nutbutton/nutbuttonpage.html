@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+<head>
+    <title>a1-creator</title>
+    <link rel="stylesheet" href="CSS/contract.css" media="screen">
+    <link rel="stylesheet" href="CSS/header.css" media="screen">
+    <link rel="stylesheet" href="CSS/index.css" media="screen">
+    <link rel="stylesheet" href="CSS/googleplaystoreButton.css" media="screen">
+    <link rel="stylesheet" href="CSS/nutbutton.css" media="screen">
+    <link rel="shortcut icon" href="images/a1Icon16px.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $("#header").load("php/header.html");
+            $("#footer").load("php/footer.html");
+        });
+    </script>
+</head>
+<body>
+    <!-- load header in -->
+    <header id="header"></header>
+
+    <div id="top-page-nut">
+        <div>
+            <h3 class="text-bubblegum-nut">NUT BUTTON</h3>
+        </div>
+    </div>
+
+    <div style="background-color: #e0e5eb;">
+        <table align="center">
+            <tr>
+                <th style="background-color: none; width: 600px " class="hidden-mobile">
+                    <div style="padding: 86px 0; ">
+                        <img src="images/nut/unpressedShowcaseWide.jpg" style="width:100%;">
+                    </div>
+                </th>
+                <th style="background-color: none; width: 600px">
+                    <div style="padding: 1rem; margin: auto; background-color:none;">
+                        <h5 class=" true-center" style="font-size: 1.25rem; font-family: RobotoLight,sans-serif; letter-spacing: 0.12rem;">a1games presents:</h5>
+                        <h2 class=" true-center" style="font-size: 2.25rem; margin-bottom: 1.6rem; font-weight: bold;">Nut Button</h2>
+                        <p class=" center-text" style="font-size: 1rem; font-family: RobotoLight,sans-serif;">Install on the Google Play Store now!</p>
+                        <div id="google-play-button">
+                            <a class="google-play-button-text" id="google-play-button-text-nut" href="https://play.google.com/store/apps/details?id=com.a1creator.nut" target="_blank">GoOgle PlaY sTore</a>
+                        </div>
+                        <p class=" center-text" style="font-size: 1rem; font-family: RobotoLight,sans-serif; margin-top: 2rem;">Try it out in browser!</p>
+                        <div id="google-play-button">
+                            <a class="google-play-button-text" id="google-play-button-text-nut" href="nut.html">nut in browser</a>
+                        </div>
+                    </div>
+                </th>
+            </tr>
+        </table>
+    </div>
+    <!-- FOOTER -->
+    <footer style="background-color: #4d4d4d;" id="footer"> </footer>
+
+</body>
+
+</html>
