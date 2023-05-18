@@ -11,7 +11,7 @@ table {
 }
 
 canvas {
-    aspect-ratio: auto;
+    aspect-ratio: 16 / 10;
 }
 
 #screenshot-container::-webkit-scrollbar {
