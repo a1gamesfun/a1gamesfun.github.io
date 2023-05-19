@@ -20,6 +20,6 @@ async function loadAndAdd() {
 
 loadAndAdd();
 
-
+document.title = gameinfo.gamename;
 
 
