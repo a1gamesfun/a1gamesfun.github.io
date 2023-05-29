@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Fun Game Title</title>
+    <link rel="stylesheet" href="CSS/index.css" media="screen">
+    <link rel="stylesheet" href="CSS/webplayer.css" media="screen">
+    <link rel="stylesheet" href="CSS/slider.css" media="screen">
+    <link rel="stylesheet" href="CSS/indieads.css" media="screen">
+    <link rel="shortcut icon" href="files/img/icon/a1Icon16px.ico" type="image/x-icon">
+    <!-- pygame shit -->
+    <link rel="prefetch" href="https://pygame-web.github.io/archives/0.7/pythonrc.py">
+    <link rel="prefetch" href="https://pygame-web.github.io/archives/0.7/vt/xterm.js">
+    <link rel="prefetch" href="https://pygame-web.github.io/archives/0.7/vt/xterm-addon-image.js">
+    <link rel="prefetch" href="https://pygame-web.github.io/archives/0.7/vt/xterm-addon-image.js">
+    <!-- Jquery (load first!) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Google AdSense -->
+    <!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4290613853758058" crossorigin="anonymous"></script>-->
+    <script>
+        $(function () {
+            $("#header").load("z_header.html");
+        });
+    </script>
+  </head>
+
+  <script src="https://pygame-web.github.io/archives/0.7/pythons.js" type=module id="site" data-os="vtx,fs,snd,gui" async defer>
+
+    print("""
+        Loading CursorInvasion from python-eksamen.apk
+        Pygbag Version : 0.7.1
+        Template Version : 0.7.0
+        Python  : 3.11
+        CDN URL : https://pygame-web.github.io/archives/0.7/
+        Screen  : {{cookiecutter.width}}x{{cookiecutter.height}}
+        Title   : CursorInvasion
+        Folder  : python-eksamen
+        Authors : pgw
+        SPDX-License-Identifier: cookiecutter.spdx
+    """)
+    
+    
+    # screen pixels (real, hardware)
+    WIDTH=1024  # {{cookiecutter.width}}
+    HEIGHT=600  # {{cookiecutter.height}}
+    
+    # reference/idealized screen pixels
+    REFX = 1980
+    REFY = 1080
+    
+    def u(real, ref, v):
+        if abs(v)<0.9999999:
+            result = int( (float(real)/100.0) * (v*1000))
+            if v<0:
+                return real-result
+            return result
+        return int( (real/ref) * v )
+    
+    def ux(*argv):
+        global WIDTH, REFX
+        acc = 0
+        for v in argv:
+            acc += u(WIDTH, REFX, v)
+        return acc
+    
+    def uy(*argv):
+        global HEIGHT, REFY
+        acc = 0
+        for v in argv:
+            acc += u(HEIGHT, REFY, v)
+        return acc
+    
+    
+    
+    
+    # do not rename
+    async def custom_site():
+    
+        import sys
+        import asyncio
+        import platform
+        import json
+        from pathlib import Path
+    
+        import embed
+    
+        platform.document.body.style.background = "#7f7f7f"
+    
+        import pygame
+    
+        def compose():
+            pygame.display.update()
+            window.chromakey(None, *screen.get_colorkey(), 40)
+    
+        pygame.init()
+        pygame.font.init()
+    
+        screen = pygame.display.set_mode([ux(.100),uy(.100)], pygame.SRCALPHA, 32)
+        screen.set_colorkey( (0,0,0,0), pygame.RLEACCEL )
+        screen.fill( (0,0,0,0) )
+    
+        compose()
+    
+        platform.window.transfer.hidden = true
+        platform.window.canvas.style.visibility = "visible"
+    
+    
+    
+        apk = "python-eksamen.apk"
+    
+        bundle = "python-eksamen"
+    
+        # the C or js loader could do that but be explicit.
+        appdir = Path(f"/data/data/{bundle}") # /data/data/python-eksamen
+        appdir.mkdir()
+    
+    
+        # mount apk
+    
+        cfg = {
+            "io": "url",
+            "type":"mount",
+            "mount" : {
+                "point" : appdir.as_posix(),
+                "path" : "/",
+            },
+            "path" : f"/ => {appdir.as_posix()}",
+        }
+    
+    
+        track = platform.window.MM.prepare(apk, json.dumps(cfg))
+    
+        marginx = ux(.020) # 20%
+        marginy = uy(.045) # 45%
+    
+    
+        def pg_bar(pos):
+            nonlocal marginx, marginy
+            # resolution of progress bar, recalculate since it may not be know yet.
+            total = track.len or 10  # avoid div0
+            slot = ux(.060)/ total # 60%
+    
+            pygame.draw.rect(screen,(10,10,10),( marginx-ux(10), marginy-uy(10), (total*slot)+ux(20), uy(110) ) )
+            pygame.draw.rect(screen,(0,255,0), ( marginx, marginy, track.pos*slot, uy(90)) )
+    
+        # wait until zip mount + overlayfs is complete
+        while not track.ready:
+            pg_bar(track.pos)
+            compose()
+            await asyncio.sleep(.1)
+    
+        # fill it up in case it was cached and instant download
+        pg_bar(track.len)
+        compose()
+    
+    
+        # preloader will change dir and prepend it to sys.path
+        platform.run_main(PyConfig, loaderhome= appdir / "assets", loadermain=None)
+    
+    
+        # wait preloading complete
+        # that includes images and wasm compilation of bundled modules
+        while embed.counter()<0:
+            await asyncio.sleep(.1)
+    
+        main = appdir / "assets" / "main.py"
+    
+        # start async top level machinery and add a console.
+        await TopLevel_async_handler.start_toplevel(platform.shell, console=window.python.config.debug)
+    
+        # now that apk is mounted we have access to font cache
+        # but we need to fill __file__ that is not yet set
+        __import__(__name__).__file__ = str(main)
+    
+    
+        # now make a prompt
+        fnt = pygame.sysfont.SysFont("freesans",  uy(80) )
+    
+        def ui_callback(pkg, error=None):
+            nonlocal fnt
+            if error:
+                prompt = fnt.render(f"{error}", True, "black")
+            else:
+                prompt = fnt.render(f"Setting [{pkg}] up", True, "black")
+            pg_bar(track.len)
+            screen.blit(prompt, ( marginx+ ux(80), marginy - uy(10) ) )
+            compose()
+    
+        # test/wait if user media interaction required
+        if not platform.window.MM.UME:
+    
+            # now make a prompt
+            fnt = pygame.sysfont.SysFont("freesans",  uy(80) )
+            prompt = fnt.render("Ready to start !", True, "blue")
+            pg_bar(track.len)
+            screen.blit(prompt, ( marginx+ ux(80), marginy - uy(10) ) )
+            compose()
+            print("""
+            * Waiting for media user engagement : please click/touch page *
+        """)
+            while not platform.window.MM.UME:
+                await asyncio.sleep(.1)
+    
+        # cleanup
+        screen.fill( (0,0,0,0) )
+        pygame.display.flip()
+    
+        await shell.runpy(main, callback=ui_callback)
+    
+    
+    
+    import asyncio
+    
+    asyncio.run( custom_site() )
+    
+    # BEGIN BLOCK
+    #
+    # now this is the html part you can (and should) customize
+    # It is not mandatory : pygame-script when it reads the first line (also called
+    # shebang ) of above code create absolute minimal widget set
+    # required for running with default rules
+    #
+    # do not alter that comment block it is separating python code from html code
+    # =============================================================================
+    # --></script><head><!--
+    //=============================================================================
+    //
+    //
+        {%- if cookiecutter.comment != "" -%}
+    {{cookiecutter.comment}}
+        {% endif %}
+
+    --><script type="application/javascript">
+    // END BLOCK
+
+
+
+    // this dict is available under PyConfig.config from __main__
+
+    config = {
+        xtermjs : "1" ,
+        _sdl2 : "canvas",
+        user_canvas : 1,
+        user_canvas_managed : 0,
+        ume_block : 1,
+        can_close : 0,
+        archive : "python-eksamen",
+        gui_debug : 3,
+        cdn : "https://pygame-web.github.io/archives/0.7/",
+        autorun : 0,
+        PYBUILD : "3.11"
+    }
+
+    </script>
+
+  <body id="background">
+    <!-- load header in -->
+    <header id="header"></header>
+
+
+    <div id="unity-container" class="unity-desktop">
+      <div id="indiead-left" >
+        <div class="indieads">
+
+        </div>
+        <div class="indieads">
+
+        </div>
+        <div class="indieads">
+
+        </div>
+      </div>
+
+      <div id="indiead-right" >
+        <div class="indieads">
+
+        </div>
+        <div class="indieads">
+
+        </div>
+        <div class="indieads">
+
+        </div>
+      </div>
+      
+      <div id="canvas-holder">
+
+        
+        
+
+        <img id="game-banner" style="display: block;"/>
+        
+        <div id="unity-background">
+
+          <div id ="canvas-frame">
+            <canvas class="emscripten" id="canvas" width="960" height="600">
+            </canvas>
+            
+            <div id="unity-loading-bar">
+              <img id="unity-logo" src="files/img/webplayer/loading.png"/>
+              <div id="unity-progress-bar-empty">
+                <div id="unity-progress-bar-full"></div>
+              </div>
+            </div>
+            
+          </div>
+
+          
+          <div id="unity-warning"> </div>
+          
+          <table id="unity-footer">
+            
+            <td align="left">
+              <div class="slidecontainer">
+                <input type="range" min="0" max="100" value="25" id="volumeSlider">
+              </div>
+            </td>
+            <td align="left">
+              <h4 id="volumeNumber" style="margin: 0;">100</h4>
+              <!-- delete after debug-->
+            </td>
+            
+            <td align="right" style="width: 0;">
+              <div id="unity-fullscreen-button"></div>
+            </td>
+          </table>
+          
+          <div id="screenshot-container">
+          </div>
+          
+          <div id="description-container">
+            
+            <p id="game-description">
+              Description: {{description}}
+            </p>
+              
+            <table id="dev-tag">
+              <tr>
+                <td id="dev-logo-container">
+                  <h3 class="developed-by">
+                    Developed by 
+                  </h3>
+                </td>
+                <td align="right">
+                  <button id="copy-game-link">
+                    Copy Game Link
+                  </button>
+                </td>
+              </tr>
+            </table>
+          </div>
+          
+          
+          <div style="height: 4rem;"/>
+        </div>
+        
+      </div>
+    </div>
+    
+
+    
+    <script src="https://pygame-web.github.io/archives/0.7//browserfs.min.js"></script>
+    
+    <script type="application/javascript" src="files/js/pythonspawner.js"></script>
+
+
+    <!-- Apply Custom WebPlayer Decorations -->
+    <script src="files/js/webplayerdecoration.js"></script>
+
+    <!-- Apply Unique CSS Style -->
+    <script src="files/js/webplayerstyle.js"></script>
+
+    <!-- Indie Ads -->
+    <script src="files/js/indieads.js"></script>
+
+    <!-- Volume Slider -->
+    <script src="files/js/volumechanger.js"></script>
+
+  </body>
+</html>
