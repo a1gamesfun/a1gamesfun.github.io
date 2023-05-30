@@ -12,9 +12,15 @@ async function loadAndAdd() {
     fetch(`https://a1games.fun/games/${gameinfo.gamename}/${gameinfo.gamename}.html`)
         .then((response) => response.text())
         .then((jsonresponse) =>  {
-            container.append(jsonresponse);
+            
+            addItem(jsonresponse);
         });
 
+}
+
+async function addItem(postObj) 
+{
+    container.append(postObj);
 }
 
 
