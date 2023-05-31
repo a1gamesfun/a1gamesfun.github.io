@@ -1,4 +1,8 @@
 
+#ad-container {
+    pointer-events: none;
+}
+
 #indiead-left {
     background-color: black;
     display: block;
