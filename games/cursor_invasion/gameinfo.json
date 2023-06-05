@@ -7,8 +7,8 @@
   "support_mobile": "false",
   "support_pc": "true",
   "has_sound": "true",
-  "description": "Nut.",
-  "shortdescription": "Nut.",
+  "description": "Avoid monsters with the cursor while shotting them with turrets also aimed at your cursor.",
+  "shortdescription": "If a monster touches your cursor, you're dead!",
   "minplayers": 1,
   "maxplayers": 1
 }
