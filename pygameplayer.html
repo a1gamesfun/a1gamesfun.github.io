@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Fun Game Title</title>
+    <link rel="stylesheet" href="CSS/index.css" media="screen">
+    <link rel="stylesheet" href="CSS/htmlplayer.css" media="screen">
+    <link rel="stylesheet" href="CSS/indieads.css" media="screen">
+    <link rel="shortcut icon" href="files/img/icon/a1Icon16px.ico" type="image/x-icon">
+    <!-- Jquery (load first!) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Google AdSense -->
+    <!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4290613853758058" crossorigin="anonymous"></script>-->
+    <script>
+        $(function () {
+            $("#header").load("z_header.html");
+        });
+    </script>
+  </head>
+
+  <body id="background">
+    <!-- load header in -->
+    <header id="header"></header>
+    
+    
+    <!-- ads underneath -->
+    <div id="ad-container">
+      <div id="indiead-left" >
+        <div class="indieads"></div>
+        <div class="indieads"></div>
+        <div class="indieads"></div>
+      </div>
+      <div id="indiead-right" >
+        <div class="indieads"></div>
+        <div class="indieads"></div>
+        <div class="indieads"></div>
+      </div>
+    </div>
+    
+    <!-- game on top -->
+    <div id="load-container">
+      
+    </div>
+
+    <!-- Indie Ads -->
+    <script src="files/js/indieads.js"></script>
+    
+    <!-- Load the Game -->
+    <script src="files/js/pygameplayerloader.js"></script>
+
+  </body>
+</html>

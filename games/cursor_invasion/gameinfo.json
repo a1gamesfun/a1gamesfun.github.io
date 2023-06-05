@@ -2,7 +2,7 @@
   "title": "Nut Button",
   "developers": [ "a1creator" ],
   "gamename": "nut_button",
-  "href": "htmlplayer.html",
+  "href": "pygameplayer.html",
   "support_controller": "false",
   "support_mobile": "false",
   "support_pc": "true",
