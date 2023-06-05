@@ -25,7 +25,7 @@
                 {
                     localStorage.setItem("SelectedGame", JSON.stringify(jsonresponse));
 
-                    window.location = "https://a1games.fun/webplayer.html";
+                    window.location.href = jsonresponse["href"];
                 }
 
             });
