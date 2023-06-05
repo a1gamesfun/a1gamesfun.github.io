@@ -346,18 +346,18 @@ config = {
 <body>
 
     <div id="transfer" align="center">
-<!--        <div class="spinner" id='spinner'></div> -->
-        <div class="emscripten" id="status">Downloading...</div>
-        <div class="emscripten">
-            <progress value="0" max="100" id="progress"></progress>
-        </div>
+        <!--<div class="spinner" id='spinner'></div> -->
+            <div class="emscripten" id="status">Downloading...</div>
+            <div class="emscripten">
+                <progress value="0" max="100" id="progress"></progress>
+            </div>
     </div>
 
 
     <canvas class="emscripten" id="canvas"
-width="1px"
-height="1px"
-    oncontextmenu="event.preventDefault()" tabindex="1">
+        width="1px"
+        height="1px"
+        oncontextmenu="event.preventDefault()" tabindex="1">
     </canvas>
 
     <div id="html"></div>
@@ -389,16 +389,16 @@ height="1px"
             <div id="info" class="trinfo"></div>
 
             <iframe id="iframe" class="framed" name="iframe"
-width="470px" height="90%"
-allowtransparency="true"
-style="z-index: 10; background: #FFFFFF;"
-frameborder="1"
-                allowfullscreen="true"
+                width="470px" height="90%"
+                allowtransparency="true"
+                style="z-index: 10; background: #FFFFFF;"
+                frameborder="1"
                 webkitallowfullscreen="true"
                 msallowfullscreen="true"
                 mozallowfullscreen="true"
                 sandbox="allow-same-origin allow-top-navigation allow-scripts allow-pointer-lock"
                 allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; xr-spatial-tracking; gamepad; gyroscope; accelerometer; cross-origin-isolated"
+                allowfullscreen="true"
                 //allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated"
                 src="https://pygame-web.github.io/archives/0.7/empty.html"
                 scrolling="yes">
