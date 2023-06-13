@@ -35,7 +35,7 @@ var fontObjectsToLoad = [];
 
 function setRandomFontReferences()
 {
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < 3; i++) {
         // get rnd index
         let rnd = Math.floor(Math.random() * fontObjects.length);
         
@@ -71,8 +71,11 @@ async function setFonts()
     let free = document.getElementById("free");
     free.style.fontFamily = `${fontObjectsToLoad[0].name}, ${fontObjectsToLoad[0].fallback}`;
 
-    let browsergames = document.getElementById("browsergames");
-    browsergames.style.fontFamily = `${fontObjectsToLoad[1].name}, ${fontObjectsToLoad[1].fallback}`;
+    let browser = document.getElementById("browser");
+    browser.style.fontFamily = `${fontObjectsToLoad[1].name}, ${fontObjectsToLoad[1].fallback}`;
+
+    let games = document.getElementById("games");
+    games.style.fontFamily = `${fontObjectsToLoad[2].name}, ${fontObjectsToLoad[2].fallback}`;
 }
 
 setFonts();

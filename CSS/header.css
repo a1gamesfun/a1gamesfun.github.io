@@ -18,19 +18,10 @@
     text-align: center;
 }
 
-#free {
-    height: 100%;
-    padding: 0 0 0 1.5rem;
-    margin: auto;
-    width: auto;
 
-    -webkit-text-fill-color: yellow !important;
-    -webkit-text-stroke: 0.1rem black !important;
-}
-
-#browsergames {
+#free, #browser, #games {
     height: 100%;
-    padding: 0 0 0 1.5rem;
+    padding: 0 1rem !important;
     margin: auto;
     width: auto;
 }
