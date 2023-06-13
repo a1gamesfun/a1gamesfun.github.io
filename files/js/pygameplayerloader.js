@@ -12,7 +12,7 @@ async function loadAndAdd() {
     fetch(`https://a1games.fun/games/${gameinfo.gamename}/build/web/index.html`)
         .then((response) => response.text())
         .then((htmlresponse) =>  {
-            container.innerHTML = htmlresponse;
+            container.dangerouslySetInnerHTML = htmlresponse;
         });
 
 }
