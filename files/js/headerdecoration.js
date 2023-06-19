@@ -41,11 +41,13 @@ function setRandomFontReferences()
         
         // append to use later
         fontObjectsToLoad.push(fontObjects[rnd]);
-        fontObjects.splice(rnd, 1);
-
+        
         // get the api font getter name
         let name = fontObjects[rnd].name;
         
+        // delete so we dont get the same one twice
+        fontObjects.splice(rnd, 1);
+
         var chars = name.split('');
         
         for (let i = 0; i < name.length; i++) {
