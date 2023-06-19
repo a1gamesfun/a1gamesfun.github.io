@@ -12,10 +12,10 @@ async function loadAndAdd() {
     fetch(`https://a1games.fun/games/${gameinfo.gamename}/build/web/index.html`)
         .then((response) => response.text())
         .then((htmlresponse) =>  {
-            let scEl = document.createElement("script");
-            scEl.innerHTML = htmlresponse;
+            //let scEl = document.createElement("script");
+            container.innerHTML = htmlresponse;
 
-            container.append(scEl);
+            //container.append(scEl);
         });
 
 }
