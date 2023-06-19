@@ -16,12 +16,12 @@
             .catch((error) => {
                 window.location = "https://a1games.fun/";
                 // return doesn't work so i just set a bool instead
-                fetchfail = true;
+                fetchfailed = true;
             })
             // if we didnt get an error:
             .then((jsonresponse) =>  {
 
-                if (!fetchfail)
+                if (!fetchfailed)
                 {
                     localStorage.setItem("SelectedGame", JSON.stringify(jsonresponse));
 
