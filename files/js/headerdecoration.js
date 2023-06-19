@@ -41,6 +41,7 @@ function setRandomFontReferences()
         
         // append to use later
         fontObjectsToLoad.push(fontObjects[rnd]);
+        fontObjects.splice(rnd, 1);
 
         // get the api font getter name
         let name = fontObjects[rnd].name;
