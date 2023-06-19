@@ -8,7 +8,7 @@ Loading CursorInvasion from python-eksamen.apk
     CDN URL : https://pygame-web.github.io/archives/0.7/
     Screen  : {{cookiecutter.width}}x{{cookiecutter.height}}
     Title   : CursorInvasion
-    Folder  : python-eksamen
+    Folder  : cursor_invasion
     Authors : pgw
     SPDX-License-Identifier: cookiecutter.spdx
 
@@ -84,12 +84,12 @@ async def custom_site():
 
 
 
-    apk = "python-eksamen.apk"
+    apk = "cursor_invasion.apk"
 
-    bundle = "python-eksamen"
+    bundle = "cursor_invasion"
 
     # the C or js loader could do that but be explicit.
-    appdir = Path(f"/data/data/{bundle}") # /data/data/python-eksamen
+    appdir = Path(f"/data/data/{bundle}") # /data/data/cursor_invasion
     appdir.mkdir()
 
 
@@ -239,7 +239,7 @@ config = {
     user_canvas_managed : 0,
     ume_block : 1,
     can_close : 0,
-    archive : "python-eksamen",
+    archive : "cursor_invasion",
     gui_debug : 3,
     cdn : "https://pygame-web.github.io/archives/0.7/",
     autorun : 0,
