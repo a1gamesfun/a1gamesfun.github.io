@@ -55,7 +55,7 @@ function setRandomFontReferences()
         }
         name = chars.join('');
         
-        console.log(name)
+        // console.log(name)
         // create a <link/> element and append it
         var node = document.createElement("link");
         node.href = `https://fonts.googleapis.com/css2?family=${name}&display=swap`;
