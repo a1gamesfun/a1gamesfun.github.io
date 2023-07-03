@@ -15,7 +15,7 @@ async function loadAndAddGame(gamename) {
 
             // return generated json object
             GAMES.push(jsonresponse);
-            addItem(jsonresponse);
+            addItem(jsonresponse, GAMES);
         });
 
 }
@@ -50,7 +50,7 @@ var container = document.getElementById("gamegrid");
 //var tmpl = document.getElementById("game_template");
 var tmpl = document.body.getElementsByClassName("game-thumbnail")[0];
 
-async function addItem(gameObj) 
+async function addItem(gameObj, games) 
 {
     var gamename = gameObj["gamename"];
     var href = gameObj["href"];
@@ -88,20 +88,19 @@ async function addItem(gameObj)
 
     
     gamesAdded += 1;
-    checkLoadGameInfoBox();
+    checkLoadGameInfoBox(games);
 }
 
 async function clearthumbnails()
 {
     let items = document.getElementById("gamegrid").getElementsByClassName("game-thumbnail");
     
-    for (let i = 0; i < items.length; i++) {
+    for (let i = items.length-1; i >= 0; i--) {
         items[i].remove();
-        i--;
     }
 }
 
-async function sortBySupported(s_pc, s_controller, s_mobile)
+async function sortBySupported(s_pc, s_controller, s_mobile, s_multiplayer)
 {
     // clear sortedgames
     SORTED_GAMES = [];
@@ -111,6 +110,7 @@ async function sortBySupported(s_pc, s_controller, s_mobile)
         let pc = gameObj["support_pc"].includes("rue") ? true : false;
         let mobile = gameObj["support_mobile"].includes("rue") ? true : false;
         let controller = gameObj["support_controller"].includes("rue") ? true : false;
+        let multiplayer = gameObj["maxplayers"] > 1 ? true : false;
 
         let valid = false;
 
@@ -124,6 +124,10 @@ async function sortBySupported(s_pc, s_controller, s_mobile)
         }
         if (s_mobile && mobile)
         {
+            //valid = true;
+        }
+        if (s_multiplayer && multiplayer)
+        {
             valid = true;
         }
         if (valid)
@@ -132,16 +136,18 @@ async function sortBySupported(s_pc, s_controller, s_mobile)
         }
     });
     
+    gamesCount = SORTED_GAMES.length;
+    gamesAdded = 0;
 }
 
-async function sortGameGrid(s_pc, s_controller, s_mobile)
+async function sortGameGrid(s_pc, s_controller, s_mobile, s_multiplayer)
 {
     await clearthumbnails();
-    await sortBySupported(s_pc, s_controller, s_mobile);
+    await sortBySupported(s_pc, s_controller, s_mobile, s_multiplayer);
 
     for (let i = 0; i < SORTED_GAMES.length; i++)
     {
-        addItem(SORTED_GAMES[i]);
+        addItem(SORTED_GAMES[i], SORTED_GAMES);
     }
 }
 
@@ -152,6 +158,7 @@ async function applySortingOnClicks()
     localStorage.setItem("PC", "true");
     localStorage.setItem("Controller", "true");
     localStorage.setItem("Mobile", "true");
+    localStorage.setItem("Multiplayer", "true");
 
 
     for (let i = 0; i < toggles.length; i++) {
@@ -179,8 +186,9 @@ async function toggleSortingElement(key)
     let pc = localStorage.getItem("PC").includes("rue");
     let controller = localStorage.getItem("Controller").includes("rue");
     let mobile = localStorage.getItem("Mobile").includes("rue");
+    let multiplayer = localStorage.getItem("Multiplayer").includes("rue");
 
-    sortGameGrid(pc, controller, mobile);
+    sortGameGrid(pc, controller, mobile, multiplayer);
 }
 
 
@@ -191,12 +199,12 @@ setGAMES();
 applySortingOnClicks();
 
 
-function checkLoadGameInfoBox()
+function checkLoadGameInfoBox(games)
 {
     if (gamesAdded >= gamesCount)
     {
         // set on hover show game info
-        loadGameInfoBox(GAMES);
+        loadGameInfoBox(games);
     }
 }
 

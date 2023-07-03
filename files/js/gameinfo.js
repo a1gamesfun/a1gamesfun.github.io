@@ -12,7 +12,6 @@ function loadGameInfoBox(GAMES)
 {
 
     let gamebuttons = document.getElementById("gamegrid").getElementsByClassName("game-thumbnail");
-
     
     for (let i = 0; i < gamebuttons.length; i++) {
         let button = gamebuttons[i].getElementsByClassName("game-button")[0];
