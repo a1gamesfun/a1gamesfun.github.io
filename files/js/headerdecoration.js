@@ -2,7 +2,7 @@
 
 const fontObjects = [
     { name: "Indie Flower", fallback: "cursive", }, 
-    { name: "Inspiration", fallback: "cursive", }, 
+   // { name: "Inspiration", fallback: "cursive", }, 
     { name: "Righteous", fallback: "cursive", }, 
     { name: "Audiowide", fallback: "cursive", },
     { name: "Bangers", fallback: "cursive", },
@@ -22,9 +22,9 @@ const fontObjects = [
     //{ name: "Redacted Script", fallback: "cursive", },
     { name: "Rubik Pixels", fallback: "cursive", },
     { name: "Rubik Vinyl", fallback: "cursive", },
-    { name: "Ruslan Display", fallback: "cursive", },
+   // { name: "Ruslan Display", fallback: "cursive", },
     { name: "Rye", fallback: "cursive", },
-    { name: "Sacramento", fallback: "cursive", },
+   // { name: "Sacramento", fallback: "cursive", },
     { name: "Sedgwick Ave Display", fallback: "cursive", },
     { name: "Silkscreen", fallback: "cursive", },
     { name: "Tilt Prism", fallback: "cursive", },
