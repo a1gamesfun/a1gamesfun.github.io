@@ -35,6 +35,7 @@ button, input[type="submit"], input[type="reset"] {
     grid-auto-rows: 87px;
     grid-auto-flow: dense;
     width: 88%;
+    max-width: 1000px;
     margin: auto;
 }
 
@@ -63,6 +64,15 @@ button, input[type="submit"], input[type="reset"] {
     padding: 0 2rem;
 }
 
+#icon-pc {
+    height: 4em;
+}
+#icon-controller {
+    height: 2.6em;
+}
+#icon-player1, #icon-player2 {
+    height: 2.2em;
+}
 
 
 .lfs-warning {
