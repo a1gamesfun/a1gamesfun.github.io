@@ -2,7 +2,7 @@
   "title": "Barrelhead",
   "developers": [ "Headless Hobo" ],
   "gamename": "pissbarrel",
-  "href": "webplayer.html",
+  "href": "unityplayer.html",
   "support_controller": "false",
   "support_mobile": "false",
   "support_pc": "true",

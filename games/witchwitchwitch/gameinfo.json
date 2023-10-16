@@ -2,7 +2,7 @@
   "title": "Witch Witch Witch",
   "developers": [ "Headless Hobo" ],
   "gamename": "witchwitchwitch",
-  "href": "webplayer.html",
+  "href": "unityplayer.html",
   "support_controller": "true",
   "support_mobile": "false",
   "support_pc": "true",

@@ -2,7 +2,7 @@
   "title": "Pong Around",
   "developers": ["Ribbo", "a1creator"],
   "gamename": "pong_around",
-  "href": "webplayer.html",
+  "href": "unityplayer.html",
   "support_controller": "false",
   "support_mobile": "false",
   "support_pc": "true",

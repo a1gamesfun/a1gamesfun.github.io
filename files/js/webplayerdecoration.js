@@ -12,25 +12,27 @@ async function LoadDecorations () {
     
     // ---- WEB PLAYER: ----
 
-    // -- Ask to load game --
-
-    let gamesize = 0;
-    let link = `https://api.github.com/repos/a1gamesfun/a1gamesfun.github.io/contents/games/${gameinfo.gamename}/Build/${gameinfo.gamename}.data${gameinfo.compression == undefined ? "" : gameinfo.compression}`;
-
-    await fetch(link)
-            .then((response) => { return response.json(); })
-            .then((response) => {
-                gamesize = Math.floor(response.size / 1024 / 1024);
-            });
-            
-    if (gamesize >= 30)
+    // -- Ask to load Unity game --
+    if (document.href.includes("unity"))
     {
-        var frame = document.getElementById("canvas-frame");
-        var question = document.createElement("button");
-        //question.innerText = "This game is large.\nPlay anyway?";
-        question.innerText = `This game is ${gamesize} MB.\nClick to continue.`;
-        question.id = "lfs-question";
-        frame.append(question);
+        let gamesize = 0;
+        let link = `https://api.github.com/repos/a1gamesfun/a1gamesfun.github.io/contents/games/${gameinfo.gamename}/Build/${gameinfo.gamename}.data${gameinfo.compression == undefined ? "" : gameinfo.compression}`;
+    
+        await fetch(link)
+                .then((response) => { return response.json(); })
+                .then((response) => {
+                    gamesize = Math.floor(response.size / 1024 / 1024);
+                });
+                
+        if (gamesize >= 30)
+        {
+            var frame = document.getElementById("canvas-frame");
+            var question = document.createElement("button");
+            //question.innerText = "This game is large.\nPlay anyway?";
+            question.innerText = `This game is ${gamesize} MB.\nClick to continue.`;
+            question.id = "lfs-question";
+            frame.append(question);
+        }
     }
 
 

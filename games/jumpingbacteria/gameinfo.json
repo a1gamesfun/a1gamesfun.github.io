@@ -2,7 +2,7 @@
   "title": "Jumping Bacteria",
   "developers": [ "a1creator" ],
   "gamename": "jumpingbacteria",
-  "href": "webplayer.html",
+  "href": "unityplayer.html",
   "support_controller": "false",
   "support_mobile": "true",
   "support_pc": "true",

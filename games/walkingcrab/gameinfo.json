@@ -2,7 +2,7 @@
   "title": "Travelling Crab",
   "developers": [ "a1creator" ],
   "gamename": "walkingcrab",
-  "href": "webplayer.html",
+  "href": "unityplayer.html",
   "support_controller": "false",
   "support_mobile": "false",
   "support_pc": "true",

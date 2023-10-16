@@ -2,7 +2,7 @@
   "title": "Hack Attack",
   "developers": [ "Ribbo", "Constantin" ],
   "gamename": "hack_attack",
-  "href": "webplayer.html",
+  "href": "unityplayer.html",
   "support_controller": "false",
   "support_mobile": "false",
   "support_pc": "true",

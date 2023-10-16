@@ -2,7 +2,7 @@
   "title": "Dawnville",
   "developers": [ "Soren Saket" ],
   "gamename": "dawnville",
-  "href": "webplayer.html",
+  "href": "unityplayer.html",
   "support_controller": "false",
   "support_mobile": "false",
   "support_pc": "true",

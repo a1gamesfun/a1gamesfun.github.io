@@ -2,7 +2,7 @@
   "title": "Fishing for Humans",
   "developers": [ "a1creator", "Constantin" ],
   "gamename": "fishing_for_humans",
-  "href": "webplayer.html",
+  "href": "unityplayer.html",
   "support_controller": "false",
   "support_mobile": "false",
   "support_pc": "true",

@@ -2,7 +2,7 @@
   "title": "Crab Island",
   "developers": ["a1creator"],
   "gamename": "crab_island",
-  "href": "webplayer.html",
+  "href": "unityplayer.html",
   "support_controller": "false",
   "support_mobile": "true",
   "support_pc": "true",
