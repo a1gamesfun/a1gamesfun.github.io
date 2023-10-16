@@ -13,7 +13,7 @@ async function LoadDecorations () {
     // ---- WEB PLAYER: ----
 
     // -- Ask to load Unity game --
-    if (gameinfso.href.includes("unity"))
+    if (gameinfo.href.includes("unity"))
     {
         let gamesize = 0;
         let link = `https://api.github.com/repos/a1gamesfun/a1gamesfun.github.io/contents/games/${gameinfo.gamename}/Build/${gameinfo.gamename}.data${gameinfo.compression == undefined ? "" : gameinfo.compression}`;
