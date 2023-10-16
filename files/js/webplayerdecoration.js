@@ -37,6 +37,17 @@ async function LoadDecorations () {
             
         // -- LOADING ICON --
         document.getElementById("unity-logo").src = `games/${gameinfo.gamename}/icon.png`;
+
+            
+        // Custom Screensize:
+        // width is always 960 so we just take the game's native res and scale it according to the fixed x value
+        document.getElementById("unity-canvas").width = 960;
+        let aspect_X = gameinfo.y / gameinfo.x; 
+        let y = 960 * aspect_X;
+        document.getElementById("unity-canvas").height = y;
+        // Fit Loading Icon to screen
+        document.getElementById("canvas-frame").style.height = y;
+        console.log(`set screensize to ${960} by ${y}`)
     }
 
 
@@ -153,15 +164,6 @@ async function LoadDecorations () {
     };
     
     
-    // Custom Screensize:
-    // width is always 960 so we just take the game's native res and scale it according to the fixed x value
-    document.getElementById("unity-canvas").width = 960;
-    let aspect_X = gameinfo.y / gameinfo.x; 
-    let y = 960 * aspect_X;
-    document.getElementById("unity-canvas").height = y;
-    // Fit Loading Icon to screen
-    document.getElementById("canvas-frame").style.height = y;
-    console.log(`set screensize to ${960} by ${y}`)
 }
 
 LoadDecorations();
