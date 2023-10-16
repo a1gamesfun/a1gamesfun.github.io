@@ -33,6 +33,10 @@ async function LoadDecorations () {
             question.id = "lfs-question";
             frame.append(question);
         }
+
+            
+        // -- LOADING ICON --
+        document.getElementById("unity-logo").src = `games/${gameinfo.gamename}/icon.png`;
     }
 
 
@@ -40,8 +44,6 @@ async function LoadDecorations () {
     document.getElementById("game-banner").src = `games/${gameinfo.gamename}/banner.png`;
     
     
-    // -- LOADING ICON --
-    document.getElementById("unity-logo").src = `games/${gameinfo.gamename}/icon.png`;
 
     
     // -- VOLUME SLIDER --
