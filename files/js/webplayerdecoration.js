@@ -144,7 +144,7 @@ async function LoadDecorations () {
             clone = document.createElement("img");
             clone.src = `files/developers/${gameinfo.developers[i]}.png`;
             clone.classList.add("dev-logo");
-            
+            s
             linkElement.append(clone);
             devlogoContainer.append(linkElement);
             
