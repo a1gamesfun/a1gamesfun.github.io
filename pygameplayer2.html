@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Fun Game Title</title>
+    <link rel="stylesheet" href="CSS/index.css" media="screen">
+    <link rel="stylesheet" href="CSS/webplayer.css" media="screen">
+    <link rel="stylesheet" href="CSS/slider.css" media="screen">
+    <link rel="stylesheet" href="CSS/indieads.css" media="screen">
+    <link rel="shortcut icon" href="files/img/icon/a1Icon16px.ico" type="image/x-icon">
+    <!-- Jquery (load first!) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Indie Ads Fetch-->
+    <script src="https://indieads.github.io/indieads.js"></script>
+    <!-- Google AdSense -->
+    <!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4290613853758058" crossorigin="anonymous"></script>-->
+    <script>
+        $(function () {
+            $("#header").load("z_header.html");
+        });
+    </script>
+  </head>
+
+  <body id="background">
+    <!-- load header in -->
+    <header id="header"></header>
+
+
+    <div id="unity-container" class="unity-desktop">
+      <div id="indiead-left" >
+        <div class="indieads">
+
+        </div>
+        <div class="indieads">
+
+        </div>
+        <div class="indieads">
+
+        </div>
+      </div>
+
+      <div id="indiead-right" >
+        <div class="indieads">
+
+        </div>
+        <div class="indieads">
+
+        </div>
+        <div class="indieads">
+
+        </div>
+      </div>
+      
+      <div id="canvas-holder">
+
+        
+        
+
+        <img id="game-banner" style="display: block;"/>
+        
+        <div id="unity-background">
+
+          <div id ="canvas-frame">
+            <!--<canvas id="unity-canvas" width="960" height="600">
+            </canvas>-->
+            <script>
+              //let canvasframe = document.getElementById("canvas-frame");
+              //canvasframe.prepend(file);
+              $("#canvas-frame").load("games/cursor_invasion/build/web/index.html");
+            </script>
+            
+            <div id="unity-loading-bar">
+              <img id="unity-logo" src="files/img/webplayer/loading.png"/>
+              <div id="unity-progress-bar-empty">
+                <div id="unity-progress-bar-full"></div>
+              </div>
+            </div>
+            
+          </div>
+
+          
+          <div id="unity-warning"> </div>
+          
+          <table id="unity-footer">
+            
+            <td align="left">
+              <div class="slidecontainer">
+                <input type="range" min="0" max="100" value="25" id="volumeSlider">
+              </div>
+            </td>
+            <td align="left">
+              <!--<h4 id="volumeNumber" style="margin: 0;">100</h4> -->
+              <!-- delete after debug-->
+            </td>
+            
+            <td align="right" style="width: 0;">
+              <div id="unity-fullscreen-button"></div>
+            </td>
+          </table>
+          
+          <div id="screenshot-container">
+          </div>
+          
+          <div id="description-container">
+            
+            <p id="game-description">
+              Description: {{description}}
+            </p>
+              
+            <table id="dev-tag">
+              <tr>
+                <td id="dev-logo-container">
+                  <h3 class="developed-by">
+                    Developed by 
+                  </h3>
+                </td>
+                <td align="right">
+                  <button id="copy-game-link">
+                    Copy Game Link
+                  </button>
+                </td>
+              </tr>
+            </table>
+          </div>
+          
+          
+          <div style="height: 4rem;"/>
+        </div>
+        
+      </div>
+    </div>
+    
+
+    <!-- Apply Custom WebPlayer Decorations -->
+    <script src="files/js/webplayerdecoration.js"></script>
+
+    <!-- Apply Unique CSS Style -->
+    <script src="files/js/webplayerstyle.js"></script>
+
+    <!-- Indie Ads Local Load -->
+    <script src="files/js/indieadsloader.js"></script>
+
+    <!-- Volume Slider -->
+    <script src="files/js/volumechanger.js"></script>
+
+  </body>
+</html>
