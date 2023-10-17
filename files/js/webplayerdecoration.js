@@ -15,8 +15,11 @@ async function LoadDecorations () {
 
         
     // Custom Screensize:
+    // we do this instead of setting it directly because
+    // unity games might be 1920x1080 but need to be 960px wide
+    // and we use the same method for pygame window to save performance
     let aspect_X = gameinfo.y / gameinfo.x; 
-    let y = gameinfo.y * aspect_X;
+    let y = gameinfo.x * aspect_X;
     // Fit Loading Icon to screen
     // also set height for pygame player
     document.getElementById("canvas-frame").style.height = `${y}px`;
