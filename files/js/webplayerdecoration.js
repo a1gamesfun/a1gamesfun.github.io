@@ -5,12 +5,6 @@ function setCharAt(str,index,chr) {
     return str.substring(0,index) + chr + str.substring(index+1);
 }
 
-// Custom Screensize:
-let aspect_X = gameinfo.y / gameinfo.x; 
-let y = gameinfo.y * aspect_X;
-// Fit Loading Icon to screen
-// also set height for pygame player
-document.getElementById("canvas-frame").style.height = y;
 
 async function LoadDecorations () {
     
@@ -19,6 +13,15 @@ async function LoadDecorations () {
     
     // ---- WEB PLAYER: ----
 
+        
+    // Custom Screensize:
+    let aspect_X = gameinfo.y / gameinfo.x; 
+    let y = gameinfo.y * aspect_X;
+    // Fit Loading Icon to screen
+    // also set height for pygame player
+    document.getElementById("canvas-frame").style.height = y;
+
+    
     // -- Ask to load Unity game --
     if (gameinfo.href.includes("unity"))
     {
