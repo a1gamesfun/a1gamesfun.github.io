@@ -5,6 +5,10 @@ function setCharAt(str,index,chr) {
     return str.substring(0,index) + chr + str.substring(index+1);
 }
 
+// Custom Screensize:
+let aspect_X = gameinfo.y / gameinfo.x; 
+let y = 960 * aspect_X;
+
 async function LoadDecorations () {
     
     // -- Title --
@@ -39,17 +43,15 @@ async function LoadDecorations () {
         document.getElementById("unity-logo").src = `games/${gameinfo.gamename}/icon.png`;
 
             
-        // Custom Screensize:
         // width is always 960 so we just take the game's native res and scale it according to the fixed x value
         document.getElementById("unity-canvas").width = 960;
-        let aspect_X = gameinfo.y / gameinfo.x; 
-        let y = 960 * aspect_X;
         document.getElementById("unity-canvas").height = y;
-        // Fit Loading Icon to screen
-        document.getElementById("canvas-frame").style.height = y;
         console.log(`set screensize to ${960} by ${y}`)
     }
 
+    // Fit Loading Icon to screen
+    // also set height for pygame player
+    document.getElementById("canvas-frame").style.height = y;
 
     // -- BANNER --
     document.getElementById("game-banner").src = `games/${gameinfo.gamename}/banner.png`;
