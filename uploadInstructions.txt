@@ -21,6 +21,7 @@ delete the head stuff like page title
 and other things that are already there from the main page
 4:
 slet ".body {__}" fra css delen
+slef "platform.document.body.style.background = "#7f7f7f""
 
 
 
