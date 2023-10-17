@@ -6,13 +6,19 @@
 PyGame:
 1:
 Set gameinfo.json href to pygameplayer2.html
+
+FROM INDEX.html:
+2:
+Delete the <html> at the top and </html> at the bottom
 2:
 in the index.html of the pygame build, change this line:
  ( _____ is the game name )
 apk = "_____.apk"
 to:
 apk = "games/_____/build/web/_____.apk"
-
+3:
+delete the head stuff like page title
+and other things that are already there from the main page
 
 
 

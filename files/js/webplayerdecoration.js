@@ -7,7 +7,10 @@ function setCharAt(str,index,chr) {
 
 // Custom Screensize:
 let aspect_X = gameinfo.y / gameinfo.x; 
-let y = 960 * aspect_X;
+let y = gameinfo.y * aspect_X;
+// Fit Loading Icon to screen
+// also set height for pygame player
+document.getElementById("canvas-frame").style.height = y;
 
 async function LoadDecorations () {
     
@@ -42,16 +45,13 @@ async function LoadDecorations () {
         // -- LOADING ICON --
         document.getElementById("unity-logo").src = `games/${gameinfo.gamename}/icon.png`;
 
-            
+        // set screen height
         // width is always 960 so we just take the game's native res and scale it according to the fixed x value
         document.getElementById("unity-canvas").width = 960;
         document.getElementById("unity-canvas").height = y;
         console.log(`set screensize to ${960} by ${y}`)
     }
 
-    // Fit Loading Icon to screen
-    // also set height for pygame player
-    document.getElementById("canvas-frame").style.height = y;
 
     // -- BANNER --
     document.getElementById("game-banner").src = `games/${gameinfo.gamename}/banner.png`;
