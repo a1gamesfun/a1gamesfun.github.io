@@ -19,7 +19,8 @@ apk = "games/_____/build/web/_____.apk"
 3:
 delete the head stuff like page title
 and other things that are already there from the main page
-
+4:
+slet ".body {__}" fra css delen
 
 
 
