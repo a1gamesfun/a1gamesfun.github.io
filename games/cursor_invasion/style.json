@@ -1,5 +1,5 @@
 {
-  "background": "#404040 url('games/cursor_invasion/smudged.png') cover center",
+  "background": "#404040 url('games/cursor_invasion/smudged.png') center/cover no-repeat",
   "text-color": "#000000",
   "primary-color": "#f2f2f2",
   "secondary-color": "#262626",

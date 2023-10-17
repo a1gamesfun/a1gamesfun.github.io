@@ -19,9 +19,9 @@ async function LoadDecorations () {
     let y = gameinfo.y * aspect_X;
     // Fit Loading Icon to screen
     // also set height for pygame player
-    document.getElementById("canvas-frame").style.height = y;
+    document.getElementById("canvas-frame").style.height = `${y}px`;
 
-    
+
     // -- Ask to load Unity game --
     if (gameinfo.href.includes("unity"))
     {
