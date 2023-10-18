@@ -12,7 +12,6 @@ async function loadAndAddGame(gamename) {
     fetch(`https://a1games.fun/games/${gamename}/gameinfo.json`)
         .then((response) => response.json())
         .then((jsonresponse) =>  {
-
             // return generated json object
             GAMES.push(jsonresponse);
             addItem(jsonresponse, GAMES);
@@ -23,25 +22,21 @@ async function loadAndAddGame(gamename) {
 // Example: [
 // "space_voyage", 
 // "crab_island", 
-// "example_name"
+// "example_name",
 // ]
 async function setGAMES()
 {
-    var list;
-    fetch("https://a1games.fun/files/gamelist.json")
-        .then((response) => response.json())
-        .then((jsonresponse) =>  {
-            // [...] makes a copy instead of a reference
-            list = [...jsonresponse.gamelist];
-            gamesCount = list.length;
+    // [...] makes a copy instead of a reference
+    // GAMELIST is loaded before this script
+    list = [...GAMELIST];
+    gamesCount = list.length;
 
-            for (let i = 0; i < gamesCount; i++) {
-                // get rnd index
-                let rnd = Math.floor(Math.random() * list.length);
-                loadAndAddGame(list[rnd]);
-                list.splice(rnd, 1);
-            }
-        });
+    for (let i = 0; i < gamesCount; i++) {
+        // get rnd index
+        let rnd = Math.floor(Math.random() * list.length);
+        loadAndAddGame(list[rnd]);
+        list.splice(rnd, 1);
+    }
     
 }
 

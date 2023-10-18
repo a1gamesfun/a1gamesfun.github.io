@@ -1,0 +1,16 @@
+GAMELIST = [
+    "crab_island",
+    "crab_defense",
+    "hack_attack",
+    "pong_around",
+    "witchwitchwitch",
+    "pissbarrel",
+    "jumpingbacteria",
+    "walkingcrab",
+    "pooprun",
+    "cursor_invasion",
+    "fishing_for_humans",
+    "nut_button",
+    "pong",
+    "dawnville",
+]
