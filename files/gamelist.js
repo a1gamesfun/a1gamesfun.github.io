@@ -7,10 +7,10 @@ GAMELIST = [
     "pissbarrel",
     "jumpingbacteria",
     "walkingcrab",
+    //"dawnville",
     "pooprun",
     "cursor_invasion",
     "fishing_for_humans",
     "nut_button",
     "pong",
-    "dawnville",
 ]
