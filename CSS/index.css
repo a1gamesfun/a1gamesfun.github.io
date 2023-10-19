@@ -12,7 +12,7 @@ button, input[type="submit"], input[type="reset"] {
 #background {
     margin: 0;
     /* background: linear-gradient(0deg, rgba(0,52,255,1) 0%, rgba(76,157,249,1) 50%, rgba(45,210,253,1) 100%);*/
-    background: var(--backgroundColor);
+    background: var(--pageBackground);
 }
 #fill-page {
     min-height: 100vh;
@@ -21,12 +21,12 @@ button, input[type="submit"], input[type="reset"] {
 .games-grid {
     justify-content: center;
     display: grid;
-    gap: 1rem 1rem;
+    gap: 1.75rem 1.5rem;
     grid-template-columns: repeat(auto-fill, 231px);
     grid-auto-rows: 87px;
     grid-auto-flow: dense;
     width: 88%;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: auto;
 }
 

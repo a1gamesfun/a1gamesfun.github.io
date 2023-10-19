@@ -10,8 +10,10 @@
 :root {
     --textColor: #ffe9e9;
     --textHover: #ffc1c1;
-    --backgroundColor: #616161;
-    --shadowColor: #0e0e0e;
+    --shadowColor: #2d2e35;
+    /* match the color to the gradient */
+    --backgroundColor: rgba(66,102,145,1);
+    --pageBackground: linear-gradient(180deg, rgb(144, 154, 167) 0%, rgb(165, 174, 194) 50%, rgb(120, 125, 141) 100%);
 }
 
 
