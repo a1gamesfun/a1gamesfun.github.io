@@ -7,20 +7,11 @@
 
 
 
-
-
-
-
 :root {
     --textColor: #ffe9e9;
     --textHover: #ffc1c1;
-    --sectionColor: #ffbe46;
-    --backgroundColor: #727272;
-    /*--- Hover  ---*/
-    --hoverColor: #ffe23d86;
-    /*--- Scroll  ---*/
-    --scrollColor: #e6a52d;
-    --scrollColorActive: #ffd900;
+    --backgroundColor: #ff0505;
+    --shadowColor: #0e0e0e;
 }
 
 

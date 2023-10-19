@@ -72,8 +72,8 @@ button, input[type="submit"], input[type="reset"] {
     margin: 0;
 
 
-    background-color: #a74747;
-    color: white;
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
     position: absolute;
     right: 0.4rem;
     bottom: 0.4rem;
@@ -90,7 +90,7 @@ button, input[type="submit"], input[type="reset"] {
     position: relative;
     border-radius: 1rem;
     outline: 2px solid white;
-    box-shadow: 0 0.5rem 0.5rem -0.25rem var(--backgroundColor);
+    box-shadow: 0 0.5rem 0.5rem -0.25rem var(--shadowColor);
 }
 /* The image itself */
 .game-thumbnail-image:hover {
