@@ -1,21 +1,29 @@
 
 
-const fontObjects = [
-    { name: "Indie Flower", fallback: "cursive", }, 
-    { name: "Righteous", fallback: "cursive", }, 
-    { name: "Bangers", fallback: "cursive", },
-    { name: "Bungee Shade", fallback: "cursive", },
-    { name: "Creepster", fallback: "cursive", }, // halloween only
-    { name: "Blaka Ink", fallback: "cursive", },
-    { name: "Foldit", fallback: "cursive", },
-    { name: "Major Mono Display", fallback: "cursive", },
-    { name: "Nabla", fallback: "cursive", },
-    { name: "Kablammo", fallback: "cursive", },
-    { name: "Press Start 2P", fallback: "cursive", },
-    { name: "Bungee Spice", fallback: "cursive", },
-    { name: "Rubik Pixels", fallback: "cursive", },
-    { name: "Rye", fallback: "cursive", },
-    { name: "Silkscreen", fallback: "cursive", },
+const fontObjects_Google = [
+    // color fonts:
+    { name: "Bungee Spice", fallback: "cursive", local:false, },
+    { name: "Nabla", fallback: "cursive", local:false, },
+    { name: "Foldit", fallback: "cursive", local:false, },
+    { name: "2PeasBlocks", fallback: "cursive", local:true, filetype:"ttf", },
+    { name: "Agreloyc", fallback: "cursive", local:true, filetype:"ttf", },
+    { name: "BroshkPlum", fallback: "cursive", local:true, filetype:"ttf", },
+    { name: "Cimero", fallback: "cursive", local:true, filetype:"otf", },
+    { name: "Colortube", fallback: "cursive", local:true, filetype:"otf", },
+    { name: "Digitalts", fallback: "cursive", local:true, filetype:"ttf", },
+    { name: "Fattern", fallback: "cursive", local:true, filetype:"otf", },
+    { name: "Freizer", fallback: "cursive", local:true, filetype:"ttf", },
+    { name: "MarioPixel", fallback: "cursive", local:true, filetype:"ttf", },
+    { name: "Multicolore", fallback: "cursive", local:true, filetype:"otf", },
+    { name: "Namskow", fallback: "cursive", local:true, filetype:"ttf", },
+    { name: "QuantumUkraine", fallback: "cursive", local:true, filetype:"ttf", },
+    { name: "UseYourImagination", fallback: "cursive", local:true, filetype:"ttf", },
+    // standard fonts:
+    { name: "Creepster", fallback: "cursive", local:false, }, // halloween only
+];
+
+const fontObjects_Local = [
+    // color fonts:
 ];
 
 var fontObjectsToLoad = [];
@@ -24,16 +32,17 @@ function setRandomFontReferences()
 {
     for (let i = 0; i < 3; i++) {
         // get rnd index
-        let rnd = Math.floor(Math.random() * fontObjects.length);
+        let rnd = Math.floor(Math.random() * fontObjects_Google.length);
         
         // append to use later
-        fontObjectsToLoad.push(fontObjects[rnd]);
+        fontObjectsToLoad.push(fontObjects_Google[rnd]);
         
         // get the api font getter name
-        let name = fontObjects[rnd].name;
+        let fontObj = fontObjects_Google[rnd];
+        let name = fontObj.name;
         
         // delete so we dont get the same one twice
-        fontObjects.splice(rnd, 1);
+        fontObjects_Google.splice(rnd, 1);
 
         var chars = name.split('');
         
@@ -48,7 +57,10 @@ function setRandomFontReferences()
         // console.log(name)
         // create a <link/> element and append it
         var node = document.createElement("link");
-        node.href = `https://fonts.googleapis.com/css2?family=${name}&display=swap`;
+        if (fontObj.local)
+            node.href = `files/z_fonts/${name}.${fontObj.filetype}`;
+        else
+            node.href = `https://fonts.googleapis.com/css2?family=${name}&display=swap`;
         node.rel = `stylesheet`;
         document.head.append(node);
     }
