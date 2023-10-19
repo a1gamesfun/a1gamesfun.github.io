@@ -2,33 +2,20 @@
 
 const fontObjects = [
     { name: "Indie Flower", fallback: "cursive", }, 
-   // { name: "Inspiration", fallback: "cursive", }, 
     { name: "Righteous", fallback: "cursive", }, 
-    { name: "Audiowide", fallback: "cursive", },
     { name: "Bangers", fallback: "cursive", },
     { name: "Bungee Shade", fallback: "cursive", },
-    { name: "Bangers", fallback: "cursive", },
-    { name: "Creepster", fallback: "cursive", },
+    { name: "Creepster", fallback: "cursive", }, // halloween only
     { name: "Blaka Ink", fallback: "cursive", },
     { name: "Foldit", fallback: "cursive", },
     { name: "Major Mono Display", fallback: "cursive", },
-    { name: "Megrim", fallback: "cursive", },
-    { name: "Mr Dafoe", fallback: "cursive", },
-    { name: "MuseoModerno", fallback: "cursive", },
     { name: "Nabla", fallback: "cursive", },
     { name: "Kablammo", fallback: "cursive", },
     { name: "Press Start 2P", fallback: "cursive", },
     { name: "Bungee Spice", fallback: "cursive", },
-    //{ name: "Redacted Script", fallback: "cursive", },
     { name: "Rubik Pixels", fallback: "cursive", },
-    { name: "Rubik Vinyl", fallback: "cursive", },
-   // { name: "Ruslan Display", fallback: "cursive", },
     { name: "Rye", fallback: "cursive", },
-   // { name: "Sacramento", fallback: "cursive", },
-    { name: "Sedgwick Ave Display", fallback: "cursive", },
     { name: "Silkscreen", fallback: "cursive", },
-    { name: "Tilt Prism", fallback: "cursive", },
-    { name: "Titan One", fallback: "cursive", },
 ];
 
 var fontObjectsToLoad = [];
