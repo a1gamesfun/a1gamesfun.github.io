@@ -12,8 +12,7 @@ button, input[type="submit"], input[type="reset"] {
 #background {
     margin: 0;
     /* background: linear-gradient(0deg, rgba(0,52,255,1) 0%, rgba(76,157,249,1) 50%, rgba(45,210,253,1) 100%);*/
-    background: rgb(170,170,170);
-    background: linear-gradient(10deg, rgba(170,170,170,1) 0%, rgba(228,228,228,1) 50%, rgba(255,255,255,1) 100%);
+    background: var(--backgroundColor);
 }
 #fill-page {
     min-height: 100vh;
