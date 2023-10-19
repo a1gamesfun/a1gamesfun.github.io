@@ -53,6 +53,7 @@ async function LoadDecorations () {
 
         // set screen height
         // width is always 960 so we just take the game's native res and scale it according to the fixed x value
+        let y = 960 * aspect_X;
         document.getElementById("unity-canvas").width = 960;
         document.getElementById("unity-canvas").height = y;
         console.log(`set screensize to ${960} by ${y}`)
