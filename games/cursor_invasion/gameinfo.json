@@ -7,11 +7,11 @@
   "support_mobile": "false",
   "support_pc": "true",
   "has_sound": "true",
-  "description": "Avoid monsters with the cursor while shotting them with turrets also aimed at your cursor. The next wave spawns when the orange bar is full. You can only pause when the blue bar is full. Developers personal highscore is 42559",
+  "description": "Avoid monsters with the cursor while shooting them with turrets also aimed at your cursor. The next wave spawns when the orange bar is full. You can only pause when the blue bar is full. Developer's personal highscore: 42559",
   "shortdescription": "If a monster touches your cursor, you're dead!",
   "minplayers": 1,
   "maxplayers": 1,
   "x": "960",
   "y": "600",
-  "screenshot-count: 4
+  "screenshot-count": 4
 }
