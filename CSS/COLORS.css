@@ -8,8 +8,8 @@
 
 
 :root {
-    --textColor: #ffe9e9;
-    --textHover: #ffc1c1;
+    --textColor: #ffffff;
+    --textHover: #66cac5;
     --shadowColor: #2d2e35;
     /* match the color to the gradient */
     --backgroundColor: rgba(66,102,145,1);
