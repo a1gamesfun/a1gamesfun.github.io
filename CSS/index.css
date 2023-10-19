@@ -8,13 +8,6 @@ button, input[type="submit"], input[type="reset"] {
 	outline: inherit;
 }
 
-#header {
-    background-color: #FFFFFF50;
-    padding: 2rem 0;
-    margin: 0;
-    width: 100%;
-    height: auto;
-}
 
 #background {
     margin: 0;
