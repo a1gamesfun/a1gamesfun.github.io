@@ -18,8 +18,9 @@ async function LoadDecorations () {
     // we do this instead of setting it directly because
     // unity games might be 1920x1080 but need to be 960px wide
     // and we use the same method for pygame window to save performance
-    let aspect_X = gameinfo.y / gameinfo.x; 
-    let y = gameinfo.x * aspect_X;
+    let aspect_X = gameinfo.y / gameinfo.x;
+    // width is always 960 so we just take the game's native res and scale it according to the fixed x value
+    let y = 960 * aspect_X;
     // Fit Loading Icon to screen
     // also set height for pygame player
     document.getElementById("canvas-frame").style.height = `${y}px`;
@@ -52,8 +53,6 @@ async function LoadDecorations () {
         document.getElementById("unity-logo").src = `games/${gameinfo.gamename}/icon.png`;
 
         // set screen height
-        // width is always 960 so we just take the game's native res and scale it according to the fixed x value
-        let y = 960 * aspect_X;
         document.getElementById("unity-canvas").width = 960;
         document.getElementById("unity-canvas").height = y;
         console.log(`set screensize to ${960} by ${y}`)
