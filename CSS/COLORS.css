@@ -13,7 +13,7 @@
     --shadowColor: #2d2e35;
     /* match the color to the gradient */
     --backgroundColor: rgba(66,102,145,1);
-    --pageBackground: linear-gradient(180deg, rgb(144, 154, 167) 0%, rgb(165, 174, 194) 50%, rgb(120, 125, 141) 100%);
+    --pageBackground: linear-gradient(75deg, #789ab6 1%, #99a0aa 40%, rgb(134, 146, 163) 60%, #6a7e99 90%);
 }
 
 
