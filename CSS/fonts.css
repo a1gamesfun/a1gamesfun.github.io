@@ -54,3 +54,23 @@ font-family: 'Foldit', cursive;
 font-family: 'Kablammo', cursive;
 */
 @import url('https://fonts.googleapis.com/css2?family=Blaka+Ink&family=Bungee+Spice&family=Foldit:wght@500&family=Kablammo&display=swap');
+
+
+/*
+    Local Fonts:
+*/
+
+@font-face {
+    font-family: "MarioPixel";
+    src: url("MarioPixel.otf") format("opentype");
+}
+
+
+
+
+
+
+
+
+
+
