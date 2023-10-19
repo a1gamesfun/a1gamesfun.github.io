@@ -60,10 +60,79 @@ font-family: 'Kablammo', cursive;
     Local Fonts:
 */
 
+/*  TTF  */
 @font-face {
     font-family: "MarioPixel";
-    src: url("MarioPixel.otf") format("opentype");
+    src: url("../files/z_fonts/MarioPixel.ttf");
 }
+
+@font-face {
+    font-family: "2PeasBlocks";
+    src: url("../files/z_fonts/2PeasBlocks.ttf");
+}
+
+@font-face {
+    font-family: "Agreloyc";
+    src: url("../files/z_fonts/Agreloyc.ttf");
+}
+
+@font-face {
+    font-family: "BroshkPlum";
+    src: url("../files/z_fonts/BroshkPlum.ttf");
+}
+
+@font-face {
+    font-family: "Digitalts";
+    src: url("../files/z_fonts/Digitalts.ttf");
+}
+
+@font-face {
+    font-family: "Freizer";
+    src: url("../files/z_fonts/Freizer.ttf");
+}
+
+@font-face {
+    font-family: "Namskow";
+    src: url("../files/z_fonts/Namskow.ttf");
+}
+
+@font-face {
+    font-family: "QuantumUkraine";
+    src: url("../files/z_fonts/QuantumUkraine.ttf");
+}
+
+@font-face {
+    font-family: "UseYourImagination";
+    src: url("../files/z_fonts/UseYourImagination.ttf");
+}
+
+
+/*  OTF  */
+@font-face {
+    font-family: "Cimero";
+    src: url("../files/z_fonts/Cimero.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Colortube";
+    src: url("../files/z_fonts/Colortube.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Fattern";
+    src: url("../files/z_fonts/Fattern.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Multicolore";
+    src: url("../files/z_fonts/Multicolore.otf") format("opentype");
+}
+
+
+
+
+
+
 
 
 
