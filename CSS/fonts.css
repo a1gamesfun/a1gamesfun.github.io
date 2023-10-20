@@ -128,6 +128,11 @@ font-family: 'Kablammo', cursive;
     src: url("../files/z_fonts/Multicolore.otf") format("opentype");
 }
 
+@font-face {
+    font-family: "Gilbert";
+    src: url("../files/z_fonts/Gilbert.otf") format("opentype");
+}
+
 
 
 

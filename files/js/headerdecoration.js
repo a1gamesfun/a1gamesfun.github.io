@@ -15,6 +15,7 @@ const fontObjects_Google = [
     { name: "Freizer", fallback: "cursive", local:true, filetype:"ttf", },
     { name: "MarioPixel", fallback: "cursive", local:true, filetype:"ttf", },
     { name: "Multicolore", fallback: "cursive", local:true, filetype:"otf", },
+    { name: "Gilbert", fallback: "cursive", local:true, filetype:"otf", },
     { name: "Namskow", fallback: "cursive", local:true, filetype:"ttf", },
     { name: "QuantumUkraine", fallback: "cursive", local:true, filetype:"ttf", },
     { name: "UseYourImagination", fallback: "cursive", local:true, filetype:"ttf", },
