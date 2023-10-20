@@ -16,6 +16,7 @@
     flex-direction: row;
 
     width: 100%;
+    height: fit-content;
 
     justify-content: center;
     align-items: center;
@@ -27,18 +28,21 @@
 
 .flex {
     display: flex;
-    flex-grow: 0;
     margin: 0;
 }
 
 .header-h1 {
     color: var(--textColor);
     display: flex;
-    font-family: 'Roboto', sans-serif;
-    font-size: 2.8rem;
-    white-space: nowrap;
-    text-align: center;
-    justify-content: center;
+
+    font-family: 'MarioPixel', sans-serif;
+    font-size: 2rem;
+    height: 4rem;
+
+
+    align-items: end;
+
+    overflow: visible;
 }
 
 #header {
