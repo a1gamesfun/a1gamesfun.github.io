@@ -46,7 +46,8 @@
 }
 
 #header {
-    padding: 2rem 0;
+    padding: 0;
+    padding-top: 2rem;
     margin: 0;
     width: 100%;
     height: auto;
