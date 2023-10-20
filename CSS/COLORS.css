@@ -8,12 +8,12 @@
 
 
 :root {
-    --textColor: #ffffff;
+    --textColor: #fffde2;
     --textHover: #66cac5;
-    --shadowColor: #2d2e35;
+    --shadowColor: #35322d;
     /* match the color to the gradient */
-    --backgroundColor: rgb(35, 46, 59);
-    --pageBackground: linear-gradient(75deg, #789ab6 1%, #99a0aa 40%, rgb(134, 146, 163) 60%, #6a7e99 90%);
+    --backgroundColor: rgb(134, 127, 106);
+    --pageBackground: linear-gradient(75deg, #b69178 1%, #aaa199 40%, rgb(163, 151, 134) 60%, #99856a 90%);
 }
 
 

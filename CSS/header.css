@@ -73,7 +73,7 @@
 
 .sub-header {
     font-size: 1.4rem;
-    color: red;
+    color: var(--textColor);
     font-family: "Nabla", sans-serif;
 
     margin: auto 0.8em;

@@ -13,6 +13,7 @@ button, input[type="submit"], input[type="reset"] {
     margin: 0;
     /* background: linear-gradient(0deg, rgba(0,52,255,1) 0%, rgba(76,157,249,1) 50%, rgba(45,210,253,1) 100%);*/
     background: var(--pageBackground);
+    background-image: url("../files/img/mariobck.jpeg");
 }
 #fill-page {
     min-height: 100vh;
