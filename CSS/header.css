@@ -64,12 +64,21 @@
     height: 100%;
 }
 
+#header-sub-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 
 .sub-header {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: red;
-    font-family: "Foldit", sans-serif;
+    font-family: "Nabla", sans-serif;
+
+    margin: auto 0.8em;
 }
+
 
 
 
