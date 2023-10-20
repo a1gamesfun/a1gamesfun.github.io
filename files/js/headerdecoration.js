@@ -6,8 +6,9 @@ const fontObjects_Google = [
     { name: "Nabla", fallback: "cursive", local:false, },
     { name: "Foldit", fallback: "cursive", local:false, },
     { name: "MarioPixel", fallback: "cursive", local:true, filetype:"ttf", },
+    { name: "QuantumUkraine", fallback: "cursive", local:true, filetype:"ttf", },
     // these ones dont work atm
-    { name: "PeasBlocks", fallback: "cursive", local:true, filetype:"ttf", },
+    //{ name: "2PeasBlocks", fallback: "cursive", local:true, filetype:"ttf", },
     //{ name: "Agreloyc", fallback: "cursive", local:true, filetype:"ttf", },
     //{ name: "BroshkPlum", fallback: "cursive", local:true, filetype:"ttf", },
     //{ name: "Cimero", fallback: "cursive", local:true, filetype:"otf", },
@@ -18,8 +19,8 @@ const fontObjects_Google = [
     //{ name: "Multicolore", fallback: "cursive", local:true, filetype:"otf", },
     //{ name: "Gilbert", fallback: "cursive", local:true, filetype:"otf", },
     //{ name: "Namskow", fallback: "cursive", local:true, filetype:"ttf", },
-    { name: "QuantumUkraine", fallback: "cursive", local:true, filetype:"ttf", },
     //{ name: "UseYourImagination", fallback: "cursive", local:true, filetype:"ttf", },
+    
     // standard fonts:
     { name: "Creepster", fallback: "cursive", local:false, }, // halloween only
 ];
