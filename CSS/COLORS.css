@@ -12,8 +12,7 @@
     --textHover: #66cac5;
     --shadowColor: #35322d;
     /* match the color to the gradient */
-    --backgroundColor: rgb(134, 127, 106);
-    --pageBackground: linear-gradient(75deg, #b69178 1%, #aaa199 40%, rgb(163, 151, 134) 60%, #99856a 90%);
+    --backgroundColor: rgb(78, 66, 53);
 }
 
 

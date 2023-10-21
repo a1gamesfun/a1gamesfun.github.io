@@ -15,7 +15,8 @@ button, input[type="submit"], input[type="reset"] {
     background: var(--pageBackground);
     background-image: url("../files/img/mariobck.jpeg");
 }
-#fill-page {
+
+.fill-page {
     min-height: 100vh;
 }
 

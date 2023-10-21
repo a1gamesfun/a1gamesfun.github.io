@@ -31,73 +31,69 @@
         });
     </script>
 </head>
-<body id="background">
+<body id="background" class="fill-page">
 
     <!-- load header in -->
-    <header id="header">
-    </header>
+    <header id="header"> </header>
+    
+    <table id="sorting-options">
+        <tr>
+            <td align="center" style="vertical-align: middle;">
 
-    <div id="fill-page">
-        
-        <table id="sorting-options">
-            <tr>
-                <td align="center" style="vertical-align: middle;">
+                <div class="sorting-item">
+                    <input type="checkbox" class="sorting-option" onclick="" value="PC" hidden />
+                    <img id="icon-pc" class="sorting-icon" src="files/img/sorting-icons/keyboardmouse.png"/>
+                </div>
+                
+                <div class="sorting-item">
+                    <input type="checkbox" class="sorting-option" onclick="" value="Controller" hidden />
+                    <img id="icon-controller" class="sorting-icon" src="files/img/sorting-icons/controller.png"/>
+                </div>
 
-                    <div class="sorting-item">
-                        <input type="checkbox" class="sorting-option" onclick="" value="PC" hidden />
-                        <img id="icon-pc" class="sorting-icon" src="files/img/sorting-icons/keyboardmouse.png"/>
-                    </div>
+                <!-- add when phone is supported
+                <div class="sorting-item">
+                    <input type="checkbox" class="sorting-option" onclick="" value="Mobile" hidden />
+                    <img class="sorting-icon" src="files/img/sorting-icons/mobile.png"/>
+                </div>
+                -->
                     
-                    <div class="sorting-item">
-                        <input type="checkbox" class="sorting-option" onclick="" value="Controller" hidden />
-                        <img id="icon-controller" class="sorting-icon" src="files/img/sorting-icons/controller.png"/>
-                    </div>
-
-                    <!-- add when phone is supported
-                    <div class="sorting-item">
-                        <input type="checkbox" class="sorting-option" onclick="" value="Mobile" hidden />
-                        <img class="sorting-icon" src="files/img/sorting-icons/mobile.png"/>
-                    </div>
-                    -->
-                        
-                    <div class="sorting-item" style="position: relative;">
-                        <input type="checkbox" class="sorting-option" onclick="" value="Multiplayer" hidden />
-                        <img id="icon-player1" class="sorting-icon" src="files/img/sorting-icons/singleplayer.png"/>
-                        <img id="icon-player2" class="sorting-icon" src="files/img/sorting-icons/multiplayer.png" style="position: absolute; right: 14%;"/>
-                    </div>
-                        
-                </td>
-            </tr>
-        </table>
-        
-        <div class="game-thumbnail" hidden>
-            <button class="game-button" onclick="" >
-                <img class="game-thumbnail-image" src="games/hack_attack/thumbnail.png" />
-            </button>
-        </div>
-        
-        <!-- grid layout thing for showcases -->
-        <div id="gamegrid" class="container no-text-deco games-grid">
-        </div>
-        
-        <!-- game info box -->
-        <div id="gameinfobox" hidden>
-            <div id="gameinfobox-visible">
-                <p id="gameinfo-resume"> Short Description </p>
-                <div id="players-required">
-                    <div id="icon-singleplayer" class="playeramount-icon" hidden></div>
-                    <div id="icon-multiplayer" class="playeramount-icon" hidden></div>
-                    <div id="player-amount">X</div>
+                <div class="sorting-item" style="position: relative;">
+                    <input type="checkbox" class="sorting-option" onclick="" value="Multiplayer" hidden />
+                    <img id="icon-player1" class="sorting-icon" src="files/img/sorting-icons/singleplayer.png"/>
+                    <img id="icon-player2" class="sorting-icon" src="files/img/sorting-icons/multiplayer.png" style="position: absolute; right: 14%;"/>
                 </div>
-                <div id="support-info">
-                    <div id="support-icon-mobile" class="gameinfo-icon" ></div>
-                    <div id="support-icon-controller" class="gameinfo-icon" ></div>
-                    <div id="support-icon-pc" class="gameinfo-icon" ></div>
-                </div>
+                    
+            </td>
+        </tr>
+    </table>
+    
+    <div class="game-thumbnail" hidden>
+        <button class="game-button" onclick="" >
+            <img class="game-thumbnail-image" src="games/hack_attack/thumbnail.png" />
+        </button>
+    </div>
+    
+    <!-- grid layout thing for showcases -->
+    <div id="gamegrid" class="container no-text-deco games-grid">
+    </div>
+    
+    <!-- game info box -->
+    <div id="gameinfobox" hidden>
+        <div id="gameinfobox-visible">
+            <p id="gameinfo-resume"> Short Description </p>
+            <div id="players-required">
+                <div id="icon-singleplayer" class="playeramount-icon" hidden></div>
+                <div id="icon-multiplayer" class="playeramount-icon" hidden></div>
+                <div id="player-amount">X</div>
+            </div>
+            <div id="support-info">
+                <div id="support-icon-mobile" class="gameinfo-icon" ></div>
+                <div id="support-icon-controller" class="gameinfo-icon" ></div>
+                <div id="support-icon-pc" class="gameinfo-icon" ></div>
             </div>
         </div>
-        
     </div>
+        
     <!-- FOOTER -->
     <footer style="background-color: #4d4d4d;" id="footer"> </footer>
 
