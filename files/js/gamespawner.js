@@ -9,7 +9,7 @@ var gamesCount = 0;
 // add jsonObject to GAMES
 async function loadAndAddGame(gamename) {
     // fetch the json game info file
-    fetch(`https://a1games.fun/games/${gamename}/gameinfo.json`)
+    fetch(`https://a1gamesfun.github.io/games/${gamename}/gameinfo.json`)
         .then((response) => response.json())
         .then((jsonresponse) =>  {
             // return generated json object
