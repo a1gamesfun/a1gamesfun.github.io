@@ -6,18 +6,35 @@ var SORTED_GAMES = [];
 var gamesAdded = 0;
 var gamesCount = 0;
 
-// add jsonObject to GAMES
+// Add jsonObject to GAMES
 async function loadAndAddGame(gamename) {
-    // fetch the json game info file
-    fetch(`https://a1games.fun/games/${gamename}/gameinfo.json`)
+    // Fetch the json game info file
+    fetchGameJSON(gamename)
         .then((response) => response.json())
         .then((jsonresponse) =>  {
-            // return generated json object
+            // Return generated json object
             GAMES.push(jsonresponse);
             addItem(jsonresponse, GAMES);
         });
 
 }
+
+async function fetchGameJSON(gamename) {
+    let result;
+
+    try {
+        result = await fetch(`https://a1games.fun/games/${gamename}/gameinfo.json`);
+        if (!result.ok) {
+            throw new Error("Primary fetch returned non-OK response");
+        }
+    } catch (e) {
+        console.warn("Primary fetch failed, trying backup...", e);
+        result = await fetch(`https://a1gamesfun.github.io/games/${gamename}/gameinfo.json`);
+    }
+
+    return result;
+}
+
 // get the array of gamenames
 // Example: [
 // "space_voyage", 
